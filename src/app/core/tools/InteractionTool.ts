@@ -5,7 +5,7 @@ import {Event} from "core/utils/Events";
 import {isPressable} from "core/utils/Pressable";
 import {LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
-import {IOObject, isNode} from "core/models";
+import {CircuitDesigner, IOObject, isNode} from "core/models";
 
 import {DefaultTool} from "./DefaultTool";
 
@@ -18,7 +18,7 @@ export class InteractionTool extends DefaultTool {
         super(...handlers);
     }
 
-    private findObject(pos: Vector, {designer}: Partial<CircuitInfo>): IOObject {
+    private findObject(pos: Vector, {designer}: CircuitInfo): IOObject | undefined {
         // Very specifically get the objects and wires and reverse them SEPARATELY
         //  doing `designer.getAll().reverse()` would put the wires BEFORE the objects
         //  which will cause incorrect behavior! Objects are always going to need to be
@@ -38,6 +38,11 @@ export class InteractionTool extends DefaultTool {
 
         const worldMousePos = camera.getWorldPos(input.getMousePos());
         const obj = this.findObject(worldMousePos, info);
+        if (!obj) {
+            if (locked)
+                return false;
+            return super.onEvent(event, info);
+        }
 
         const foundPorts = FindPorts(info);
         let visPorts = foundPorts.length > 0;

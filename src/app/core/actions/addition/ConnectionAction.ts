@@ -45,7 +45,7 @@ export class ConnectionAction extends ReversableAction {
         } else {
             this.wire = this.designer.createWire(p1, p2);
             this.p1 = p1;
-            this.p2 = p2;
+            this.p2 = p2!;
         }
     }
 
@@ -86,6 +86,10 @@ export class ConnectionAction extends ReversableAction {
      */
     public getWire(): Wire {
         return this.wire;
+    }
+
+    public getName(): string {
+        return `Connected ${this.p1.getParent().getName()} to ${this.p2.getParent().getName()}`;
     }
 
 }

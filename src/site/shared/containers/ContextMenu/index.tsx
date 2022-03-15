@@ -3,6 +3,7 @@ import {HEADER_HEIGHT} from "shared/utils/Constants";
 
 import {CircuitInfo} from "core/utils/CircuitInfo";
 import {SerializeForCopy} from "core/utils/ComponentUtils";
+import {V, Vector} from "core/utils/math/Vector";
 
 import {IOObject} from "core/models";
 
@@ -29,12 +30,12 @@ const CONTEXT_MENU_VERT_OFFSET = 4;
 
 type Props = {
     info: CircuitInfo;
-    paste: (text: string) => boolean;
+    paste: (text: string, menuPos: Vector) => boolean;
 }
 
 
 export const ContextMenu = ({info, paste}: Props) => {
-    const {locked, input, history, designer, selections, renderer} = info;
+    const {locked, input, camera, history, designer, selections, renderer} = info;
     const {undoHistory, redoHistory} = useHistory(info);
 
     const {isOpen} = useSharedSelector(
@@ -42,6 +43,7 @@ export const ContextMenu = ({info, paste}: Props) => {
     );
     const dispatch = useSharedDispatch();
 
+    let menuPos: Vector;
 
     useEffect(() => {
         if (!input)
@@ -93,7 +95,7 @@ export const ContextMenu = ({info, paste}: Props) => {
             alert("Your web browser does not support right click PASTE operation. Please use CTRL+V");
             return;
         }
-        paste(await navigator.clipboard.readText());
+        paste(await navigator.clipboard.readText(), menuPos);
     }
 
     /* Context Menu "Select All" */
@@ -116,20 +118,25 @@ export const ContextMenu = ({info, paste}: Props) => {
         dispatch(CloseContextMenu());
     }
 
-    const menu = useRef<HTMLDivElement>();
+    const menu = useRef<HTMLDivElement>(null);
     let pos = input?.getMousePos();
-    
+
     /* Relocate context menu to opposite side of cursor if it were to go off-screen */
     if (isOpen) {
+        if (!menu.current)
+            throw new Error("ContextMenu failed: menu.current is null");
         const offset = 1;
         const contextMenuWidth = menu.current.getBoundingClientRect().width;
         const contextMenuHeight = menu.current.getBoundingClientRect().height;
 
         if (pos.x + contextMenuWidth > window.innerWidth)
             pos.x -= contextMenuWidth - offset;
-                
+
         if (pos.y + contextMenuHeight + HEADER_HEIGHT - CONTEXT_MENU_VERT_OFFSET > window.innerHeight)
             pos.y -= contextMenuHeight - offset;
+
+        // Update context menu position on canvas
+        menuPos = camera.getWorldPos(input.getMousePos());
     }
 
     return (
@@ -140,10 +147,10 @@ export const ContextMenu = ({info, paste}: Props) => {
                  top: `${pos?.y + HEADER_HEIGHT - CONTEXT_MENU_VERT_OFFSET}px`,
                  visibility: (isOpen ? "initial" : "hidden")
              }}>
-            <button title="Cut"        onClick={() => doFunc(onCut)}>Cut</button>
-            <button title="Copy"       onClick={() => doFunc(onCopy)}>Copy</button>
+            <button title="Cut"        onClick={() => doFunc(onCut)} disabled={selections.amount() === 0}>Cut</button>
+            <button title="Copy"       onClick={() => doFunc(onCopy)} disabled={selections.amount() === 0}>Copy</button>
             <button title="Paste"      onClick={() => doFunc(onPaste)}>Paste</button>
-            <button title="Select All" onClick={() => doFunc(onSelectAll)}>Select All</button>
+            <button title="Select All" onClick={() => doFunc(onSelectAll)} disabled={designer.getObjects().length === 0}>Select All</button>
             <hr/>
             <button title="Undo" onClick={() => doFunc(onUndo)} disabled={undoHistory.length === 0}>Undo</button>
             <button title="Redo" onClick={() => doFunc(onRedo)} disabled={redoHistory.length === 0}>Redo</button>

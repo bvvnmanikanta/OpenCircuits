@@ -13,6 +13,8 @@ import {Renderer}    from "core/rendering/Renderer";
 import {Rectangle}   from "core/rendering/shapes/Rectangle";
 import {Style}       from "core/rendering/Style";
 
+import {IOLabelRenderer} from "core/rendering/IOLabelRenderer";
+
 import {FlipFlop}            from "digital/models/ioobjects/flipflops/FlipFlop";
 import {Latch}               from "digital/models/ioobjects/latches/Latch";
 import {Encoder}             from "digital/models/ioobjects/other/Encoder";
@@ -20,17 +22,17 @@ import {Decoder}             from "digital/models/ioobjects/other/Decoder";
 import {Multiplexer}         from "digital/models/ioobjects/other/Multiplexer";
 import {Demultiplexer}       from "digital/models/ioobjects/other/Demultiplexer";
 import {Label}               from "digital/models/ioobjects/other/Label";
+import {IC}                  from "digital/models/ioobjects/other/IC";
+import {Comparator}          from "digital/models/ioobjects/other/Comparator";
 import {PressableComponent}  from "digital/models/ioobjects/PressableComponent";
 import {Gate}                from "digital/models/ioobjects/gates/Gate";
 import {LED}                 from "digital/models/ioobjects/outputs/LED";
 import {SegmentDisplay}      from "digital/models/ioobjects/outputs/SegmentDisplay";
 import {Oscilloscope}        from "digital/models/ioobjects/outputs/Oscilloscope";
-import {IC}                  from "digital/models/ioobjects/other/IC";
 import {ConstantNumber}      from "digital/models/ioobjects/inputs/ConstantNumber";
 
 import {Images} from "digital/utils/Images";
 
-import {IOLabelRenderer}        from "./IOLabelRenderer";
 import {IOPortRenderer}         from "./IOPortRenderer";
 import {MultiplexerRenderer}    from "./other/MultiplexerRenderer";
 import {ICRenderer}             from "./other/ICRenderer";
@@ -39,6 +41,7 @@ import {LEDRenderer}            from "./outputs/LEDRenderer";
 import {SegmentDisplayRenderer} from "./outputs/SegmentDisplayRenderer";
 import {ConstantNumberRenderer} from "./inputs/ConstantNumberRenderer";
 import {OscilloscopeRenderer}   from "./outputs/OscilloscopeRenderer";
+
 
 /**
  * Renders Components
@@ -120,6 +123,8 @@ export const ComponentRenderer = (() => {
                 drawBox(renderer, transform, selected);
             else if (object instanceof Encoder || object instanceof Decoder)
                 drawBox(renderer, transform, selected);
+            else if (object instanceof Comparator)
+                drawBox(renderer, transform, selected);
             else if (object instanceof ConstantNumber)
                 ConstantNumberRenderer.render(renderer, object, selected);
             else if (object instanceof Oscilloscope)
@@ -131,7 +136,10 @@ export const ComponentRenderer = (() => {
                 LEDRenderer.render(renderer, camera, object, selected);
             }
             else if (imgName) {
-                renderer.image(Images.GetImage(imgName), V(), size, tint);
+                const img = Images.GetImage(imgName);
+                if (!img)
+                    throw new Error("ComponentRender.render failed: img is undefined");
+                renderer.image(img, V(), size, tint);
             }
 
             // Render the IOLabels, does not render labels if they are blank

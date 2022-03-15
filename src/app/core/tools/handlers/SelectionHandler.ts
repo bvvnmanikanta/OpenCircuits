@@ -23,8 +23,8 @@ export const SelectionHandler: EventHandler = ({
         if (!input.isShiftKeyDown())
             action.add(CreateDeselectAllAction(selections).execute());
 
-        const ports = GetAllPorts(designer.getObjects().reverse());
-        const objs = designer.getAll().reverse() as (Component | Wire)[];
+        const ports = GetAllPorts(designer.getObjects());
+        const objs = [...designer.getObjects().reverse(), ...designer.getWires().reverse()];
 
         // Check if an object was clicked
         let obj = objs.find(o => o.isWithinSelectBounds(worldMousePos));

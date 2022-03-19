@@ -8,6 +8,7 @@ import (
 )
 
 // RegisterPages Registers the web-page-serving routes
+// All authManager returns the same original page
 func RegisterPages(router *gin.Engine, authManager auth.AuthenticationManager) {
 	router.Static("/assets", "./site/assets")
 	router.Static("/img", "./site/img")

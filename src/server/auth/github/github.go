@@ -9,16 +9,26 @@ import (
 
 	"github.com/OpenCircuits/OpenCircuits/site/go/auth"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 	"google.golang.org/api/oauth2/v2"
 	"google.golang.org/api/option"
 )
+
+// we do not need this in the non-local testing mode.
+// Because our github client id will be in the environment from the very beginning
+func init() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatalf("ERROR loading .env")
+	}
+}
 
 type authenticationMethod struct {
 	config  oauth2ConfigWrapper
 	service *oauth2.Service
 }
 
-// Credentials which stores google ids.
+// Credentials which stores github ids.
 type oauth2Config struct {
 	ClientID  string `json:"client_id"`
 	ProjectID string `json:"project_id"`

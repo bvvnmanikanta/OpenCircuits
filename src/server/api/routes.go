@@ -2,6 +2,7 @@ package api
 
 import (
 	"fmt"
+	"github.com/OpenCircuits/OpenCircuits/site/go/auth/github"
 	"net/http"
 
 	"github.com/OpenCircuits/OpenCircuits/site/go/auth"
@@ -44,4 +45,6 @@ func RegisterRoutes(router *gin.Engine, manager auth.AuthenticationManager, user
 	router.POST("/api/circuits", authenticatedHandler(manager, circuitHandler(userCsif, circuitCreateHandler)))
 	router.PUT("/api/circuits/:id", authenticatedHandler(manager, circuitHandler(userCsif, circuitStoreHandler)))
 	router.POST("/api/circuits/:id/delete", authenticatedHandler(manager, circuitHandler(userCsif, circuitDeleteHandler)))
+	router.GET("/api/login/github", github.New)
+	router.GET("/api/login/github/callback", github.GithubCallbackHandler)
 }

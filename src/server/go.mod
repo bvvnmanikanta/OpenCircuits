@@ -11,5 +11,6 @@ require (
 	github.com/gorilla/sessions v1.2.0 // indirect
 	github.com/joho/godotenv v1.4.0
 	github.com/mattn/go-sqlite3 v1.11.0
+	github.com/thedevsaddam/gojsonq/v2 v2.5.2
 	google.golang.org/api v0.10.0
 )

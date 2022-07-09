@@ -50,5 +50,8 @@ module.exports = {
         "nonblock-statement-body-position": ["error", "below", {
             "overrides": { "while": "any" },
         }],
+
+        // Use Typescript equivalent rule
+        "semi": "off",
     },
 }

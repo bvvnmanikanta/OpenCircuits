@@ -17,6 +17,7 @@
     "coverage": "node ./build/scripts/test.js --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:css": "stylelint **/*.scss",
     "postinstall": "tsc --project ./scripts/tsconfig.json && copyfiles ./scripts/utils/browser/openChrome.applescript ./build"
   },
   "devDependencies": {
@@ -73,6 +74,8 @@
     "react-refresh-typescript": "^2.0.5",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard-scss": "^5.0.0",
     "ts-jest": "^28.0.5",
     "ts-loader": "^9.3.1",
     "ts-morph": "^15.1.0",

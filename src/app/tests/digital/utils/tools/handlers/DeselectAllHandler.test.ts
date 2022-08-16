@@ -33,15 +33,6 @@ describe("DeselectAllHandler", () => {
 
         expect(selections.amount()).toBe(0);
         expect(designer.getObjects()).toHaveLength(1);
-
-        input.click(V(0, 0));
-
-        expect(selections.amount()).toBe(1);
-
-        input.click(V(100,0));
-
-        expect(selections.amount()).toBe(0);
-        expect(designer.getObjects()).toHaveLength(1);
     });
     test("Deselection of Two Objects", () => {
         const [lo, hi] = Place(new ConstantLow(), new ConstantHigh());
@@ -58,17 +49,6 @@ describe("DeselectAllHandler", () => {
 
         input.pressKey("Escape")
             .releaseKey("Escape");
-
-        expect(selections.amount()).toBe(0);
-        expect(designer.getObjects()).toHaveLength(2);
-
-        input.click(V(0,0))
-            .pressKey("Shift")
-            .click(V(100,0))
-            .releaseKey("Shift");
-        expect(selections.amount()).toBe(2);
-
-        input.click(V(200,0));
 
         expect(selections.amount()).toBe(0);
         expect(designer.getObjects()).toHaveLength(2);

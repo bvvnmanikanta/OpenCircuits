@@ -1,15 +1,15 @@
+import type {SharedModuleInputFieldProps} from "./ModuleInputField";
+import type {Vector}                      from "Vector";
+
 import {useRef} from "react";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {Clamp} from "math/MathUtils";
 
 import {NumberInputField} from "shared/components/InputField";
 
 import {useBaseModule} from "./ModuleInputField";
-
-import type {SharedModuleInputFieldProps} from "./ModuleInputField";
 
 
 type Props = SharedModuleInputFieldProps<Vector> & {

@@ -1,3 +1,5 @@
+import type {InputPort} from "../InputPort";
+
 import {serializable} from "serialeazy";
 
 import {IO_PORT_LENGTH} from "core/utils/Constants";
@@ -7,8 +9,6 @@ import {V} from "Vector";
 import {Positioner} from "core/models/ports/positioners/Positioner";
 
 import {FlipFlop} from "digital/models/ioobjects/flipflops/FlipFlop";
-
-import type {InputPort} from "../InputPort";
 
 
 @serializable("FlipFlopPositioner")

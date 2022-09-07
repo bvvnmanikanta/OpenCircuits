@@ -1,11 +1,10 @@
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
+import type {Vector}      from "Vector";
+
 import {ROTATION_CIRCLE_R1,
         ROTATION_CIRCLE_R2,
         ROTATION_SNAP_AMT}  from "core/utils/Constants";
-
-import type {Vector} from "Vector";
-
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
 
 import {GroupAction} from "core/actions/GroupAction";
 

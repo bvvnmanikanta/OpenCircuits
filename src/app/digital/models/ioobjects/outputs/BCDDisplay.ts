@@ -1,5 +1,6 @@
-import {serializable} from "serialeazy";
+import type {InputPort} from "digital/models/ports/InputPort";
 
+import {serializable} from "serialeazy";
 
 import {ClampedValue} from "math/ClampedValue";
 
@@ -7,10 +8,9 @@ import {Positioner} from "core/models/ports/positioners/Positioner";
 
 import {PortsToDecimal} from "digital/utils/ComponentUtils";
 
-import type {InputPort} from "digital/models/ports/InputPort";
-
 import {BCDFont}        from "./BCDFont";
 import {SegmentDisplay} from "./SegmentDisplay";
+
 
 /**
  * A representation of a BCD Display, which takes a Binary Coded Decimal

@@ -1,14 +1,12 @@
-import {GetIDFor, serializable, serialize} from "serialeazy";
-
+import type {ICData}      from "./ioobjects/other/ICData";
+import type {IOObject}    from "core/models/IOObject";
 import type {IOObjectSet} from "core/utils/ComponentUtils";
 
+import {GetIDFor, serializable, serialize} from "serialeazy";
+
 import {CircuitDesigner} from "core/models/CircuitDesigner";
-import type {IOObject}   from "core/models/IOObject";
 
 import {DigitalComponent, DigitalObjectSet, DigitalWire, InputPort, OutputPort, Propagation} from "./index";
-
-import type {ICData} from "./ioobjects/other/ICData";
-
 
 
 export type PropagationEvent = {

@@ -1,6 +1,9 @@
+import type {DigitalObjectSet} from "digital/models/DigitalObjectSet";
+import type {DigitalComponent} from "digital/models/index";
 import type {InputToken, InputTreeBinOpNode, InputTreeIdent,
         InputTreeUnOpNode, OperatorFormat,
         Token} from "digital/utils/ExpressionParser/Constants/DataStructures";
+
 import {FORMATS} from "digital/utils/ExpressionParser/Constants/Formats";
 
 import {ExpressionToCircuit} from "digital/utils/ExpressionParser";
@@ -9,8 +12,6 @@ import {GenerateInputTree} from "digital/utils/ExpressionParser/GenerateInputTre
 import {GenerateTokens}    from "digital/utils/ExpressionParser/GenerateTokens";
 
 import {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
-import type {DigitalObjectSet}  from "digital/models/DigitalObjectSet";
-import type {DigitalComponent}  from "digital/models/index";
 import "digital/models/ioobjects";
 
 import {ANDGate} from "digital/models/ioobjects/gates/ANDGate";

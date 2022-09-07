@@ -1,10 +1,10 @@
+import type {Middleware} from "webpack-dev-server";
+import type Server       from "webpack-dev-server";
+
 import fs   from "node:fs";
 import path from "node:path";
 
 import bodyParser from "body-parser";
-
-import type {Middleware} from "webpack-dev-server";
-import type Server       from "webpack-dev-server";
 
 
 /**

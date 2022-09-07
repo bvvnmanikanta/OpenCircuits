@@ -1,7 +1,8 @@
+import type {Vector} from "Vector";
+
 import {serializable, serialize} from "serialeazy";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 

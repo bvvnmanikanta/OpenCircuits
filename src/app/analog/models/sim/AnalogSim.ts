@@ -1,10 +1,8 @@
-
-import {CreateWASMInstance} from "./lib/WASM";
-import {NetlistToNGSpice}   from "./Netlist";
-
 import type {NGSpiceLib} from "./lib/NGSpiceLib";
 import type {Netlist}    from "./Netlist";
 
+import {CreateWASMInstance} from "./lib/WASM";
+import {NetlistToNGSpice}   from "./Netlist";
 
 
 const MakeInstance = (lib: NGSpiceLib) => CreateWASMInstance(lib);

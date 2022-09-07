@@ -1,10 +1,9 @@
+import type {IOObjectSet} from "./ComponentUtils";
+import type {Vector}      from "Vector";
+
 import {ORGANIZE_SEP_X, ORGANIZE_SEP_Y} from "./Constants";
 
-import type {Vector} from "Vector";
-
 import {CreateGraph} from "./ComponentUtils";
-
-import type {IOObjectSet} from "./ComponentUtils";
 
 
 function OrganizeCore(groups: IOObjectSet, start: Vector, depths: number[][]): void {

@@ -1,4 +1,5 @@
-import type {UnitKey}         from "core/utils/Units";
+import type {UnitKey} from "core/utils/Units";
+
 import {Unit, UnitNumberInfo} from "core/utils/Units";
 
 

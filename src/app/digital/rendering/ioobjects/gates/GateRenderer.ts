@@ -1,3 +1,8 @@
+import type {Renderer} from "core/rendering/Renderer";
+import type {Gate}     from "digital/models/ioobjects/gates/Gate";
+import type {Camera}   from "math/Camera";
+import type {Vector}   from "Vector";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_BORDER_WIDTH,
         DEFAULT_CURVE_BORDER_WIDTH,
@@ -6,22 +11,18 @@ import {DEFAULT_BORDER_COLOR,
         SELECTED_BORDER_COLOR,
         SELECTED_FILL_COLOR} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
-import type {Camera} from "math/Camera";
-
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {Circle}    from "core/rendering/shapes/Circle";
 import {Line}      from "core/rendering/shapes/Line";
 import {QuadCurve} from "core/rendering/shapes/QuadCurve";
 
-import {ANDGate}   from "digital/models/ioobjects/gates/ANDGate";
-import type {Gate} from "digital/models/ioobjects/gates/Gate";
-import {ORGate}    from "digital/models/ioobjects/gates/ORGate";
-import {XORGate}   from "digital/models/ioobjects/gates/XORGate";
+import {ANDGate} from "digital/models/ioobjects/gates/ANDGate";
+import {ORGate}  from "digital/models/ioobjects/gates/ORGate";
+import {XORGate} from "digital/models/ioobjects/gates/XORGate";
+
 
 /**
  * Renders Gates using the following steps:

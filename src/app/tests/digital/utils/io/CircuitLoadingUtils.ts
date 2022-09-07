@@ -1,12 +1,12 @@
 /* eslint-disable jest/no-standalone-expect */
+import type {Component}             from "core/models";
+import type {Circuit, ContentsData} from "core/models/Circuit";
+
 import {Deserialize} from "serialeazy";
 
 import "test/helpers/Extensions";
 
-import type {Component} from "core/models";
-
-import type {Circuit, ContentsData} from "core/models/Circuit";
-import {CircuitDesigner}            from "core/models/CircuitDesigner";
+import {CircuitDesigner} from "core/models/CircuitDesigner";
 
 import "digital/models/ioobjects";
 

@@ -1,11 +1,12 @@
+import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
+
 import {Create, GetIDFor} from "serialeazy";
 
 import {CoderPortChangeAction} from "digital/actions/ports/CoderPortChangeAction";
 import {InputPortChangeAction} from "digital/actions/ports/InputPortChangeAction";
 import {MuxPortChangeAction}   from "digital/actions/ports/MuxPortChangeAction";
 
-import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
-import {InputPort, OutputPort}                         from "digital/models";
+import {InputPort, OutputPort} from "digital/models";
 
 import {Decoder, Encoder, IC} from "digital/models/ioobjects";
 

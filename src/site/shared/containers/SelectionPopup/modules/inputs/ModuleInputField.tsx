@@ -1,8 +1,7 @@
-import {useEffect, useState} from "react";
-
 import type {Action} from "core/actions/Action";
+import type {Prop}   from "core/models/PropInfo";
 
-import type {Prop} from "core/models/PropInfo";
+import {useEffect, useState} from "react";
 
 
 export type ModuleSubmitInfo = {

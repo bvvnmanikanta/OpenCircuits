@@ -1,7 +1,6 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
-
 import type {EventHandler} from "../EventHandler";
+import type {CircuitInfo}  from "core/utils/CircuitInfo";
+import type {Event}        from "core/utils/Events";
 
 
 export const SaveHandler = (save: () => void): EventHandler => ({

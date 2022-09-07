@@ -1,12 +1,12 @@
+import type {CircuitDesigner} from "core/models";
+import type {Node}            from "core/models/Node";
+
 import {GroupAction} from "core/actions/GroupAction";
 
 import {DisconnectAction} from "core/actions/addition/ConnectionAction";
 import {DeleteAction}     from "core/actions/addition/PlaceAction";
 
-import type {CircuitDesigner} from "core/models";
-
 import {Component} from "core/models/Component";
-import type {Node} from "core/models/Node";
 import {Wire}      from "core/models/Wire";
 
 

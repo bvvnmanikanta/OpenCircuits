@@ -1,5 +1,4 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-
+import type {CircuitInfo}            from "core/utils/CircuitInfo";
 import type {DigitalCircuitDesigner} from "digital/models";
 
 

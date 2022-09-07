@@ -1,13 +1,12 @@
+import type {Event}         from "core/utils/Events";
+import type {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
+
 import {DEFAULT_BORDER_WIDTH, LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
 import {V} from "Vector";
 
 import {RectContains} from "math/MathUtils";
 import {Transform}    from "math/Transform";
-
-import type {Event} from "core/utils/Events";
-
-import type {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
 
 
 export type ICEdge = "horizontal" | "vertical" | "none";

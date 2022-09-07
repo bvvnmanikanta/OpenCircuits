@@ -1,3 +1,8 @@
+import type {AppState, AppStore} from "./state";
+import type {AllActions}         from "./state/actions";
+import type {NGSpiceLib}         from "analog/models/sim/lib/NGSpiceLib";
+import type {ThunkMiddleware}    from "redux-thunk";
+
 import React, {createRef}             from "react";
 import ReactDOM                       from "react-dom";
 import ReactGA                        from "react-ga";
@@ -38,8 +43,6 @@ import {CursorHandler} from "analog/tools/handlers/CursorHandler";
 
 import "analog/models/eeobjects";
 
-import type {NGSpiceLib} from "analog/models/sim/lib/NGSpiceLib";
-
 import {GetCookie}     from "shared/utils/Cookies";
 import {LoadingScreen} from "shared/utils/LoadingScreen";
 
@@ -58,10 +61,6 @@ import {AnalogPaste} from "./utils/AnalogPaste";
 import {Setup}       from "./utils/CircuitInfo/Setup";
 
 import ImageFiles from "./data/images.json";
-
-import type {AppState, AppStore} from "./state";
-import type {AllActions}         from "./state/actions";
-import type {ThunkMiddleware}    from "redux-thunk";
 
 
 async function Init(): Promise<void> {

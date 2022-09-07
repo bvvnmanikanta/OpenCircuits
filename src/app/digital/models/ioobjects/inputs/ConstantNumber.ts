@@ -1,3 +1,5 @@
+import type {Prop} from "core/models/PropInfo";
+
 import {serializable} from "serialeazy";
 
 import {V} from "Vector";
@@ -6,8 +8,6 @@ import {ClampedValue} from "math/ClampedValue";
 import {DecimalToBCD} from "math/MathUtils";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
-
-import type {Prop} from "core/models/PropInfo";
 
 import {DigitalComponent} from "digital/models/DigitalComponent";
 

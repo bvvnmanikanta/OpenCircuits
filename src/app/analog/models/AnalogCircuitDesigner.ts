@@ -1,14 +1,13 @@
+import type {AnalogPort} from "./index";
+import type {IOObject}   from "core/models/IOObject";
+
 import {serializable, serialize} from "serialeazy";
 
 import {IOObjectSet} from "core/utils/ComponentUtils";
 
 import {CircuitDesigner} from "core/models/CircuitDesigner";
-import type {IOObject}   from "core/models/IOObject";
 
 import {AnalogComponent, AnalogWire} from "./index";
-
-import type {AnalogPort} from "./index";
-
 
 
 export type ForcedEvent = {

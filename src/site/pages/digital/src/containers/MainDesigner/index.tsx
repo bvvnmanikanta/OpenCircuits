@@ -1,3 +1,5 @@
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+
 import {useLayoutEffect} from "react";
 
 import {HEADER_HEIGHT} from "shared/utils/Constants";
@@ -9,8 +11,6 @@ import {Input} from "core/utils/Input";
 import {CreateGroupPlaceAction} from "core/actions/addition/PlaceAction";
 
 import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
-
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
 import {usePageVisibility} from "shared/utils/hooks/usePageVisibility";
 import {useWindowSize}     from "shared/utils/hooks/useWindowSize";

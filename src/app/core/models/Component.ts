@@ -1,3 +1,7 @@
+import type {Port} from "./ports/Port";
+import type {Prop} from "./PropInfo";
+import type {Wire} from "./Wire";
+
 import {serialize} from "serialeazy";
 
 import {DEFAULT_BORDER_WIDTH,
@@ -10,10 +14,6 @@ import {RectContains} from "math/MathUtils";
 import {Transform}    from "math/Transform";
 
 import {CullableObject} from "./CullableObject";
-
-import type {Port} from "./ports/Port";
-import type {Prop} from "./PropInfo";
-import type {Wire} from "./Wire";
 
 
 export abstract class Component extends CullableObject {

@@ -1,7 +1,7 @@
-import {useEffect} from "react";
-
 import type {Event, EventType} from "core/utils/Events";
 import type {Input}            from "core/utils/Input";
+
+import {useEffect} from "react";
 
 
 export const useEvent = <T extends EventType>(type: T, f: (ev: Event & {type: T}) => void,

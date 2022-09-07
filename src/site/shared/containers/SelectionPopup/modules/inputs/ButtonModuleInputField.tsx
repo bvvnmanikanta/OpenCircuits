@@ -1,8 +1,6 @@
-import type {Action} from "core/actions/Action";
-
-import type {Prop} from "core/models/PropInfo";
-
 import type {ModuleSubmitInfo} from "./ModuleInputField";
+import type {Action}           from "core/actions/Action";
+import type {Prop}             from "core/models/PropInfo";
 
 
 type Props = {

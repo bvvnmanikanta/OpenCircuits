@@ -1,8 +1,7 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
-
 import type {DefaultTool} from "./DefaultTool";
 import type {Tool}        from "./Tool";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
 
 
 export class ToolManager {

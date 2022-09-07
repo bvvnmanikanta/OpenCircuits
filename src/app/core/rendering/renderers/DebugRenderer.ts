@@ -1,20 +1,19 @@
-import {IO_PORT_SELECT_RADIUS} from "core/utils/Constants";
+import type {Renderer}    from "../Renderer";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Pressable}   from "core/utils/Pressable";
 
+import {IO_PORT_SELECT_RADIUS} from "core/utils/Constants";
 
 import {V} from "Vector";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import {GetAllPorts}      from "core/utils/ComponentUtils";
-import type {Pressable}   from "core/utils/Pressable";
-import {isPressable}      from "core/utils/Pressable";
+import {GetAllPorts} from "core/utils/ComponentUtils";
+import {isPressable} from "core/utils/Pressable";
 
 import {Circle}                       from "../shapes/Circle";
 import {Rectangle}                    from "../shapes/Rectangle";
 import {DEBUG_CULLBOX_STYLE,
         DEBUG_PRESSABLE_BOUNDS_STYLE,
         DEBUG_SELECTION_BOUNDS_STYLE} from "../Styles";
-
-import type {Renderer} from "../Renderer";
 
 
 export const DebugRenderer = ({

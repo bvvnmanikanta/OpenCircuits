@@ -1,3 +1,7 @@
+import type {DigitalCircuitDesigner}    from "digital/models";
+import type {DigitalCircuitInfo}        from "digital/utils/DigitalCircuitInfo";
+import type {ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
+
 import {useEffect, useLayoutEffect} from "react";
 import {Deserialize, Serialize}     from "serialeazy";
 
@@ -7,12 +11,6 @@ import {InteractionTool} from "core/tools/InteractionTool";
 import {PanTool}         from "core/tools/PanTool";
 
 import {FitToScreenHandler} from "core/tools/handlers/FitToScreenHandler";
-
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
-
-import type {DigitalCircuitDesigner} from "digital/models";
-
-import type {ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
 
 import {GetRenderFunc} from "site/digital/utils/Rendering";
 

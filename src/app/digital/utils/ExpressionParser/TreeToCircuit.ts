@@ -1,14 +1,11 @@
+import type {InputTree, InputTreeBinOpType, InputTreeOpType} from "./Constants/DataStructures";
+import type {IOObject}                                       from "core/models";
+import type {DigitalComponent}                               from "digital/models";
+import type {Gate}                                           from "digital/models/ioobjects/gates/Gate";
+
 import {Create} from "serialeazy";
 
-import type {InputTree, InputTreeBinOpType, InputTreeOpType} from "./Constants/DataStructures";
-
-import type {IOObject} from "core/models";
-
 import {LazyConnect} from "digital/utils/ComponentUtils";
-
-import type {DigitalComponent} from "digital/models";
-
-import type {Gate} from "digital/models/ioobjects/gates/Gate";
 
 
 /**

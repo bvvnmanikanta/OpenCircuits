@@ -1,3 +1,7 @@
+import type {AppState, AppStore} from "./state";
+import type {AllActions}         from "./state/actions";
+import type {ThunkMiddleware}    from "redux-thunk";
+
 import React, {createRef}             from "react";
 import ReactDOM                       from "react-dom";
 import ReactGA                        from "react-ga";
@@ -39,7 +43,6 @@ import {LoadingScreen} from "shared/utils/LoadingScreen";
 
 import {DevGetFile, DevListFiles} from "shared/api/Dev";
 
-
 import {NoAuthState} from "shared/api/auth/NoAuthState";
 
 import {SetCircuitSaved} from "shared/state/CircuitInfo";
@@ -52,10 +55,6 @@ import {Setup}        from "./utils/CircuitInfo/Setup";
 import {DigitalPaste} from "./utils/DigitalPaste";
 
 import ImageFiles from "./data/images.json";
-
-import type {AppState, AppStore} from "./state";
-import type {AllActions}         from "./state/actions";
-import type {ThunkMiddleware}    from "redux-thunk";
 
 
 async function Init(): Promise<void> {

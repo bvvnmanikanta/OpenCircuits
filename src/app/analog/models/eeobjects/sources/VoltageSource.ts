@@ -1,10 +1,11 @@
+import type {PropInfoLayout} from "core/utils/PropInfoUtils";
+
 import {serializable} from "serialeazy";
 
 import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 
-import type {PropInfoLayout}                from "core/utils/PropInfoUtils";
 import {GenPropInfo}                        from "core/utils/PropInfoUtils";
 import {AngleInfo, FrequencyInfo, TimeInfo} from "core/utils/Units";
 

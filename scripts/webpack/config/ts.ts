@@ -1,10 +1,10 @@
+import type {Config}        from "./types.js";
+import type {Configuration} from "webpack";
+
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import ReactRefreshTypescript    from "react-refresh-typescript";
 
 import getAliases from "../../utils/getAliases.js";
-
-import type {Config}        from "./types.js";
-import type {Configuration} from "webpack";
 
 
 /**

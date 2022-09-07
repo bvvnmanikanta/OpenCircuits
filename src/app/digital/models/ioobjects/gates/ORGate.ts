@@ -1,9 +1,10 @@
+import type {Vector} from "Vector";
+
 import {serializable} from "serialeazy";
 
 import {GATE_OR_CULLBOX_OFFSET} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 

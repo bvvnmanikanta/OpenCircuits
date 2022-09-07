@@ -1,3 +1,6 @@
+import type {Config}        from "./types";
+import type {Configuration} from "webpack";
+
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 import webpack                     from "webpack";
 
@@ -8,9 +11,6 @@ import HTMLConfig from "./html.js";
 import IMGConfig  from "./img.js";
 import TSConfig   from "./ts.js";
 import WASMConfig from "./wasm.js";
-
-import type {Config}        from "./types";
-import type {Configuration} from "webpack";
 
 
 /**

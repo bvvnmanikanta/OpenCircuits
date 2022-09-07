@@ -1,10 +1,11 @@
-import type React                         from "react";
+import type React    from "react";
+import type {Vector} from "Vector";
+
 import {useCallback, useEffect, useState} from "react"
 
 import {DRAG_TIME, RIGHT_MOUSE_BUTTON} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {useDocEvent}           from "shared/utils/hooks/useDocEvent";
 import {useWindowKeyDownEvent} from "shared/utils/hooks/useKeyDownEvent";

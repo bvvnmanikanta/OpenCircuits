@@ -1,8 +1,7 @@
+import type {Shape}  from "./Shape";
 import type {Vector} from "Vector";
 
 import {Transform} from "math/Transform";
-
-import type {Shape} from "./Shape";
 
 
 /**

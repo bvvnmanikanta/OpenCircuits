@@ -1,11 +1,12 @@
+import type {BezierCurve} from "./BezierCurve";
+import type {Transform}   from "./Transform";
+
 import {WIRE_DIST_ITERATIONS,
         WIRE_DIST_THRESHOLD2,
         WIRE_NEWTON_ITERATIONS} from "../Constants";
 
 import {V, Vector} from "./Vector";
 
-import type {BezierCurve} from "./BezierCurve";
-import type {Transform}   from "./Transform";
 
 /**
  * Clamps a number between a given min and max.

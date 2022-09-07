@@ -1,6 +1,5 @@
-import type {Vector} from "Vector";
-
 import type {Transform} from "math/Transform";
+import type {Vector}    from "Vector";
 
 import {Component} from "core/models/Component";
 

@@ -1,8 +1,8 @@
-import {useState} from "react";
-
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-
+import type {Utility}            from "./UtilitiesDropdown";
+import type {CircuitInfo}        from "core/utils/CircuitInfo";
 import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+
+import {useState} from "react";
 
 import {DownloadMenuDropdown} from "./DownloadMenuDropdown";
 import {OpenFileButton}       from "./OpenFileButton";
@@ -13,7 +13,6 @@ import {UtilitiesDropdown}    from "./UtilitiesDropdown";
 
 import "./index.scss";
 
-import type {Utility} from "./UtilitiesDropdown";
 
 
 type Props = {

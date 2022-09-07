@@ -1,6 +1,5 @@
+import type {AllSharedActions}  from "shared/state/actions";
 import type {ActionCreatorType} from "shared/utils/CreateState";
-
-import type {AllSharedActions} from "shared/state/actions";
 
 
 /* eslint-disable @typescript-eslint/consistent-type-imports */

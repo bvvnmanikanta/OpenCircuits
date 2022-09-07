@@ -1,3 +1,7 @@
+import type {Renderer}      from "core/rendering/Renderer";
+import type {Demultiplexer} from "digital/models/ioobjects/other/Demultiplexer";
+import type {Camera}        from "math/Camera";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_BORDER_WIDTH,
         DEFAULT_FILL_COLOR,
@@ -7,15 +11,11 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import type {Camera} from "math/Camera";
-
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {Polygon} from "core/rendering/shapes/Polygon";
 
-import type {Demultiplexer} from "digital/models/ioobjects/other/Demultiplexer";
-import {Multiplexer}        from "digital/models/ioobjects/other/Multiplexer";
+import {Multiplexer} from "digital/models/ioobjects/other/Multiplexer";
 
 
 /**

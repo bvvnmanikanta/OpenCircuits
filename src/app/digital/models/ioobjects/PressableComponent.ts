@@ -1,12 +1,12 @@
+import type {Pressable}    from "core/utils/Pressable";
+import type {ClampedValue} from "math/ClampedValue";
+
 import {serialize} from "serialeazy";
 
 import {V, Vector} from "Vector";
 
-import type {ClampedValue} from "math/ClampedValue";
-import {RectContains}      from "math/MathUtils";
-import {Transform}         from "math/Transform";
-
-import type {Pressable} from "core/utils/Pressable";
+import {RectContains} from "math/MathUtils";
+import {Transform}    from "math/Transform";
 
 import {DigitalComponent} from "../DigitalComponent";
 

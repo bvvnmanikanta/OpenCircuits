@@ -1,20 +1,18 @@
-import type {RefObject} from "react";
-import {Deserialize}    from "serialeazy";
+import type {AppStore}              from "../../state";
+import type {AnalogCircuitDesigner} from "analog/models";
+import type {AnalogCircuitInfo}     from "analog/utils/AnalogCircuitInfo";
+import type {ContentsData}          from "core/models/Circuit";
+import type {RefObject}             from "react";
+import type {CircuitInfoHelpers}    from "shared/utils/CircuitInfoHelpers";
 
+import {Deserialize} from "serialeazy";
 
 import {OVERWRITE_CIRCUIT_MESSAGE} from "../Constants";
 
 import {V} from "Vector";
 
-import type {ContentsData}      from "core/models/Circuit";
 import {Circuit}                from "core/models/Circuit";
 import {CircuitMetadataBuilder} from "core/models/CircuitMetadata";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
-
-import type {AnalogCircuitDesigner} from "analog/models";
-
-import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {CreateUserCircuit, DeleteUserCircuit, LoadUserCircuit} from "shared/api/Circuits";
 
@@ -23,10 +21,7 @@ import {SetCircuitId, SetCircuitName, SetCircuitSaved, _SetCircuitLoading} from 
 import {SaveCircuit}      from "shared/state/thunks/SaveCircuit";
 import {LoadUserCircuits} from "shared/state/thunks/User";
 
-
 import {GenerateThumbnail} from "../GenerateThumbnail";
-
-import type {AppStore} from "../../state";
 
 
 export function GetAnalogCircuitInfoHelpers(store: AppStore, canvas: RefObject<HTMLCanvasElement>,

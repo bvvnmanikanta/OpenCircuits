@@ -1,11 +1,15 @@
+import type {Action}                 from "core/actions/Action";
+import type {IOObject}               from "core/models";
+import type {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
+import type {DigitalCircuitInfo}     from "digital/utils/DigitalCircuitInfo";
+import type {Vector}                 from "Vector";
+
 import {Deserialize, Serialize} from "serialeazy";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {IOObjectSet} from "core/utils/ComponentUtils";
 
-import type {Action} from "core/actions/Action";
 import {GroupAction} from "core/actions/GroupAction";
 
 import {AddGroupAction} from "core/actions/addition/AddGroupAction";
@@ -14,14 +18,9 @@ import {CreateDeselectAllAction, CreateGroupSelectAction} from "core/actions/sel
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
-import type {IOObject} from "core/models";
-import {Component}     from "core/models";
-
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import {Component} from "core/models";
 
 import {TransferICDataAction} from "digital/actions/TransferICDataAction";
-
-import type {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
 
 import {IC} from "digital/models/ioobjects/other";
 

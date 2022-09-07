@@ -1,7 +1,7 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-
 import type {Config}        from "./types";
 import type {Configuration} from "webpack";
+
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 
 /**

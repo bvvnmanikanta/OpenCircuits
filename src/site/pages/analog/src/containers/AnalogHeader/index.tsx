@@ -1,5 +1,4 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-
+import type {CircuitInfo}        from "core/utils/CircuitInfo";
 import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {Header} from "shared/containers/Header";

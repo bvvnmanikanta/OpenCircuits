@@ -1,21 +1,20 @@
-import type {RefObject} from "react";
-import {Deserialize}    from "serialeazy";
+import type {AppStore}               from "../../state";
+import type {ContentsData}           from "core/models/Circuit";
+import type {DigitalCircuitDesigner} from "digital/models";
+import type {DigitalCircuitInfo}     from "digital/utils/DigitalCircuitInfo";
+import type {RefObject}              from "react";
+import type {CircuitInfoHelpers}     from "shared/utils/CircuitInfoHelpers";
 
+import {Deserialize} from "serialeazy";
 
 import {OVERWRITE_CIRCUIT_MESSAGE} from "../Constants";
 
 import {V} from "Vector";
 
-import type {ContentsData}      from "core/models/Circuit";
 import {Circuit}                from "core/models/Circuit";
 import {CircuitMetadataBuilder} from "core/models/CircuitMetadata";
 
-import type {DigitalCircuitInfo}                              from "digital/utils/DigitalCircuitInfo";
 import {VersionConflictPostResolver, VersionConflictResolver} from "digital/utils/DigitalVersionConflictResolver";
-
-import type {DigitalCircuitDesigner} from "digital/models";
-
-import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {CreateUserCircuit, DeleteUserCircuit, LoadUserCircuit} from "shared/api/Circuits";
 
@@ -24,10 +23,7 @@ import {SetCircuitId, SetCircuitName, SetCircuitSaved, _SetCircuitLoading} from 
 import {SaveCircuit}      from "shared/state/thunks/SaveCircuit";
 import {LoadUserCircuits} from "shared/state/thunks/User";
 
-
 import {GenerateThumbnail} from "../GenerateThumbnail";
-
-import type {AppStore} from "../../state";
 
 
 export function GetDigitalCircuitInfoHelpers(store: AppStore, canvas: RefObject<HTMLCanvasElement>,

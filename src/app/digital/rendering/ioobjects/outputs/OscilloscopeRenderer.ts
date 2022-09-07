@@ -1,20 +1,19 @@
+import type {Renderer}     from "core/rendering/Renderer";
+import type {Oscilloscope} from "digital/models/ioobjects";
+import type {Camera}       from "math/Camera";
+import type {Vector}       from "Vector";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_BORDER_WIDTH,
         DEFAULT_ON_COLOR,
         SELECTED_BORDER_COLOR,
         SELECTED_FILL_COLOR} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
-import type {Camera} from "math/Camera";
-
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
-
-import type {Oscilloscope} from "digital/models/ioobjects";
 
 
 const GRAPH_LINE_WIDTH = 4;

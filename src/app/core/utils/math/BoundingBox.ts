@@ -1,5 +1,6 @@
 import type {Vector} from "Vector";
 
+
 /**
  * A simple axis-aligned bounding box.
  * A representation of a 2D Bounding Box. Used to keep track of area used by component(s).

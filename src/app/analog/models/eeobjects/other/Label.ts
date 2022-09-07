@@ -1,3 +1,5 @@
+import type {PropInfo} from "core/models/PropInfo";
+
 import {serializable} from "serialeazy";
 
 import {V} from "Vector";
@@ -5,8 +7,6 @@ import {V} from "Vector";
 import {ClampedValue} from "math/ClampedValue";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
-
-import type {PropInfo} from "core/models/PropInfo";
 
 import {AnalogComponent} from "analog/models/AnalogComponent";
 

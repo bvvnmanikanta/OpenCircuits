@@ -1,13 +1,12 @@
+import type {Tool}        from "core/tools/Tool";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
+
 import {ARROW_PAN_DISTANCE_NORMAL,
         ARROW_PAN_DISTANCE_SMALL,
         MIDDLE_MOUSE_BUTTON} from "core/utils/Constants";
 
 import {Vector} from "Vector";
-
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
-
-import type {Tool} from "core/tools/Tool";
 
 
 export const PanTool: Tool = (() => {

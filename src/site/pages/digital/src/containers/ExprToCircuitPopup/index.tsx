@@ -1,9 +1,10 @@
+import type {InputTypes, OutputTypes}             from "./generate";
+import type {DigitalCircuitInfo}                  from "digital/utils/DigitalCircuitInfo";
+import type {OperatorFormat, OperatorFormatLabel} from "digital/utils/ExpressionParser/Constants/DataStructures";
+
 import {useState} from "react";
 
-import type {OperatorFormat, OperatorFormatLabel} from "digital/utils/ExpressionParser/Constants/DataStructures";
-import {FORMATS}                                  from "digital/utils/ExpressionParser/Constants/Formats";
-
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import {FORMATS} from "digital/utils/ExpressionParser/Constants/Formats";
 
 import {useSharedDispatch,
         useSharedSelector} from "shared/utils/hooks/useShared";
@@ -17,12 +18,7 @@ import {Popup}        from "shared/components/Popup";
 import {BooleanOption}  from "./BooleanOption";
 import {CustomOps}      from "./CustomOps";
 import {DropdownOption} from "./DropdownOption";
-
-import type {
-        InputTypes,
-        OutputTypes} from "./generate";
-
-import {Generate} from "./generate";
+import {Generate}       from "./generate";
 
 import "./index.scss";
 

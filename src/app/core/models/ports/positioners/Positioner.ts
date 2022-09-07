@@ -1,11 +1,11 @@
+import type {Port}   from "core/models/ports/Port";
+import type {Vector} from "Vector";
+
 import {serializable} from "serialeazy";
 
 import {DEFAULT_BORDER_WIDTH, IO_PORT_LENGTH} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
-
-import type {Port} from "core/models/ports/Port";
+import {V} from "Vector";
 
 
 export type Dir = "left" | "right" | "top" | "bottom";

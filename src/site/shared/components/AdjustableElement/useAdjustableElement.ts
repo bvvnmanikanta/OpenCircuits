@@ -1,10 +1,11 @@
+import type {RectProps} from "math/Rect";
+import type {Vector}    from "Vector";
+
 import {useState} from "react";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
-import type {RectProps} from "math/Rect";
-import {Rect}           from "math/Rect";
+import {Rect} from "math/Rect";
 
 import {useDocEvent}   from "shared/utils/hooks/useDocEvent";
 import {useMousePos}   from "shared/utils/hooks/useMousePos";

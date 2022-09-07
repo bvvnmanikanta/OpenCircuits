@@ -1,5 +1,4 @@
-import type {Action} from "core/actions/Action";
-
+import type {Action}    from "core/actions/Action";
 import type {Component} from "core/models/Component";
 
 

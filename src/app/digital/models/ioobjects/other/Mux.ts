@@ -1,23 +1,22 @@
+import type {Component, Port} from "core/models";
+import type {Positioner}      from "core/models/ports/positioners/Positioner";
+import type {DigitalWire}     from "digital/models";
+import type {OutputPort}      from "digital/models/ports/OutputPort";
+import type {Vector}          from "Vector";
+
 import {serialize} from "serialeazy";
 
 import {DEFAULT_SIZE, MULTIPLEXER_HEIGHT_OFFSET, MUX_DEFAULT_SELECT_PORTS} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 
-import type {Component, Port} from "core/models";
-
 import {PortSet} from "core/models/ports/PortSets";
 
-import type {Positioner} from "core/models/ports/positioners/Positioner";
-
-import type {DigitalWire} from "digital/models";
 import {DigitalComponent} from "digital/models";
 
-import {InputPort}       from "digital/models/ports/InputPort";
-import type {OutputPort} from "digital/models/ports/OutputPort";
+import {InputPort} from "digital/models/ports/InputPort";
 
 
 export abstract class Mux extends DigitalComponent {

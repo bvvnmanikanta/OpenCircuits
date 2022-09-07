@@ -1,3 +1,5 @@
+import type {Component} from "core/models";
+
 import {ROTATION_CIRCLE_RADIUS} from "core/utils/Constants";
 
 import {V} from "Vector";
@@ -5,8 +7,6 @@ import {V} from "Vector";
 import "test/helpers/Extensions";
 import {GetHelpers} from "test/helpers/Helpers";
 import {Setup}      from "test/helpers/Setup";
-
-import type {Component} from "core/models";
 
 import {ANDGate, ORGate} from "digital/models/ioobjects";
 

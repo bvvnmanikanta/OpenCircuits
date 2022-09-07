@@ -1,3 +1,5 @@
+import type {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
+
 import {serializable, serialize} from "serialeazy";
 
 import {DEFAULT_SIZE} from "core/utils/Constants";
@@ -6,9 +8,8 @@ import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 
-import type {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
-import {DigitalComponent}            from "digital/models/DigitalComponent";
-import {DigitalObjectSet}            from "digital/models/DigitalObjectSet";
+import {DigitalComponent} from "digital/models/DigitalComponent";
+import {DigitalObjectSet} from "digital/models/DigitalObjectSet";
 
 import {ICData} from "./ICData";
 

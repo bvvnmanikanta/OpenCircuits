@@ -1,3 +1,7 @@
+import type {ThunkMiddleware} from "redux-thunk";
+import type {AppState}        from "site/digital/state";
+import type {AllActions}      from "site/digital/state/actions";
+
 import "@testing-library/jest-dom";
 import {act, render, screen}          from "@testing-library/react";
 import userEvent                      from "@testing-library/user-event";
@@ -14,14 +18,9 @@ import {OpenHeaderPopup} from "shared/state/Header";
 import "shared/tests/helpers/Extensions";
 import {PressToggle} from "shared/tests/helpers/PressToggle";
 
-import type {AppState} from "site/digital/state";
-
-import type {AllActions} from "site/digital/state/actions";
-import {reducers}        from "site/digital/state/reducers";
+import {reducers} from "site/digital/state/reducers";
 
 import {ExprToCircuitPopup} from "site/digital/containers/ExprToCircuitPopup";
-
-import type {ThunkMiddleware} from "redux-thunk";
 
 
 // beforeAll and beforeEach can be used to avoid duplicating store/render code, but is not recommended

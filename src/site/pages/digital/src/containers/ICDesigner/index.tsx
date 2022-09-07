@@ -1,3 +1,7 @@
+import type {ICEdge}             from "digital/tools/ICResizeTool";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {ICCircuitInfo}      from "digital/utils/ICCircuitInfo";
+
 import {useEffect, useLayoutEffect, useRef, useState} from "react";
 
 import {IC_DESIGNER_VH, IC_DESIGNER_VW} from "site/digital/utils/Constants";
@@ -20,13 +24,9 @@ import {FitToScreenHandler} from "core/tools/handlers/FitToScreenHandler";
 import {RedoHandler}        from "core/tools/handlers/RedoHandler";
 import {UndoHandler}        from "core/tools/handlers/UndoHandler";
 
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
-import type {ICCircuitInfo}      from "digital/utils/ICCircuitInfo";
-
 import {CreateICDataAction} from "digital/actions/CreateICDataAction";
 
 import {ICPortTool}   from "digital/tools/ICPortTool";
-import type {ICEdge}  from "digital/tools/ICResizeTool";
 import {
         ICResizeTool} from "digital/tools/ICResizeTool";
 

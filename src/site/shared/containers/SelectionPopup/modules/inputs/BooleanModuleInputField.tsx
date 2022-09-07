@@ -1,9 +1,9 @@
+import type {SharedModuleInputFieldProps} from "./ModuleInputField";
+
 import {ButtonToggle} from "shared/components/ButtonToggle";
 import {SwitchToggle} from "shared/components/SwitchToggle";
 
 import {DefaultConfig, useBaseModule} from "./ModuleInputField";
-
-import type {SharedModuleInputFieldProps} from "./ModuleInputField";
 
 
 type Props = SharedModuleInputFieldProps<boolean> & {

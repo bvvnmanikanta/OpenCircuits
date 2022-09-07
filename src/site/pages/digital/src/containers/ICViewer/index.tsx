@@ -1,11 +1,14 @@
+import type {CullableObject}     from "core/models";
+import type {CircuitInfo}        from "core/utils/CircuitInfo";
+import type {Event}              from "core/utils/Events";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+
 import {useCallback, useEffect, useLayoutEffect, useRef, useState} from "react";
 
 import {IC_VIEWER_ZOOM_PADDING_RATIO}   from "core/utils/Constants";
 import {IC_DESIGNER_VH, IC_DESIGNER_VW} from "site/digital/utils/Constants";
 
-import type {CircuitInfo}        from "core/utils/CircuitInfo";
 import {CopyGroup, GetCameraFit} from "core/utils/ComponentUtils";
-import type {Event}              from "core/utils/Events";
 import {Input}                   from "core/utils/Input";
 import {isPressable}             from "core/utils/Pressable";
 
@@ -13,10 +16,6 @@ import {MoveCameraAction} from "core/actions/camera/MoveCameraAction";
 
 import {InteractionTool} from "core/tools/InteractionTool";
 import {PanTool}         from "core/tools/PanTool";
-
-import type {CullableObject} from "core/models";
-
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
 import {Button, Switch} from "digital/models/ioobjects/inputs";
 

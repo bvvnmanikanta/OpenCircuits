@@ -1,11 +1,12 @@
+import type {Vector} from "Vector";
+
 import {serializable} from "serialeazy";
 
 import {DEFAULT_SIZE,
         LED_LIGHT_RADIUS,
         LED_WIDTH} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 

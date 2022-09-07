@@ -1,9 +1,7 @@
-
 import type {Action} from "core/actions/Action";
+import type {Port}   from "core/models";
 
 import {PortChangeAction} from "core/actions/ports/PortChangeAction";
-
-import type {Port} from "core/models";
 
 import {Multiplexer} from "digital/models/ioobjects/other/Multiplexer";
 import {Mux}         from "digital/models/ioobjects/other/Mux";

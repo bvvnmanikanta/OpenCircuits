@@ -1,3 +1,5 @@
+import type {AppState} from ".";
+
 import {combineReducers} from "redux";
 
 import {circuitInfoReducer} from "shared/state/CircuitInfo";
@@ -10,8 +12,6 @@ import {userInfoReducer}    from "shared/state/UserInfo";
 
 import {icDesignerReducer} from "./ICDesigner";
 import {icViewerReducer}   from "./ICViewer";
-
-import type {AppState} from ".";
 
 
 export const reducers = combineReducers<AppState>({

@@ -1,16 +1,12 @@
-import type {Vector} from "Vector";
-
-import type {ClampedValue} from "math/ClampedValue";
+import type {InputPort, OutputPort} from "..";
+import type {Positioner}            from "core/models/ports/positioners/Positioner";
+import type {Prop}                  from "core/models/PropInfo";
+import type {ClampedValue}          from "math/ClampedValue";
+import type {Vector}                from "Vector";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
 
-import type {Prop} from "core/models/PropInfo";
-
-import type {Positioner} from "core/models/ports/positioners/Positioner";
-
 import {DigitalComponent} from "digital/models/DigitalComponent";
-
-import type {InputPort, OutputPort} from "..";
 
 
 const [Info] = GenPropInfo({

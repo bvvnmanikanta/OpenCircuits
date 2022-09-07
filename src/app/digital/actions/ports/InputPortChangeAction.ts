@@ -1,10 +1,8 @@
-import type {Action} from "core/actions/Action";
+import type {Action}           from "core/actions/Action";
+import type {Port}             from "core/models/ports/Port";
+import type {DigitalComponent} from "digital/models/DigitalComponent";
 
 import {PortChangeAction} from "core/actions/ports/PortChangeAction";
-
-import type {Port} from "core/models/ports/Port";
-
-import type {DigitalComponent} from "digital/models/DigitalComponent";
 
 
 /**

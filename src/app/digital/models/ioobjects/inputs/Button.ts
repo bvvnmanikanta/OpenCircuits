@@ -1,12 +1,14 @@
+import type {Vector} from "Vector";
+
 import {serializable} from "serialeazy";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {ClampedValue}   from "math/ClampedValue";
 import {CircleContains} from "math/MathUtils";
 
 import {PressableComponent} from "../PressableComponent";
+
 
 /**
  * An input that acts as a button. While pressed down by the mouse button, it outputs a signal. When you

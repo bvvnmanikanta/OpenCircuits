@@ -152,6 +152,7 @@ module.exports = {
                 "pathGroupsExcludedImportTypes": ["react"],
                 "groups":
                     [
+                        "type",
                         "builtin",
                         "external",
                         "internal",
@@ -159,7 +160,6 @@ module.exports = {
                         "sibling",
                         "index",
                         "object",
-                        "type",
                     ],
                 "alphabetize":
                 {
@@ -168,6 +168,7 @@ module.exports = {
                 },
                 "newlines-between": "always",
                 "warnOnUnassignedImports": true,
+                "pathGroupsExcludedImportTypes": ["type"],
             },
         ],
         "import/newline-after-import": ["error", {

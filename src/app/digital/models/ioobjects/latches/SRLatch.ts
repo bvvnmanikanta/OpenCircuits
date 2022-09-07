@@ -1,8 +1,8 @@
+import type {InputPort} from "digital/models/ports/InputPort";
+
 import {serializable} from "serialeazy";
 
 import {Positioner} from "core/models/ports/positioners/Positioner";
-
-import type {InputPort} from "digital/models/ports/InputPort";
 
 import {Latch} from "./Latch";
 

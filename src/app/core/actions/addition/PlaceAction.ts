@@ -1,5 +1,4 @@
-import type {Action} from "core/actions/Action";
-
+import type {Action}          from "core/actions/Action";
 import type {CircuitDesigner} from "core/models/CircuitDesigner";
 import type {Component}       from "core/models/Component";
 

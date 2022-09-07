@@ -1,3 +1,6 @@
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {CullableObject}    from "core/models";
+
 import {DEFAULT_THUMBNAIL_SIZE,
         THUMBNAIL_ZOOM_PADDING_RATIO} from "./Constants";
 
@@ -7,10 +10,6 @@ import {GetCameraFit} from "core/utils/ComponentUtils";
 
 import {DefaultTool} from "core/tools/DefaultTool";
 import {ToolManager} from "core/tools/ToolManager";
-
-import type {CullableObject} from "core/models";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {GetRenderFunc} from "./Rendering";
 

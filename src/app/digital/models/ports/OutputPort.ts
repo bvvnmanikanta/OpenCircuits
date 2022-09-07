@@ -1,13 +1,13 @@
+import type {DigitalWire} from "../index";
+import type {Vector}      from "Vector";
+
 import {serializable} from "serialeazy";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {Port} from "core/models/ports/Port";
 
 import {DigitalComponent} from "../index";
-
-import type {DigitalWire} from "../index";
 
 
 @serializable("DigitalOutputPort")

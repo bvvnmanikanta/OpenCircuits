@@ -1,4 +1,5 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo}      from "core/utils/CircuitInfo";
+import type {ModuleSubmitInfo} from "shared/containers/SelectionPopup/modules/inputs/ModuleInputField";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -8,7 +9,6 @@ import {Oscilloscope} from "digital/models/ioobjects";
 
 import {useSelectionProps} from "shared/containers/SelectionPopup/modules/useSelectionProps";
 
-import type {ModuleSubmitInfo}  from "shared/containers/SelectionPopup/modules/inputs/ModuleInputField";
 import {NumberModuleInputField} from "shared/containers/SelectionPopup/modules/inputs/NumberModuleInputField";
 
 

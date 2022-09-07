@@ -1,11 +1,11 @@
+import type {Action}  from "core/actions/Action";
+import type {Decoder} from "digital/models/ioobjects/other/Decoder";
+
 import {DEFAULT_SIZE} from "core/utils/Constants";
 
 import {V} from "Vector";
 
-import type {Action} from "core/actions/Action";
-
-import type {Decoder} from "digital/models/ioobjects/other/Decoder";
-import {Encoder}      from "digital/models/ioobjects/other/Encoder";
+import {Encoder} from "digital/models/ioobjects/other/Encoder";
 
 import {InputPortChangeAction}  from "./InputPortChangeAction";
 import {OutputPortChangeAction} from "./OutputPortChangeAction";

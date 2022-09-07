@@ -1,7 +1,11 @@
-import {Create} from "serialeazy";
-
+import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
+import type {Clock, Label}                             from "digital/models/ioobjects";
+import type {DigitalCircuitInfo}                       from "digital/utils/DigitalCircuitInfo";
 import type {OperatorFormat,
         OperatorFormatLabel} from "digital/utils/ExpressionParser/Constants/DataStructures";
+
+import {Create} from "serialeazy";
+
 import {FORMATS} from "digital/utils/ExpressionParser/Constants/Formats";
 
 import {OrganizeMinDepth} from "core/utils/ComponentOrganizers";
@@ -22,9 +26,7 @@ import {CreateDeselectAllAction,
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
-
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
-import {ExpressionToCircuit}     from "digital/utils/ExpressionParser";
+import {ExpressionToCircuit} from "digital/utils/ExpressionParser";
 
 import {GenerateTokens} from "digital/utils/ExpressionParser/GenerateTokens";
 
@@ -32,13 +34,9 @@ import {CreateICDataAction} from "digital/actions/CreateICDataAction";
 
 import {InputPortChangeAction} from "digital/actions/ports/InputPortChangeAction";
 
-import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
-import {DigitalObjectSet}                              from "digital/models";
+import {DigitalObjectSet} from "digital/models";
 
-import type {Clock, Label} from "digital/models/ioobjects";
-import {IC, ICData}        from "digital/models/ioobjects";
-
-
+import {IC, ICData} from "digital/models/ioobjects";
 
 
 export type ExprToCirGeneratorOptions = {

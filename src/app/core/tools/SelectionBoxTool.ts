@@ -1,18 +1,17 @@
-import type {Vector} from "Vector";
-import {V}           from "Vector";
-
-import {RectContains,
-        TransformContains} from "math/MathUtils";
-import {Transform} from "math/Transform";
-
 import type {CircuitInfo} from "core/utils/CircuitInfo";
-import {GetAllPorts}      from "core/utils/ComponentUtils";
 import type {Event}       from "core/utils/Events";
+import type {Vector}      from "Vector";
+
+import {V} from "Vector";
+
+import {RectContains, TransformContains} from "math/MathUtils";
+import {Transform}                       from "math/Transform";
+
+import {GetAllPorts} from "core/utils/ComponentUtils";
 
 import {GroupAction} from "core/actions/GroupAction";
 
-import {CreateDeselectAllAction,
-        CreateGroupSelectAction} from "core/actions/selection/SelectAction";
+import {CreateDeselectAllAction, CreateGroupSelectAction} from "core/actions/selection/SelectAction";
 
 
 export const SelectionBoxTool = (() => {

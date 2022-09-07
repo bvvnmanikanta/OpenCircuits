@@ -1,5 +1,6 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
+import type {EventHandler} from "../EventHandler";
+import type {CircuitInfo}  from "core/utils/CircuitInfo";
+import type {Event}        from "core/utils/Events";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -8,8 +9,6 @@ import {CreateDeleteGroupAction} from "core/actions/deletion/DeleteGroupActionFa
 import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
 
 import {IOObject} from "core/models";
-
-import type {EventHandler} from "../EventHandler";
 
 
 /**

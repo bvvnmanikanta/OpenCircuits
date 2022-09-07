@@ -1,17 +1,16 @@
+import type {Prop}      from "core/models/PropInfo";
+import type {InputPort} from "digital/models";
+import type {Vector}    from "Vector";
+
 import {serializable, serialize} from "serialeazy";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
 
-import type {Prop} from "core/models/PropInfo";
-
 import {ConstantSpacePositioner} from "core/models/ports/positioners/ConstantSpacePositioner";
-
-import type {InputPort} from "digital/models";
 
 import {TimedComponent} from "../TimedComponent";
 

@@ -1,8 +1,8 @@
-import {useEffect} from "react";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-
+import type {CircuitInfo}        from "core/utils/CircuitInfo";
 import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+
+import {useEffect} from "react";
 
 import {useSharedDispatch, useSharedSelector} from "shared/utils/hooks/useShared";
 

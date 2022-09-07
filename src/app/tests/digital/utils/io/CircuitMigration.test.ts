@@ -1,7 +1,7 @@
+import type {Circuit} from "core/models/Circuit";
+
 // TODO: Find out why Camera is being ignored and requiring a manual import
 import "math/Camera";
-
-import type {Circuit} from "core/models/Circuit";
 
 import {VersionConflictResolver} from "digital/utils/DigitalVersionConflictResolver";
 
@@ -18,8 +18,6 @@ import v3_1propsJson      from "./saves/v3.1_misc_properties.json";
 
 
 // TODO: add save 3 test for v3.1, also find out why it fails to load it
-
-
 describe("Save Migration Tests", () => {
     describe("v1.1 -> v2.1", () => {
         test("Save 1 - Muxes / ANDGates", () => {

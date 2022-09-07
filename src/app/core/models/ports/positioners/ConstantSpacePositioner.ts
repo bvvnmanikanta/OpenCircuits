@@ -1,9 +1,8 @@
-import {serializable} from "serialeazy";
-
 import type {Port} from "core/models/ports/Port";
 
-import {Dir,Positioner} from "core/models/ports/positioners/Positioner";
+import {serializable} from "serialeazy";
 
+import {type Dir, Positioner} from "core/models/ports/positioners/Positioner";
 
 
 @serializable("ConstantSpacePositioner")

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
-import {SaveFile}                from "shared/utils/Exporter";
+
+import {SaveFile} from "shared/utils/Exporter";
 
 import {useSharedDispatch, useSharedSelector} from "shared/utils/hooks/useShared";
 

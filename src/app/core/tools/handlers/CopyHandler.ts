@@ -1,6 +1,8 @@
+import type {EventHandler}          from "../EventHandler";
 import type {CircuitInfo}           from "core/utils/CircuitInfo";
-import {SerializeForCopy}           from "core/utils/ComponentUtils";
 import type {CopyPasteEvent, Event} from "core/utils/Events";
+
+import {SerializeForCopy} from "core/utils/ComponentUtils";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -9,8 +11,6 @@ import {CreateDeleteGroupAction} from "core/actions/deletion/DeleteGroupActionFa
 import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
 
 import {IOObject} from "core/models";
-
-import type {EventHandler} from "../EventHandler";
 
 
 export const CopyHandler: EventHandler = ({

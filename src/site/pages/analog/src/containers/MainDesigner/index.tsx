@@ -1,17 +1,17 @@
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {Cursor}            from "core/utils/CircuitInfo";
+
 import {useLayoutEffect, useState} from "react";
 
 import {HEADER_HEIGHT} from "shared/utils/Constants";
 
 import {V} from "Vector";
 
-import type {Cursor} from "core/utils/CircuitInfo";
-import {Input}       from "core/utils/Input";
+import {Input} from "core/utils/Input";
 
 import {CreateGroupPlaceAction} from "core/actions/addition/PlaceAction";
 
 import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {useWindowSize} from "shared/utils/hooks/useWindowSize";
 

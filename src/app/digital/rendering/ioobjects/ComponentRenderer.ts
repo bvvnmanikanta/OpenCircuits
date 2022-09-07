@@ -1,3 +1,8 @@
+import type {Component}   from "core/models/Component";
+import type {Renderer}    from "core/rendering/Renderer";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Transform}   from "math/Transform";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_BORDER_WIDTH,
         SELECTED_BORDER_COLOR,
@@ -5,22 +10,13 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import type {Transform} from "math/Transform";
+import {Images} from "core/utils/Images";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import {Images}           from "core/utils/Images";
-
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {IOLabelRenderer} from "core/rendering/renderers/IOLabelRenderer";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
-
-import type {Component} from "core/models/Component";
-
-
-
 
 import {PressableComponent} from "digital/models/ioobjects/PressableComponent";
 
@@ -43,7 +39,6 @@ import {Multiplexer}   from "digital/models/ioobjects/other/Multiplexer";
 import {LED}            from "digital/models/ioobjects/outputs/LED";
 import {Oscilloscope}   from "digital/models/ioobjects/outputs/Oscilloscope";
 import {SegmentDisplay} from "digital/models/ioobjects/outputs/SegmentDisplay";
-
 
 import {GateRenderer}           from "./gates/GateRenderer";
 import {ConstantNumberRenderer} from "./inputs/ConstantNumberRenderer";

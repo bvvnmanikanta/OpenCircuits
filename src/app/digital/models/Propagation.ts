@@ -1,6 +1,6 @@
-import {serializable} from "serialeazy";
-
 import type {DigitalComponent, DigitalWire} from "./index";
+
+import {serializable} from "serialeazy";
 
 
 @serializable("Propagation")

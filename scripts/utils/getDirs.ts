@@ -1,7 +1,7 @@
+import type {Choice} from "prompts";
+
 import {existsSync, readFileSync, readdirSync} from "node:fs";
 import path                                    from "node:path";
-
-import type {Choice} from "prompts";
 
 
 /**

@@ -1,11 +1,9 @@
+import type {Action}            from "core/actions/Action";
 import type {Selectable}        from "core/utils/Selectable";
 import type {SelectionsWrapper} from "core/utils/SelectionsWrapper";
 
-import type {Action} from "core/actions/Action";
-
 import {GroupAction}      from "../GroupAction";
 import {ReversableAction} from "../ReversableAction";
-
 
 
 export class SelectAction extends ReversableAction {

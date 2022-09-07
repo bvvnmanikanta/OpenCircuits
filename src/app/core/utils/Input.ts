@@ -1,16 +1,16 @@
+import type {Event}  from "./Events";
+import type {Key}    from "./Key";
+import type {Vector} from "Vector";
+
 import Hammer from "hammerjs";
 
 import {DRAG_TIME,
         LEFT_MOUSE_BUTTON,
         MIDDLE_MOUSE_BUTTON} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {CalculateMidpoint} from "math/MathUtils";
-
-import type {Event} from "./Events";
-import type {Key}   from "./Key";
 
 
 export type Listener = (event: Event) => void;

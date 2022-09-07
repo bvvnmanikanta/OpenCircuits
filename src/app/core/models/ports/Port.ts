@@ -1,14 +1,13 @@
+import type {Component}  from "core/models/Component";
+import type {Wire}       from "core/models/Wire";
+import type {Selectable} from "core/utils/Selectable";
+import type {Vector}     from "Vector";
+
 import {IO_PORT_LENGTH, IO_PORT_SELECT_RADIUS} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {CircleContains} from "math/MathUtils";
-
-import type {Selectable} from "core/utils/Selectable";
-
-import type {Component} from "core/models/Component";
-import type {Wire}      from "core/models/Wire";
 
 
 /**

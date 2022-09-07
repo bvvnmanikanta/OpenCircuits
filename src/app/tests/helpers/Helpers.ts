@@ -1,4 +1,9 @@
-import type {Action} from "core/actions/Action";
+import type {Action}                 from "core/actions/Action";
+import type {Wire}                   from "core/models";
+import type {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
+import type {DigitalComponent}       from "digital/models/DigitalComponent";
+import type {DigitalWire}            from "digital/models/DigitalWire";
+
 import {GroupAction} from "core/actions/GroupAction";
 
 import {ConnectionAction}       from "core/actions/addition/ConnectionAction";
@@ -6,13 +11,7 @@ import {CreateGroupPlaceAction} from "core/actions/addition/PlaceAction";
 
 import {CreateDeleteGroupAction} from "core/actions/deletion/DeleteGroupActionFactory";
 
-import type {Wire} from "core/models";
-
-import type {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
-import type {DigitalComponent}       from "digital/models/DigitalComponent";
-import type {DigitalWire}            from "digital/models/DigitalWire";
-import {LED, Switch}                 from "digital/models/ioobjects";
-
+import {LED, Switch} from "digital/models/ioobjects";
 
 
 export function GetHelpers(designer: DigitalCircuitDesigner) {

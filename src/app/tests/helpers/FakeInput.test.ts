@@ -1,5 +1,6 @@
 import type {Vector} from "Vector";
-import {V}           from "Vector";
+
+import {V} from "Vector";
 
 import {FakeInput} from "./FakeInput";
 

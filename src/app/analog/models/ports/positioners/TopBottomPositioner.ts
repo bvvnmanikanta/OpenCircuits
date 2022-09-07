@@ -1,13 +1,12 @@
+import type {AnalogPort} from "analog/models";
+
 import {serializable} from "serialeazy";
 
 import {IO_PORT_LENGTH} from "core/utils/Constants";
 
-
 import {V} from "Vector";
 
 import {Positioner} from "core/models/ports/positioners/Positioner";
-
-import type {AnalogPort} from "analog/models";
 
 
 @serializable("TopBottomPositioner")

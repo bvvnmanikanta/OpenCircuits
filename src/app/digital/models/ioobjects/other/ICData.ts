@@ -1,22 +1,20 @@
+import type {Component} from "core/models/Component";
+import type {IOObject}  from "core/models/IOObject";
+import type {Port}      from "core/models/ports/Port";
+import type {Vector}    from "Vector";
+
 import {serializable} from "serialeazy";
 
 import {DEFAULT_SIZE,
         GRID_SIZE,
         IO_PORT_LENGTH} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {GetNearestPointOnRect} from "math/MathUtils";
 import {Transform}             from "math/Transform";
 
-import {CopyGroup,
-        CreateGroup} from "core/utils/ComponentUtils";
-
-import type {Component} from "core/models/Component";
-import type {IOObject}  from "core/models/IOObject";
-
-import type {Port} from "core/models/ports/Port";
+import {CopyGroup, CreateGroup} from "core/utils/ComponentUtils";
 
 import {DigitalObjectSet} from "digital/models/DigitalObjectSet";
 

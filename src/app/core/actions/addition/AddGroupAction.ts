@@ -1,8 +1,6 @@
-import type {IOObjectSet} from "core/utils/ComponentUtils";
-
+import type {Action}          from "../Action";
 import type {CircuitDesigner} from "core/models/CircuitDesigner";
-
-import type {Action} from "../Action";
+import type {IOObjectSet}     from "core/utils/ComponentUtils";
 
 
 export class AddGroupAction implements Action {

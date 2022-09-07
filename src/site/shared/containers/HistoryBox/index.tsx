@@ -1,8 +1,8 @@
-import {useState} from "react";
-
+import type {Action}      from "core/actions/Action";
 import type {CircuitInfo} from "core/utils/CircuitInfo";
 
-import type {Action} from "core/actions/Action";
+import {useState} from "react";
+
 import {GroupAction} from "core/actions/GroupAction";
 
 import {useDocEvent}                          from "shared/utils/hooks/useDocEvent";

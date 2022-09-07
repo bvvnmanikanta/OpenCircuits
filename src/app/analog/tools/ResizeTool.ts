@@ -1,22 +1,20 @@
+import type {Oscilloscope}      from "analog/models/eeobjects";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {Action}            from "core/actions/Action";
+import type {Cursor}            from "core/utils/CircuitInfo";
+import type {Event}             from "core/utils/Events";
+
 import {LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
 import {V, Vector} from "Vector";
 
 import {Rect} from "math/Rect";
 
-import type {Cursor} from "core/utils/CircuitInfo";
-import type {Event}  from "core/utils/Events";
-
-import type {Action}       from "core/actions/Action";
 import {GroupAction}       from "core/actions/GroupAction";
 import {SetPropertyAction} from "core/actions/SetPropertyAction";
 import {ShiftAction}       from "core/actions/ShiftAction";
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
-
-import type {Oscilloscope} from "analog/models/eeobjects";
 
 import {FindEdge} from "./handlers/CursorHandler";
 

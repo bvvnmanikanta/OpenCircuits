@@ -1,20 +1,18 @@
+import type {DigitalWire}  from "./index";
+import type {Port}         from "core/models/ports/Port";
+import type {Prop}         from "core/models/PropInfo";
+import type {ClampedValue} from "math/ClampedValue";
+import type {Vector}       from "Vector";
+
 import {serialize} from "serialeazy";
 
-import type {Vector} from "Vector";
-
-import type {ClampedValue} from "math/ClampedValue";
-
 import {Component} from "core/models/Component";
-import type {Prop} from "core/models/PropInfo";
 
-import type {Port} from "core/models/ports/Port";
-import {PortSet}   from "core/models/ports/PortSets";
+import {PortSet} from "core/models/ports/PortSets";
 
 import {Positioner} from "core/models/ports/positioners/Positioner";
 
 import {DigitalCircuitDesigner, InputPort, OutputPort} from "./index";
-
-import type {DigitalWire} from "./index";
 
 
 export abstract class DigitalComponent extends Component {

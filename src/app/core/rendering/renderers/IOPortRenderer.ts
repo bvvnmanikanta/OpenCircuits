@@ -1,3 +1,6 @@
+import type {Port}     from "core/models/ports/Port";
+import type {Renderer} from "core/rendering/Renderer";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_FILL_COLOR,
         IO_PORT_BORDER_WIDTH,
@@ -6,13 +9,10 @@ import {DEFAULT_BORDER_COLOR,
         SELECTED_BORDER_COLOR,
         SELECTED_FILL_COLOR} from "core/utils/Constants";
 
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {Circle} from "core/rendering/shapes/Circle";
 import {Line}   from "core/rendering/shapes/Line";
-
-import type {Port} from "core/models/ports/Port";
 
 
 /**

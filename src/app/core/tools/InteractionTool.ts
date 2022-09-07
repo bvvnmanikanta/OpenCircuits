@@ -1,16 +1,14 @@
+import type {EventHandler} from "./EventHandler";
+import type {IOObject}     from "core/models";
+import type {CircuitInfo}  from "core/utils/CircuitInfo";
+import type {Event}        from "core/utils/Events";
+import type {Vector}       from "Vector";
+
 import {LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
-import {isPressable}      from "core/utils/Pressable";
-
-import type {IOObject} from "core/models";
+import {isPressable} from "core/utils/Pressable";
 
 import {DefaultTool} from "./DefaultTool";
-
-import type {EventHandler} from "./EventHandler";
 
 
 export class InteractionTool extends DefaultTool {

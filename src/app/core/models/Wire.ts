@@ -1,11 +1,14 @@
+import type {Component} from "./Component";
+import type {Node}      from "./Node";
+import type {Vector}    from "Vector";
+
 import {serialize} from "serialeazy";
 
 import {DEFAULT_SIZE,
         WIRE_SNAP_THRESHOLD,
         WIRE_THICKNESS} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {BezierCurve}    from "math/BezierCurve";
 import {BezierContains} from "math/MathUtils";
@@ -14,10 +17,6 @@ import {GenPropInfo} from "core/utils/PropInfoUtils";
 
 import {CullableObject} from "./CullableObject";
 import {Port}           from "./ports/Port";
-
-import type {Component} from "./Component";
-import type {Node}      from "./Node";
-
 
 
 const [Info, InitialInfo] = GenPropInfo({

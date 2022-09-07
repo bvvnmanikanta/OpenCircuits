@@ -1,9 +1,8 @@
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {Component}         from "core/models";
+
 import {useCallback} from "react";
 import {GetIDFor}    from "serialeazy";
-
-import type {Component} from "core/models";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {ItemNav} from "shared/containers/ItemNav";
 

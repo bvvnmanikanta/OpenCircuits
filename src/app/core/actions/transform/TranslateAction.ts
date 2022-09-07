@@ -1,8 +1,6 @@
-import type {Vector} from "Vector";
-
-import type {Action} from "core/actions/Action";
-
+import type {Action}    from "core/actions/Action";
 import type {Component} from "core/models/Component";
+import type {Vector}    from "Vector";
 
 import {SnapPos} from "./SnapUtils";
 

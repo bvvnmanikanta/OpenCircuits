@@ -1,11 +1,12 @@
+import type {ImageExportOptions} from "shared/utils/ImageExporter";
+
 import {useCallback, useEffect, useRef, useState} from "react";
 
 import {HEADER_HEIGHT} from "shared/utils/Constants";
 
 import {Clamp} from "math/MathUtils";
 
-import type {ImageExportOptions} from "shared/utils/ImageExporter";
-import {SaveImage}               from "shared/utils/ImageExporter";
+import {SaveImage} from "shared/utils/ImageExporter";
 
 import {useSharedDispatch, useSharedSelector} from "shared/utils/hooks/useShared";
 

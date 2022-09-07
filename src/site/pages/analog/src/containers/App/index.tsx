@@ -1,22 +1,20 @@
+import type {AnalogCircuitInfo}    from "analog/utils/AnalogCircuitInfo";
+import type {
+        ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+
 import {useCallback} from "react";
 
 import {CircuitMetadataBuilder} from "core/models/CircuitMetadata";
 
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
-
-import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
-
 import {useWindowSize} from "shared/utils/hooks/useWindowSize";
 
-import {ContextMenu}               from "shared/containers/ContextMenu";
-import {HistoryBox}                from "shared/containers/HistoryBox";
-import type {
-        ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
+import {ContextMenu}        from "shared/containers/ContextMenu";
+import {HistoryBox}         from "shared/containers/HistoryBox";
 import {ImageExporterPopup} from "shared/containers/ImageExporterPopup";
 import {LoginPopup}         from "shared/containers/LoginPopup";
 import {SelectionPopup}     from "shared/containers/SelectionPopup";
 import {SideNav}            from "shared/containers/SideNav";
-
 
 import {PositionModule} from "shared/containers/SelectionPopup/modules/PositionModule";
 import {PropertyModule} from "shared/containers/SelectionPopup/modules/PropertyModule";

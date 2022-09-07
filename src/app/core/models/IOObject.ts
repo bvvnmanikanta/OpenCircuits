@@ -1,11 +1,10 @@
+import type {Prop, PropInfo} from "core/models/PropInfo";
+import type {Selectable}     from "core/utils/Selectable";
+import type {Vector}         from "Vector";
+
 import {serialize} from "serialeazy";
 
-import type {Vector} from "Vector";
-
-import {Name}            from "core/utils/Name";
-import type {Selectable} from "core/utils/Selectable";
-
-import type {Prop, PropInfo} from "core/models/PropInfo";
+import {Name} from "core/utils/Name";
 
 
 export abstract class IOObject implements Selectable {

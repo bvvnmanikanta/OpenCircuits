@@ -1,9 +1,8 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
+import type {EventHandler} from "../EventHandler";
+import type {CircuitInfo}  from "core/utils/CircuitInfo";
+import type {Event}        from "core/utils/Events";
 
 import {CreateGroupSelectAction} from "core/actions/selection/SelectAction";
-
-import type {EventHandler} from "../EventHandler";
 
 
 export const SelectAllHandler: EventHandler = ({

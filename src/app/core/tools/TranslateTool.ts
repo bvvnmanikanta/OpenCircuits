@@ -1,12 +1,14 @@
+import type {Tool}        from "core/tools/Tool";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
+
 import {ARROW_TRANSLATE_DISTANCE_NORMAL,
         ARROW_TRANSLATE_DISTANCE_SMALL,
         LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
 import {V, Vector} from "Vector";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import {Snap}             from "core/utils/ComponentUtils";
-import type {Event}       from "core/utils/Events";
+import {Snap} from "core/utils/ComponentUtils";
 
 import {CopyGroupAction} from "core/actions/CopyGroupAction";
 import {GroupAction}     from "core/actions/GroupAction";
@@ -14,10 +16,7 @@ import {ShiftAction}     from "core/actions/ShiftAction";
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
-import type {Tool} from "core/tools/Tool";
-
 import {Component} from "core/models";
-
 
 
 export const TranslateTool: Tool = (() => {

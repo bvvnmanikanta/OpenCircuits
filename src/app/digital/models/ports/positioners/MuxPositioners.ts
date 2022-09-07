@@ -1,3 +1,6 @@
+import type {InputPort}  from "../InputPort";
+import type {OutputPort} from "../OutputPort";
+
 import {serializable} from "serialeazy";
 
 import {DEFAULT_SIZE, IO_PORT_LENGTH, MULTIPLEXER_HEIGHT_OFFSET} from "core/utils/Constants";
@@ -5,9 +8,6 @@ import {DEFAULT_SIZE, IO_PORT_LENGTH, MULTIPLEXER_HEIGHT_OFFSET} from "core/util
 import {V} from "Vector";
 
 import {Positioner} from "core/models/ports/positioners/Positioner";
-
-import type {InputPort}  from "../InputPort";
-import type {OutputPort} from "../OutputPort";
 
 
 @serializable("MuxSelectPositioner")

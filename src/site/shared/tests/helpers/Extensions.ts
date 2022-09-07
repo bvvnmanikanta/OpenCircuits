@@ -1,6 +1,6 @@
-import {screen} from "@testing-library/react";
-
 import type {Matcher} from "@testing-library/react";
+
+import {screen} from "@testing-library/react";
 
 
 declare global {

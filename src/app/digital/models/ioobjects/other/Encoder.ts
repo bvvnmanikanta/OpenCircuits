@@ -1,3 +1,6 @@
+import type {InputPort}  from "digital/models/ports/InputPort";
+import type {OutputPort} from "digital/models/ports/OutputPort";
+
 import {serializable} from "serialeazy";
 
 import {DEFAULT_SIZE} from "core/utils/Constants";
@@ -9,9 +12,6 @@ import {ClampedValue} from "math/ClampedValue";
 import {ConstantSpacePositioner} from "core/models/ports/positioners/ConstantSpacePositioner";
 
 import {DigitalComponent} from "digital/models/DigitalComponent";
-
-import type {InputPort}  from "digital/models/ports/InputPort";
-import type {OutputPort} from "digital/models/ports/OutputPort";
 
 
 @serializable("Encoder")

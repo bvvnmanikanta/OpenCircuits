@@ -1,10 +1,10 @@
+import type {Config}        from "./types";
+import type {Configuration} from "webpack";
+
 import path from "node:path";
 
 import HtmlWebpackPlugin     from "html-webpack-plugin";
 import InterpolateHtmlPlugin from "interpolate-html-plugin";
-
-import type {Config}        from "./types";
-import type {Configuration} from "webpack";
 
 
 /**

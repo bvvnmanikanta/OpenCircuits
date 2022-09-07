@@ -1,3 +1,7 @@
+import type {Renderer} from "core/rendering/Renderer";
+import type {IC}       from "digital/models/ioobjects/other/IC";
+import type {Camera}   from "math/Camera";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_BORDER_WIDTH,
         DEFAULT_FILL_COLOR,
@@ -6,14 +10,9 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import type {Camera} from "math/Camera";
-
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
-
-import type {IC} from "digital/models/ioobjects/other/IC";
 
 
 /**

@@ -1,5 +1,6 @@
-import {combineReducers} from "redux";
+import type {AppState} from ".";
 
+import {combineReducers} from "redux";
 
 import {circuitInfoReducer} from "shared/state/CircuitInfo";
 import {contextMenuReducer} from "shared/state/ContextMenu";
@@ -10,8 +11,6 @@ import {sideNavReducer}     from "shared/state/SideNav";
 import {userInfoReducer}    from "shared/state/UserInfo";
 
 import {simStateReducer} from "./Sim";
-
-import type {AppState} from ".";
 
 
 export const reducers = combineReducers<AppState>({

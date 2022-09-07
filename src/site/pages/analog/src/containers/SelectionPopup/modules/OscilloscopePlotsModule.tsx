@@ -1,6 +1,6 @@
-import {GroupAction} from "core/actions/GroupAction";
-
 import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo"
+
+import {GroupAction} from "core/actions/GroupAction";
 
 import {SetScopeConfigAction} from "analog/actions/SetScopeConfigAction";
 

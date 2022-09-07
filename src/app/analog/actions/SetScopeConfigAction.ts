@@ -1,6 +1,5 @@
-import type {Action} from "core/actions/Action";
-
 import type {Oscilloscope, ScopeConfig} from "analog/models/eeobjects";
+import type {Action}                    from "core/actions/Action";
 
 
 export class SetScopeConfigAction implements Action {

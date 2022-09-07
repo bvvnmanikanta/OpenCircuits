@@ -1,3 +1,7 @@
+import type {Oscilloscope}      from "analog/models/eeobjects";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {Renderer}          from "core/rendering/Renderer";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_BORDER_WIDTH,
         SELECTED_BORDER_COLOR,
@@ -8,15 +12,10 @@ import {V} from "Vector";
 import {linspace, linspaceDX} from "math/MathUtils";
 import {Margin, Rect}         from "math/Rect";
 
-import type {Renderer}   from "core/rendering/Renderer";
 import {Style}           from "core/rendering/Style";
 import {GRID_LINE_COLOR} from "core/rendering/Styles";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
-
-import type {Oscilloscope} from "analog/models/eeobjects";
 
 
 const GRAPH_LINE_WIDTH = 1;

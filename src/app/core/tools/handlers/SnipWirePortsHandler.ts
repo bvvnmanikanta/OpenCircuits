@@ -1,5 +1,7 @@
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
+import type {EventHandler} from "../EventHandler";
+import type {Node}         from "core/models";
+import type {CircuitInfo}  from "core/utils/CircuitInfo";
+import type {Event}        from "core/utils/Events";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -7,10 +9,7 @@ import {CreateGroupSnipAction} from "core/actions/addition/SplitWireAction";
 
 import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
 
-import type {Node} from "core/models";
-import {isNode}    from "core/models";
-
-import type {EventHandler} from "../EventHandler";
+import {isNode} from "core/models";
 
 
 export const SnipWirePortsHandler: EventHandler = ({

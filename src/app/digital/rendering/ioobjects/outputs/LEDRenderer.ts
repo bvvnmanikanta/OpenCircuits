@@ -1,3 +1,7 @@
+import type {Renderer} from "core/rendering/Renderer";
+import type {LED}      from "digital/models/ioobjects";
+import type {Camera}   from "math/Camera";
+
 import {blend, parseColor} from "svg2canvas";
 
 import {LED_LIGHT_INTENSITY,
@@ -6,16 +10,11 @@ import {LED_LIGHT_INTENSITY,
 
 import {V} from "Vector";
 
-import type {Camera} from "math/Camera";
-
 import {Images} from "core/utils/Images";
 
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {Circle} from "core/rendering/shapes/Circle";
-
-import type {LED} from "digital/models/ioobjects";
 
 
 /**

@@ -1,7 +1,8 @@
-import {V} from "Vector";
+import type {EventHandler} from "../EventHandler";
+import type {CircuitInfo}  from "core/utils/CircuitInfo";
+import type {Event}        from "core/utils/Events";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import type {Event}       from "core/utils/Events";
+import {V} from "Vector";
 
 import {CopyGroupAction} from "core/actions/CopyGroupAction";
 import {GroupAction}     from "core/actions/GroupAction";
@@ -12,8 +13,6 @@ import {CreateDeselectAllAction,
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
 import {IOObject} from "core/models";
-
-import type {EventHandler} from "../EventHandler";
 
 
 export const DuplicateHandler: EventHandler = ({

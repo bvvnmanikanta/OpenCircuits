@@ -1,6 +1,7 @@
-import {V} from "Vector";
+import type {ModuleSubmitInfo} from "./inputs/ModuleInputField";
+import type {CircuitInfo}      from "core/utils/CircuitInfo";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
+import {V} from "Vector";
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
@@ -8,8 +9,6 @@ import {Component} from "core/models";
 
 import {VectorModuleInputField} from "./inputs/VectorModuleInputField";
 import {useSelectionProps}      from "./useSelectionProps";
-
-import type {ModuleSubmitInfo} from "./inputs/ModuleInputField";
 
 
 type Props = {

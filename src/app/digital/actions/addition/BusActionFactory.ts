@@ -1,3 +1,5 @@
+import type {Component, Port} from "core/models";
+
 import {V} from "Vector";
 
 import {Transform} from "math/Transform";
@@ -7,8 +9,6 @@ import {GetAllPorts} from "core/utils/ComponentUtils";
 import {GroupAction} from "core/actions/GroupAction";
 
 import {ConnectionAction} from "core/actions/addition/ConnectionAction";
-
-import type {Component, Port} from "core/models";
 
 import {InputPort}  from "digital/models/ports/InputPort";
 import {OutputPort} from "digital/models/ports/OutputPort";

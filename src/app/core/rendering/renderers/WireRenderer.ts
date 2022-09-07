@@ -1,18 +1,16 @@
+import type {Wire}        from "core/models";
+import type {Renderer}    from "core/rendering/Renderer";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Color}       from "svg2canvas";
+
 import {blend, parseColor} from "svg2canvas";
 
 import {SELECTED_FILL_COLOR,
         WIRE_THICKNESS} from "core/utils/Constants";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {Curve} from "core/rendering/shapes/Curve";
-
-import type {Wire} from "core/models";
-
-import type {Color} from "svg2canvas";
 
 
 // @TODO @leon - Move this function to "svg2canvas"

@@ -1,8 +1,7 @@
+import type {Shape}  from "./Shape";
 import type {Vector} from "Vector";
 
 import {BezierCurve} from "math/BezierCurve";
-
-import type {Shape} from "./Shape";
 
 
 /**

@@ -1,3 +1,7 @@
+import type {Port}          from "core/models";
+import type {Event}         from "core/utils/Events";
+import type {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
+
 import {IO_PORT_LENGTH, LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
 import {V} from "Vector";
@@ -5,11 +9,6 @@ import {V} from "Vector";
 import {GetNearestPointOnRect} from "math/MathUtils";
 
 import {PortContains} from "core/utils/ComponentUtils";
-import type {Event}   from "core/utils/Events";
-
-import type {Port} from "core/models";
-
-import type {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
 
 
 export const ICPortTool = (() => {

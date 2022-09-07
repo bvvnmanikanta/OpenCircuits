@@ -1,14 +1,11 @@
+import type {Port}      from "core/models";
+import type {Component} from "core/models/Component";
+import type {Renderer}  from "core/rendering/Renderer";
+import type {Camera}    from "math/Camera";
+
 import {IO_LABEL_DIR_PADDING, IO_LABEL_VERTICAL_TEXT_PADDING} from "core/utils/Constants";
 
 import {V, Vector} from "Vector";
-
-import type {Camera} from "math/Camera";
-
-import type {Renderer} from "core/rendering/Renderer";
-
-import type {Port} from "core/models";
-
-import type {Component} from "core/models/Component";
 
 
 /**

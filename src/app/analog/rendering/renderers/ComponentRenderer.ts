@@ -1,3 +1,8 @@
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {Component}         from "core/models/Component";
+import type {Renderer}          from "core/rendering/Renderer";
+import type {Transform}         from "math/Transform";
+
 import {DEFAULT_BORDER_COLOR,
         DEFAULT_BORDER_WIDTH,
         SELECTED_BORDER_COLOR,
@@ -5,22 +10,14 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import type {Transform} from "math/Transform";
-
 import {Images} from "core/utils/Images";
 
-
-import type {Renderer} from "core/rendering/Renderer";
-import {Style}         from "core/rendering/Style";
+import {Style} from "core/rendering/Style";
 
 import {IOLabelRenderer} from "core/rendering/renderers/IOLabelRenderer";
 import {IOPortRenderer}  from "core/rendering/renderers/IOPortRenderer";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
-
-import type {Component} from "core/models/Component";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {Label, Oscilloscope} from "analog/models/eeobjects";
 

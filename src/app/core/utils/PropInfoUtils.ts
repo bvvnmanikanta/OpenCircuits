@@ -1,7 +1,6 @@
-import type {Vector} from "Vector";
-
 import type {BooleanPropInfo, ButtonPropInfo, ColorPropInfo, NumberPropInfo, NumberSelectPropInfo,
-        Prop, PropInfo, Props, StringPropInfo, StringSelectPropInfo, VectorPropInfo} from "core/models/PropInfo";
+             Prop, PropInfo, Props, StringPropInfo, StringSelectPropInfo, VectorPropInfo} from "core/models/PropInfo";
+import type {Vector} from "Vector";
 
 
 const merge = (a1: PropInfoLayout["isActive"], a2: PropInfoLayout["isActive"]): PropInfoLayout["isActive"] => {

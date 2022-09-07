@@ -1,14 +1,13 @@
+import type {Port, Wire}  from "core/models";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
+import type {Vector}      from "Vector";
+
 import {IO_PORT_RADIUS, LEFT_MOUSE_BUTTON, RIGHT_MOUSE_BUTTON} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-
-import type {CircuitInfo} from "core/utils/CircuitInfo";
-import {GetAllPorts}      from "core/utils/ComponentUtils";
-import type {Event}       from "core/utils/Events";
+import {GetAllPorts} from "core/utils/ComponentUtils";
 
 import {ConnectionAction} from "core/actions/addition/ConnectionAction";
-
-import type {Port, Wire} from "core/models";
 
 
 export const WiringTool = (() => {

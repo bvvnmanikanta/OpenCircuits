@@ -1,6 +1,5 @@
+import type {Shape}  from "./Shape";
 import type {Vector} from "Vector";
-
-import type {Shape} from "./Shape";
 
 
 /**

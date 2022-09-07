@@ -1,4 +1,6 @@
 /* eslint-disable jest/no-jest-import */
+import type {Arguments} from "yargs";
+
 import path from "node:path";
 
 import chalk   from "chalk";
@@ -10,8 +12,6 @@ import yargs   from "yargs/yargs";
 import getEnv     from "./utils/env.js";
 import getAliases from "./utils/getAliases.js";
 import getDirs    from "./utils/getDirs.js";
-
-import type {Arguments} from "yargs";
 
 
 // Do this as the first thing so that any code reading it knows the right env.

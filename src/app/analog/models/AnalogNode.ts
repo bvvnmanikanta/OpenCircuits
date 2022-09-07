@@ -1,18 +1,17 @@
+import type {AnalogPort} from "./index";
+import type {Node}       from "core/models/Node";
+import type {Vector}     from "Vector";
+
 import {serializable} from "serialeazy";
 
 import {IO_PORT_RADIUS} from "core/utils/Constants";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {ClampedValue}   from "math/ClampedValue";
 import {CircleContains} from "math/MathUtils";
 
-import type {Node} from "core/models/Node";
-
 import {AnalogComponent} from "./index";
-
-import type {AnalogPort} from "./index";
 
 
 @serializable("AnalogNode")

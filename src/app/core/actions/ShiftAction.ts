@@ -1,9 +1,7 @@
-import type {Action} from "core/actions/Action";
-
+import type {Action}          from "core/actions/Action";
 import type {CircuitDesigner} from "core/models";
-
-import type {Component} from "core/models/Component";
-import type {Wire}      from "core/models/Wire";
+import type {Component}       from "core/models/Component";
+import type {Wire}            from "core/models/Wire";
 
 
 export class ShiftAction implements Action {

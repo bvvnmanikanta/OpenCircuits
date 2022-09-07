@@ -1,17 +1,15 @@
+import type {DigitalComponent} from "./index";
+import type {Port}             from "core/models";
+
 import {serializable, serialize} from "serialeazy";
 
 import {DEFAULT_ON_COLOR} from "core/utils/Constants";
-
-import type {Port} from "core/models";
 
 import {Wire} from "core/models/Wire";
 
 import {DigitalNode} from "./ioobjects/other/DigitalNode";
 
 import {InputPort, OutputPort} from "./index";
-
-import type {DigitalComponent} from "./index";
-
 
 
 @serializable("DigitalWire")

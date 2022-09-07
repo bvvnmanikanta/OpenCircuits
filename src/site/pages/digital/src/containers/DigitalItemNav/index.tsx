@@ -1,22 +1,22 @@
+import type {Component}                      from "core/models";
+import type {DigitalComponent, DigitalEvent} from "digital/models";
+import type {DigitalCircuitInfo}             from "digital/utils/DigitalCircuitInfo";
+import type {ItemNavItem, ItemNavSection}    from "shared/containers/ItemNav";
+
 import {useCallback, useEffect, useMemo, useState} from "react";
 import {Create, GetIDFor}                          from "serialeazy";
 
-import type {Component} from "core/models";
-
-import {IsICDataInUse}           from "digital/utils/ComponentUtils";
-import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import {IsICDataInUse} from "digital/utils/ComponentUtils";
 
 import {DeleteICDataAction} from "digital/actions/DeleteICDataAction";
 
-import type {DigitalComponent, DigitalEvent} from "digital/models";
-import {InputPort, OutputPort}               from "digital/models";
+import {InputPort, OutputPort} from "digital/models";
 
 import {IC} from "digital/models/ioobjects";
 
 import {useWindowKeyDownEvent} from "shared/utils/hooks/useKeyDownEvent";
 
-import type {ItemNavItem, ItemNavSection} from "shared/containers/ItemNav";
-import {ItemNav}                          from "shared/containers/ItemNav";
+import {ItemNav} from "shared/containers/ItemNav";
 
 import {SmartPlaceOptions} from "site/digital/utils/DigitalCreate";
 

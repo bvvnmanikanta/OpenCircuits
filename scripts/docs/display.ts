@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/no-nested-template-literals */
-import {escapeStr} from "./utils.js";
-
 import type {Class, Method, MethodSignature, TSDoc, Types} from "./model";
+
+import {escapeStr} from "./utils.js";
 
 
 const Colors = {

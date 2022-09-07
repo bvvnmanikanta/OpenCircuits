@@ -1,15 +1,16 @@
+import type {DigitalEvent}       from "digital/models";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+
 import {useEffect, useMemo, useState} from "react";
 import {GetIDFor}                     from "serialeazy";
 
 import {GroupAction} from "core/actions/GroupAction";
 
-import type {DigitalCircuitInfo}                  from "digital/utils/DigitalCircuitInfo";
 import {GenerateReplacementList, GetReplacements} from "digital/utils/ReplaceDigitalComponentHelpers";
 
 import {CreateReplaceDigitalComponentAction} from "digital/actions/ReplaceDigitalComponentActionFactory";
 
-import type {DigitalEvent} from "digital/models";
-import {DigitalComponent}  from "digital/models";
+import {DigitalComponent} from "digital/models";
 
 import {IC} from "digital/models/ioobjects";
 

@@ -1,7 +1,7 @@
-import type {CircuitMetadata} from "core/models/CircuitMetadata";
-
+import type {CircuitMetadata}    from "core/models/CircuitMetadata";
 import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
-import {Request}                 from "shared/utils/Request";
+
+import {Request} from "shared/utils/Request";
 
 import {useSharedDispatch, useSharedSelector} from "shared/utils/hooks/useShared";
 

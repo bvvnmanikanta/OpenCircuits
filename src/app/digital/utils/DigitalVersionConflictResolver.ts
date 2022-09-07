@@ -1,6 +1,5 @@
 /* eslint-disable key-spacing */
-import type {Circuit, ContentsData} from "core/models/Circuit";
-
+import type {Circuit, ContentsData}  from "core/models/Circuit";
 import type {DigitalCircuitDesigner} from "digital/models";
 
 import {Button, IC, Switch} from "digital/models/ioobjects";

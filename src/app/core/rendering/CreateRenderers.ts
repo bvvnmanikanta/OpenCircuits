@@ -1,14 +1,6 @@
-
-
-// export class CircuitRenderer {
-
+import type {Renderer}    from "./Renderer"
 import type {CircuitInfo} from "core/utils/CircuitInfo"
 
-import type {Renderer} from "./Renderer"
-
-
-
-// }
 
 type RendererInstance<T> = {
     render: (renderer: Renderer, info: CircuitInfo, extra?: T) => void;

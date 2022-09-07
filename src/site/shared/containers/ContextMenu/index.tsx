@@ -1,12 +1,13 @@
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Vector}      from "core/utils/math/Vector";
+
 import {useEffect, useRef, useState} from "react";
 
 import {HEADER_HEIGHT} from "shared/utils/Constants";
 
-import type {CircuitInfo} from "core/utils/CircuitInfo";
 import {SerializeForCopy} from "core/utils/ComponentUtils";
 
-import type {Vector} from "core/utils/math/Vector";
-import {V}           from "core/utils/math/Vector";
+import {V} from "core/utils/math/Vector";
 
 import {GroupAction} from "core/actions/GroupAction";
 

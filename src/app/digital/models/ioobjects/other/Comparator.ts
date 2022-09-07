@@ -1,3 +1,5 @@
+import type {OutputPort} from "digital/models/ports/OutputPort";
+
 import {serializable} from "serialeazy";
 
 import {DEFAULT_SIZE} from "core/utils/Constants";
@@ -12,10 +14,7 @@ import {PortsToDecimal} from "digital/utils/ComponentUtils";
 
 import {DigitalComponent} from "digital/models/DigitalComponent";
 
-import type {OutputPort} from "digital/models/ports/OutputPort";
-
 import {ComparatorPositioner} from "digital/models/ports/positioners/ComparatorPositioner";
-
 
 
 @serializable("Comparator")

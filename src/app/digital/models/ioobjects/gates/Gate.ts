@@ -1,16 +1,15 @@
-import {serialize} from "serialeazy";
+import type {Positioner} from "core/models/ports/positioners/Positioner"
+import type {InputPort}  from "digital/models/ports/InputPort";
+import type {Vector}     from "Vector";
 
-import type {Vector} from "Vector";
+import {serialize} from "serialeazy";
 
 import {ClampedValue} from "math/ClampedValue";
 
 import {Name} from "core/utils/Name";
 
-import type {Positioner} from "core/models/ports/positioners/Positioner"
-
 import {DigitalComponent} from "digital/models/DigitalComponent";
 
-import type {InputPort} from "digital/models/ports/InputPort";
 
 //
 // Gate is an abstract superclass for simple logical gates.

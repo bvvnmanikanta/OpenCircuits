@@ -1,7 +1,10 @@
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {IOObject}          from "core/models";
+import type {Vector}            from "Vector";
+
 import {Deserialize} from "serialeazy";
 
-import type {Vector} from "Vector";
-import {V}           from "Vector";
+import {V} from "Vector";
 
 import {IOObjectSet} from "core/utils/ComponentUtils";
 
@@ -13,10 +16,7 @@ import {CreateDeselectAllAction, CreateGroupSelectAction} from "core/actions/sel
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
-import type {IOObject} from "core/models";
-import {Component}     from "core/models";
-
-import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import {Component} from "core/models";
 
 
 /**

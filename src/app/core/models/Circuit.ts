@@ -1,15 +1,15 @@
+import type {CircuitMetadataDef} from "./CircuitMetadata";
+
 import {Serialize, serializable} from "serialeazy";
 
 import {Camera} from "math/Camera";
 
 import {CircuitDesigner} from "./CircuitDesigner";
 
-import type {CircuitMetadataDef} from "./CircuitMetadata";
 
 // THIS IS ALL A HACK
 // TODO: improve serialeazy to allow specifying set ids for reference
 //  so that it's easier to interface with and we can just Deserialize<Circuit>
-
 @serializable("ContentsData")
 export class ContentsData {
     public designer: CircuitDesigner;

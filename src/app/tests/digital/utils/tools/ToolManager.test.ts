@@ -1,3 +1,6 @@
+import type {DefaultTool} from "core/tools/DefaultTool";
+import type {Tool}        from "core/tools/Tool";
+
 import {ROTATION_CIRCLE_RADIUS} from "core/utils/Constants";
 
 import {V} from "Vector";
@@ -6,13 +9,10 @@ import "test/helpers/Extensions";
 import {GetHelpers} from "test/helpers/Helpers";
 import {Setup}      from "test/helpers/Setup";
 
-import type {DefaultTool} from "core/tools/DefaultTool";
-import {RotateTool}       from "core/tools/RotateTool";
-import type {Tool}        from "core/tools/Tool";
-import {WiringTool}       from "core/tools/WiringTool";
+import {RotateTool} from "core/tools/RotateTool";
+import {WiringTool} from "core/tools/WiringTool";
 
 import {ANDGate, LED, Switch} from "digital/models/ioobjects";
-
 
 
 describe("Tool Manager", () => {

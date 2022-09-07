@@ -1,6 +1,8 @@
-import {CreateDrawingFromSVG, SVGDrawing} from "svg2canvas";
+import {CreateDrawingFromSVG} from "svg2canvas";
 
 import {DEBUG_NO_FILL} from "core/utils/Constants";
+
+import type {SVGDrawing} from "svg2canvas";
 
 
 export const Images = (() => {

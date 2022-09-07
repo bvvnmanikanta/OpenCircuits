@@ -1,4 +1,4 @@
-import {AuthType} from "./AuthTypes";
+import type {AuthType} from "./AuthTypes";
 
 
 export interface AuthState {

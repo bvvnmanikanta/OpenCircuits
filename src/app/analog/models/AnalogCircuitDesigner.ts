@@ -3,9 +3,11 @@ import {serializable, serialize} from "serialeazy";
 import {IOObjectSet} from "core/utils/ComponentUtils";
 
 import {CircuitDesigner} from "core/models/CircuitDesigner";
-import {IOObject}        from "core/models/IOObject";
+import type {IOObject}   from "core/models/IOObject";
 
-import {AnalogComponent, AnalogPort, AnalogWire} from "./index";
+import {AnalogComponent, AnalogWire} from "./index";
+
+import type {AnalogPort} from "./index";
 
 
 

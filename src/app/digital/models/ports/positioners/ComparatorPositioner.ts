@@ -2,7 +2,7 @@ import {serializable} from "serialeazy";
 
 import {ConstantSpacePositioner} from "core/models/ports/positioners/ConstantSpacePositioner";
 
-import {InputPort} from "digital/models";
+import type {InputPort} from "digital/models";
 
 
 @serializable("ComparatorPositioner")

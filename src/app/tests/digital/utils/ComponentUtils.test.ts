@@ -3,9 +3,9 @@ import {CopyGroup, CreateGroup,
 
 import {GetInvertedGate} from "digital/utils/ComponentUtils";
 
-import {DigitalComponent} from "digital/models/DigitalComponent";
-import {DigitalObjectSet} from "digital/models/DigitalObjectSet";
-import {DigitalWire}      from "digital/models/DigitalWire";
+import type {DigitalComponent} from "digital/models/DigitalComponent";
+import {DigitalObjectSet}      from "digital/models/DigitalObjectSet";
+import {DigitalWire}           from "digital/models/DigitalWire";
 
 import {ANDGate} from "digital/models/ioobjects/gates/ANDGate";
 import {ORGate}  from "digital/models/ioobjects/gates/ORGate";

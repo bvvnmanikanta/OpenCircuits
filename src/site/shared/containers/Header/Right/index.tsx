@@ -1,17 +1,19 @@
 import {useState} from "react";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
-import {DownloadMenuDropdown}      from "./DownloadMenuDropdown";
-import {OpenFileButton}            from "./OpenFileButton";
-import {SettingsMenu}              from "./SettingsMenu";
-import {SignInOutButtons}          from "./SignInOutButtons";
-import {TutorialDropdown}          from "./TutorialDropdown";
-import {UtilitiesDropdown,Utility} from "./UtilitiesDropdown";
+import {DownloadMenuDropdown} from "./DownloadMenuDropdown";
+import {OpenFileButton}       from "./OpenFileButton";
+import {SettingsMenu}         from "./SettingsMenu";
+import {SignInOutButtons}     from "./SignInOutButtons";
+import {TutorialDropdown}     from "./TutorialDropdown";
+import {UtilitiesDropdown}    from "./UtilitiesDropdown";
 
 import "./index.scss";
+
+import type {Utility} from "./UtilitiesDropdown";
 
 
 type Props = {

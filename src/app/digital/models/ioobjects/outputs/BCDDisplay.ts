@@ -7,7 +7,7 @@ import {Positioner} from "core/models/ports/positioners/Positioner";
 
 import {PortsToDecimal} from "digital/utils/ComponentUtils";
 
-import {InputPort} from "digital/models/ports/InputPort";
+import type {InputPort} from "digital/models/ports/InputPort";
 
 import {BCDFont}        from "./BCDFont";
 import {SegmentDisplay} from "./SegmentDisplay";

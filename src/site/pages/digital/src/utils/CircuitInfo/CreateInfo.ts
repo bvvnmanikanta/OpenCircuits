@@ -1,16 +1,16 @@
 import {Camera} from "math/Camera";
 
-import {Input}             from "core/utils/Input";
+import type {Input}        from "core/utils/Input";
 import {RenderQueue}       from "core/utils/RenderQueue";
 import {SelectionsWrapper} from "core/utils/SelectionsWrapper";
 
 import {HistoryManager} from "core/actions/HistoryManager";
 
-import {DefaultTool} from "core/tools/DefaultTool";
-import {Tool}        from "core/tools/Tool";
-import {ToolManager} from "core/tools/ToolManager";
+import type {DefaultTool} from "core/tools/DefaultTool";
+import type {Tool}        from "core/tools/Tool";
+import {ToolManager}      from "core/tools/ToolManager";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
 import {DigitalCircuitDesigner} from "digital/models";
 

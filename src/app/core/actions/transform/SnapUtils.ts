@@ -1,6 +1,6 @@
 import {WIRE_SNAP_THRESHOLD} from "core/utils/Constants";
 
-import {Component} from "core/models";
+import type {Component} from "core/models";
 
 
 /**

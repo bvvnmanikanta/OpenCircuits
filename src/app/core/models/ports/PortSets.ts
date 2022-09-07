@@ -4,7 +4,7 @@ import {ClampedValue} from "math/ClampedValue";
 
 import {Component} from "core/models/Component";
 
-import {Port} from "core/models/ports/Port";
+import type {Port} from "core/models/ports/Port";
 
 import {Positioner} from "./positioners/Positioner";
 

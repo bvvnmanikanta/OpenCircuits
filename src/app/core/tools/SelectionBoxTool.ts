@@ -1,12 +1,13 @@
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {RectContains,
         TransformContains} from "math/MathUtils";
 import {Transform} from "math/Transform";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {GetAllPorts} from "core/utils/ComponentUtils";
-import {Event}       from "core/utils/Events";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import {GetAllPorts}      from "core/utils/ComponentUtils";
+import type {Event}       from "core/utils/Events";
 
 import {GroupAction} from "core/actions/GroupAction";
 

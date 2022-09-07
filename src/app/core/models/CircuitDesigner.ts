@@ -1,9 +1,9 @@
-import {IOObjectSet} from "core/utils/ComponentUtils";
+import type {IOObjectSet} from "core/utils/ComponentUtils";
 
-import {Component} from "./Component";
-import {IOObject}  from "./IOObject";
-import {Port}      from "./ports/Port";
-import {Wire}      from "./Wire";
+import type {Component} from "./Component";
+import type {IOObject}  from "./IOObject";
+import type {Port}      from "./ports/Port";
+import type {Wire}      from "./Wire";
 
 
 export abstract class CircuitDesigner {

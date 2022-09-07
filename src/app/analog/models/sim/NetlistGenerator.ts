@@ -2,14 +2,14 @@ import {CreateGraph, IOObjectSet} from "core/utils/ComponentUtils";
 
 import {isNode} from "core/models";
 
-import {AnalogCircuitDesigner} from "../AnalogCircuitDesigner";
-import {AnalogComponent}       from "../AnalogComponent";
-import {AnalogNode}            from "../AnalogNode";
-import {AnalogWire}            from "../AnalogWire";
-import {Ground}                from "../eeobjects";
-import {AnalogPort}            from "../ports";
+import {AnalogNode} from "../AnalogNode";
+import {AnalogWire} from "../AnalogWire";
+import {Ground}     from "../eeobjects";
+import {AnalogPort} from "../ports";
 
-import {Netlist, NetlistAnalysis} from "./Netlist";
+import type {AnalogCircuitDesigner}    from "../AnalogCircuitDesigner";
+import type {AnalogComponent}          from "../AnalogComponent";
+import type {Netlist, NetlistAnalysis} from "./Netlist";
 
 
 type PathPart = AnalogWire | AnalogNode | AnalogPort; // <--- PORT !!

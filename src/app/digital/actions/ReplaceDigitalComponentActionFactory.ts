@@ -1,4 +1,4 @@
-import {SelectionsWrapper} from "core/utils/SelectionsWrapper";
+import type {SelectionsWrapper} from "core/utils/SelectionsWrapper";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -11,7 +11,8 @@ import {TranslateAction} from "core/actions/transform/TranslateAction";
 
 import {CreateDigitalComponent, GetPortChangeAction} from "digital/utils/ReplaceDigitalComponentHelpers";
 
-import {DigitalCircuitDesigner, DigitalComponent, InputPort, OutputPort} from "digital/models";
+import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
+import {InputPort, OutputPort}                         from "digital/models";
 
 
 /**

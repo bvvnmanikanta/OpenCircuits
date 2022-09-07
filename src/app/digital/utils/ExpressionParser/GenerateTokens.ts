@@ -1,4 +1,4 @@
-import {InputToken, OperatorFormat, Token, TokenType} from "./Constants/DataStructures";
+import type {InputToken, OperatorFormat, Token, TokenType} from "./Constants/DataStructures";
 
 import {SubStrEquals} from "core/utils/StringUtils";
 

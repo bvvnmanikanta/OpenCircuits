@@ -4,9 +4,9 @@ import {ARROW_TRANSLATE_DISTANCE_NORMAL,
 
 import {V, Vector} from "Vector";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Snap}        from "core/utils/ComponentUtils";
-import {Event}       from "core/utils/Events";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import {Snap}             from "core/utils/ComponentUtils";
+import type {Event}       from "core/utils/Events";
 
 import {CopyGroupAction} from "core/actions/CopyGroupAction";
 import {GroupAction}     from "core/actions/GroupAction";
@@ -14,7 +14,7 @@ import {ShiftAction}     from "core/actions/ShiftAction";
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
-import {Tool} from "core/tools/Tool";
+import type {Tool} from "core/tools/Tool";
 
 import {Component} from "core/models";
 

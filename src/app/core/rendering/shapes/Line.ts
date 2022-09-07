@@ -1,6 +1,6 @@
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {Shape} from "./Shape";
+import type {Shape} from "./Shape";
 
 
 /**

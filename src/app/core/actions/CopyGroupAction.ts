@@ -1,12 +1,13 @@
-import {Transform} from "math/Transform";
+import type {Transform} from "math/Transform";
 
-import {CopyGroup,
+import type {
         IOObjectSet} from "core/utils/ComponentUtils";
+import {CopyGroup} from "core/utils/ComponentUtils";
 
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
-import {CircuitDesigner} from "core/models/CircuitDesigner";
-import {IOObject}        from "core/models/IOObject";
+import type {CircuitDesigner} from "core/models/CircuitDesigner";
+import type {IOObject}        from "core/models/IOObject";
 
 // TODO: Change this terribleness
 export class CopyGroupAction implements Action {

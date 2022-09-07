@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-import {Key} from "core/utils/Key";
+import type {Key} from "core/utils/Key";
 
 import {useDocEvent} from "./useDocEvent";
 

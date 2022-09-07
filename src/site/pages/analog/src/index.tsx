@@ -3,7 +3,7 @@ import ReactDOM                       from "react-dom";
 import ReactGA                        from "react-ga";
 import {Provider}                     from "react-redux";
 import {applyMiddleware, createStore} from "redux";
-import thunk, {ThunkMiddleware}       from "redux-thunk";
+import thunk                          from "redux-thunk";
 
 import {DEV_CACHED_CIRCUIT_FILE} from "shared/utils/Constants";
 
@@ -38,7 +38,7 @@ import {CursorHandler} from "analog/tools/handlers/CursorHandler";
 
 import "analog/models/eeobjects";
 
-import {NGSpiceLib} from "analog/models/sim/lib/NGSpiceLib";
+import type {NGSpiceLib} from "analog/models/sim/lib/NGSpiceLib";
 
 import {GetCookie}     from "shared/utils/Cookies";
 import {LoadingScreen} from "shared/utils/LoadingScreen";
@@ -51,15 +51,17 @@ import {SetCircuitSaved} from "shared/state/CircuitInfo";
 
 import {Login} from "shared/state/thunks/User";
 
-import {App}                from "./containers/App";
-import NGSpice              from "./lib/ngspice.wasm";
-import {AppState, AppStore} from "./state";
-import {AllActions}         from "./state/actions";
-import {reducers}           from "./state/reducers";
-import {AnalogPaste}        from "./utils/AnalogPaste";
-import {Setup}              from "./utils/CircuitInfo/Setup";
+import {App}         from "./containers/App";
+import NGSpice       from "./lib/ngspice.wasm";
+import {reducers}    from "./state/reducers";
+import {AnalogPaste} from "./utils/AnalogPaste";
+import {Setup}       from "./utils/CircuitInfo/Setup";
 
 import ImageFiles from "./data/images.json";
+
+import type {AppState, AppStore} from "./state";
+import type {AllActions}         from "./state/actions";
+import type {ThunkMiddleware}    from "redux-thunk";
 
 
 async function Init(): Promise<void> {

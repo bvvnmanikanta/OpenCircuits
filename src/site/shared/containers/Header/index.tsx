@@ -1,8 +1,8 @@
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
-import {Utility} from "shared/containers/Header/Right/UtilitiesDropdown";
+import type {Utility} from "shared/containers/Header/Right/UtilitiesDropdown";
 
 import {HeaderLeft}  from "./Left";
 import {HeaderRight} from "./Right";

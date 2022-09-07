@@ -1,4 +1,5 @@
-import {Unit, UnitKey, UnitNumberInfo} from "core/utils/Units";
+import type {UnitKey}         from "core/utils/Units";
+import {Unit, UnitNumberInfo} from "core/utils/Units";
 
 
 export const VoltageInfo = (key: string, label: string, initial = 0, initialU: UnitKey = " ") => UnitNumberInfo(

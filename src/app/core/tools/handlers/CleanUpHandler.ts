@@ -1,6 +1,6 @@
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Snap}        from "core/utils/ComponentUtils";
-import {Event}       from "core/utils/Events";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import {Snap}             from "core/utils/ComponentUtils";
+import type {Event}       from "core/utils/Events";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -9,7 +9,7 @@ import {TranslateAction} from "core/actions/transform/TranslateAction";
 
 import {Component} from "core/models";
 
-import {EventHandler} from "../EventHandler";
+import type {EventHandler} from "../EventHandler";
 
 
 export const CleanUpHandler: EventHandler = ({

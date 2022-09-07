@@ -1,9 +1,10 @@
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {Transform} from "math/Transform";
 
-import {IOObject} from "core/models/IOObject"
-import {Prop}     from "core/models/PropInfo";
+import {IOObject}  from "core/models/IOObject"
+import type {Prop} from "core/models/PropInfo";
 
 
 export abstract class CullableObject extends IOObject {

@@ -1,4 +1,4 @@
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
 
 type DropHandler = (pos: Vector, ...data: unknown[]) => void;

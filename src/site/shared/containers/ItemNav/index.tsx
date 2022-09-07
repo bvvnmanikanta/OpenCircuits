@@ -2,12 +2,13 @@ import {useCallback, useEffect, useMemo, useState} from "react";
 
 import {ITEMNAV_HEIGHT, ITEMNAV_WIDTH, RIGHT_MOUSE_BUTTON} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {Clamp} from "math/MathUtils";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Selectable}  from "core/utils/Selectable";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Selectable}  from "core/utils/Selectable";
 
 import {CreateDeleteGroupAction} from "core/actions/deletion/DeleteGroupActionFactory";
 

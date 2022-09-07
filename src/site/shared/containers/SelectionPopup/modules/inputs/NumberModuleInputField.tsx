@@ -2,7 +2,9 @@ import {Clamp} from "math/MathUtils";
 
 import {NumberInputField} from "shared/components/InputField";
 
-import {SharedModuleInputFieldProps, useBaseModule} from "./ModuleInputField";
+import {useBaseModule} from "./ModuleInputField";
+
+import type {SharedModuleInputFieldProps} from "./ModuleInputField";
 
 
 type Props = SharedModuleInputFieldProps<number> & {

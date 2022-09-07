@@ -1,8 +1,8 @@
-import {OperatorFormat} from "./Constants/DataStructures";
-import {FORMATS}        from "./Constants/Formats";
+import type {OperatorFormat} from "./Constants/DataStructures";
+import {FORMATS}             from "./Constants/Formats";
 
-import {DigitalComponent} from "digital/models/DigitalComponent";
-import {DigitalObjectSet} from "digital/models/DigitalObjectSet";
+import type {DigitalComponent} from "digital/models/DigitalComponent";
+import {DigitalObjectSet}      from "digital/models/DigitalObjectSet";
 
 import {GenerateInputTree}        from "./GenerateInputTree";
 import {GenerateTokens}           from "./GenerateTokens";

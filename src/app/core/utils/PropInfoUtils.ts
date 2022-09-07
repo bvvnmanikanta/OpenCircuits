@@ -1,6 +1,6 @@
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {BooleanPropInfo, ButtonPropInfo, ColorPropInfo, NumberPropInfo, NumberSelectPropInfo,
+import type {BooleanPropInfo, ButtonPropInfo, ColorPropInfo, NumberPropInfo, NumberSelectPropInfo,
         Prop, PropInfo, Props, StringPropInfo, StringSelectPropInfo, VectorPropInfo} from "core/models/PropInfo";
 
 

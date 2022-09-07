@@ -6,7 +6,7 @@ import {ClampedValue} from "math/ClampedValue";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
 
-import {PropInfo} from "core/models/PropInfo";
+import type {PropInfo} from "core/models/PropInfo";
 
 import {AnalogComponent} from "analog/models/AnalogComponent";
 

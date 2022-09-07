@@ -195,5 +195,6 @@ module.exports = {
         }],
 
         "@typescript-eslint/prefer-readonly": "error",
+        "@typescript-eslint/consistent-type-imports": "error",
     },
 }

@@ -20,13 +20,14 @@ import {FitToScreenHandler} from "core/tools/handlers/FitToScreenHandler";
 import {RedoHandler}        from "core/tools/handlers/RedoHandler";
 import {UndoHandler}        from "core/tools/handlers/UndoHandler";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
-import {ICCircuitInfo}      from "digital/utils/ICCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {ICCircuitInfo}      from "digital/utils/ICCircuitInfo";
 
 import {CreateICDataAction} from "digital/actions/CreateICDataAction";
 
 import {ICPortTool}   from "digital/tools/ICPortTool";
-import {ICEdge,
+import type {ICEdge}  from "digital/tools/ICResizeTool";
+import {
         ICResizeTool} from "digital/tools/ICResizeTool";
 
 import {IC} from "digital/models/ioobjects";

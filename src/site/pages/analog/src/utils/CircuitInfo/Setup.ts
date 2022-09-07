@@ -1,15 +1,15 @@
-import {RefObject} from "react";
+import type {RefObject} from "react";
 
-import {DefaultTool} from "core/tools/DefaultTool";
-import {Tool}        from "core/tools/Tool";
+import type {DefaultTool} from "core/tools/DefaultTool";
+import type {Tool}        from "core/tools/Tool";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
-import {NGSpiceLib} from "analog/models/sim/lib/NGSpiceLib";
+import type {NGSpiceLib} from "analog/models/sim/lib/NGSpiceLib";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
-import {AppStore} from "site/analog/state";
+import type {AppStore} from "site/analog/state";
 
 import {GetAnalogCircuitInfoHelpers} from "./AnalogCircuitInfoHelpers";
 import {CreateInfo}                  from "./CreateInfo";

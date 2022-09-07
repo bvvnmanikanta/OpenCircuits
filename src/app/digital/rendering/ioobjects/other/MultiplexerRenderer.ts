@@ -7,15 +7,15 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import {Camera} from "math/Camera";
+import type {Camera} from "math/Camera";
 
-import {Renderer} from "core/rendering/Renderer";
-import {Style}    from "core/rendering/Style";
+import type {Renderer} from "core/rendering/Renderer";
+import {Style}         from "core/rendering/Style";
 
 import {Polygon} from "core/rendering/shapes/Polygon";
 
-import {Demultiplexer} from "digital/models/ioobjects/other/Demultiplexer";
-import {Multiplexer}   from "digital/models/ioobjects/other/Multiplexer";
+import type {Demultiplexer} from "digital/models/ioobjects/other/Demultiplexer";
+import {Multiplexer}        from "digital/models/ioobjects/other/Multiplexer";
 
 
 /**

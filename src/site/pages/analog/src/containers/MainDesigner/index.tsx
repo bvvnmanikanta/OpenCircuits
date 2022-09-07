@@ -4,14 +4,14 @@ import {HEADER_HEIGHT} from "shared/utils/Constants";
 
 import {V} from "Vector";
 
-import {Cursor} from "core/utils/CircuitInfo";
-import {Input}  from "core/utils/Input";
+import type {Cursor} from "core/utils/CircuitInfo";
+import {Input}       from "core/utils/Input";
 
 import {CreateGroupPlaceAction} from "core/actions/addition/PlaceAction";
 
 import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {useWindowSize} from "shared/utils/hooks/useWindowSize";
 

@@ -6,7 +6,7 @@ import {V} from "Vector";
 
 import {Positioner} from "core/models/ports/positioners/Positioner";
 
-import {InputPort} from "../InputPort";
+import type {InputPort} from "../InputPort";
 
 
 @serializable("QuadraticCurvePositioner")

@@ -1,4 +1,4 @@
-import {DigitalComponent} from "digital/models/DigitalComponent";
+import type {DigitalComponent} from "digital/models/DigitalComponent";
 
 
 /**

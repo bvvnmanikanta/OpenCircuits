@@ -2,14 +2,16 @@ import {GetIDFor} from "serialeazy";
 
 import {BCDtoDecimal} from "math/MathUtils";
 
-import {IOObject} from "core/models";
+import type {IOObject} from "core/models";
 
-import {DigitalCircuitDesigner, DigitalComponent, DigitalWire} from "digital/models";
+import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
+import {DigitalWire}                                   from "digital/models";
 
-import {IC, ICData}            from "digital/models/ioobjects";
-import {InputPort, OutputPort} from "digital/models/ports";
+import type {ICData}                from "digital/models/ioobjects";
+import {IC}                         from "digital/models/ioobjects";
+import type {InputPort, OutputPort} from "digital/models/ports";
 
-import {Gate} from "digital/models/ioobjects/gates/Gate";
+import type {Gate} from "digital/models/ioobjects/gates/Gate";
 
 
 /**

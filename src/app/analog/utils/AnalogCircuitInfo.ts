@@ -1,9 +1,9 @@
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
-import {AnalogCircuitDesigner} from "analog/models";
+import type {AnalogCircuitDesigner} from "analog/models";
 
-import {AnalogSim}       from "analog/models/sim/AnalogSim";
-import {SimDataMappings} from "analog/models/sim/NetlistGenerator";
+import type {AnalogSim}       from "analog/models/sim/AnalogSim";
+import type {SimDataMappings} from "analog/models/sim/NetlistGenerator";
 
 
 export type AnalogCircuitInfo = Omit<CircuitInfo, "designer"> & {

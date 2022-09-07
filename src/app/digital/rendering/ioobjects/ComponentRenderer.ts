@@ -5,19 +5,19 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import {Transform} from "math/Transform";
+import type {Transform} from "math/Transform";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Images}      from "core/utils/Images";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import {Images}           from "core/utils/Images";
 
-import {Renderer} from "core/rendering/Renderer";
-import {Style}    from "core/rendering/Style";
+import type {Renderer} from "core/rendering/Renderer";
+import {Style}         from "core/rendering/Style";
 
 import {IOLabelRenderer} from "core/rendering/renderers/IOLabelRenderer";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
 
-import {Component} from "core/models/Component";
+import type {Component} from "core/models/Component";
 
 
 

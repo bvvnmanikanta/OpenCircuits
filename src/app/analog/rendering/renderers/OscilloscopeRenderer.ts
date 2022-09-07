@@ -8,15 +8,15 @@ import {V} from "Vector";
 import {linspace, linspaceDX} from "math/MathUtils";
 import {Margin, Rect}         from "math/Rect";
 
-import {Renderer}        from "core/rendering/Renderer";
+import type {Renderer}   from "core/rendering/Renderer";
 import {Style}           from "core/rendering/Style";
 import {GRID_LINE_COLOR} from "core/rendering/Styles";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
-import {Oscilloscope} from "analog/models/eeobjects";
+import type {Oscilloscope} from "analog/models/eeobjects";
 
 
 const GRAPH_LINE_WIDTH = 1;

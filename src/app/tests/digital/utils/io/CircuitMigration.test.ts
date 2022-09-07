@@ -1,7 +1,7 @@
 // TODO: Find out why Camera is being ignored and requiring a manual import
 import "math/Camera";
 
-import {Circuit} from "core/models/Circuit";
+import type {Circuit} from "core/models/Circuit";
 
 import {VersionConflictResolver} from "digital/utils/DigitalVersionConflictResolver";
 

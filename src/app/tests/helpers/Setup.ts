@@ -7,13 +7,13 @@ import {SelectionsWrapper} from "core/utils/SelectionsWrapper";
 
 import {HistoryManager} from "core/actions/HistoryManager";
 
-import {DefaultTool}      from "core/tools/DefaultTool";
+import type {DefaultTool} from "core/tools/DefaultTool";
 import {InteractionTool}  from "core/tools/InteractionTool";
 import {PanTool}          from "core/tools/PanTool";
 import {RotateTool}       from "core/tools/RotateTool";
 import {SelectionBoxTool} from "core/tools/SelectionBoxTool";
 import {SplitWireTool}    from "core/tools/SplitWireTool";
-import {Tool}             from "core/tools/Tool";
+import type {Tool}        from "core/tools/Tool";
 import {ToolManager}      from "core/tools/ToolManager";
 import {TranslateTool}    from "core/tools/TranslateTool";
 import {WiringTool}       from "core/tools/WiringTool";
@@ -30,7 +30,7 @@ import {SelectPathHandler}    from "core/tools/handlers/SelectPathHandler";
 import {SnipWirePortsHandler} from "core/tools/handlers/SnipWirePortsHandler";
 import {UndoHandler}          from "core/tools/handlers/UndoHandler";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
 import {DigitalCircuitDesigner} from "digital/models";
 

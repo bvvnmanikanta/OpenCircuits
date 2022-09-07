@@ -2,7 +2,7 @@ import {useEffect} from "react";
 
 import {SAVE_TIME} from "shared/utils/Constants";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {useSharedDispatch, useSharedSelector} from "shared/utils/hooks/useShared";
 

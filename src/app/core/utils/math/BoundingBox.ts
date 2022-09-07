@@ -1,4 +1,4 @@
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
 /**
  * A simple axis-aligned bounding box.

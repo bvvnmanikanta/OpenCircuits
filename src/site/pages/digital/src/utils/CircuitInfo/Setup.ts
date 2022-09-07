@@ -1,13 +1,13 @@
-import {RefObject} from "react";
+import type {RefObject} from "react";
 
-import {DefaultTool} from "core/tools/DefaultTool";
-import {Tool}        from "core/tools/Tool";
+import type {DefaultTool} from "core/tools/DefaultTool";
+import type {Tool}        from "core/tools/Tool";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
-import {AppStore} from "site/digital/state";
+import type {AppStore} from "site/digital/state";
 
 import {CreateInfo}                   from "./CreateInfo";
 import {GetDigitalCircuitInfoHelpers} from "./DigitalCircuitInfoHelpers";

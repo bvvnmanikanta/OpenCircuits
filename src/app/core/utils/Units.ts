@@ -1,7 +1,7 @@
 /* eslint-disable key-spacing */
-import {PropInfoWithInitial} from "core/utils/PropInfoUtils";
+import type {PropInfoWithInitial} from "core/utils/PropInfoUtils";
 
-import {NumberPropInfo, UnitInfo} from "core/models/PropInfo";
+import type {NumberPropInfo, UnitInfo} from "core/models/PropInfo";
 
 
 export const Unit = (sym: string, name:  string) => ({

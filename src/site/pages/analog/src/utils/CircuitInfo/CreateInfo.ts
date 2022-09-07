@@ -1,22 +1,22 @@
 import {Camera} from "math/Camera";
 
-import {Input}             from "core/utils/Input";
+import type {Input}        from "core/utils/Input";
 import {RenderQueue}       from "core/utils/RenderQueue";
 import {SelectionsWrapper} from "core/utils/SelectionsWrapper";
 
 import {HistoryManager} from "core/actions/HistoryManager";
 
-import {DefaultTool} from "core/tools/DefaultTool";
-import {Tool}        from "core/tools/Tool";
-import {ToolManager} from "core/tools/ToolManager";
+import type {DefaultTool} from "core/tools/DefaultTool";
+import type {Tool}        from "core/tools/Tool";
+import {ToolManager}      from "core/tools/ToolManager";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {AnalogCircuitDesigner} from "analog/models";
 
 import {AnalogSim} from "analog/models/sim/AnalogSim";
 
-import {NGSpiceLib} from "analog/models/sim/lib/NGSpiceLib";
+import type {NGSpiceLib} from "analog/models/sim/lib/NGSpiceLib";
 
 
 export function CreateInfo(ngSpiceLib: NGSpiceLib | undefined,

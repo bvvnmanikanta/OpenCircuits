@@ -1,20 +1,22 @@
 import {useCallback, useEffect, useMemo, useState} from "react";
 import {Create, GetIDFor}                          from "serialeazy";
 
-import {Component} from "core/models";
+import type {Component} from "core/models";
 
-import {IsICDataInUse}      from "digital/utils/ComponentUtils";
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import {IsICDataInUse}           from "digital/utils/ComponentUtils";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
 import {DeleteICDataAction} from "digital/actions/DeleteICDataAction";
 
-import {DigitalComponent, DigitalEvent, InputPort, OutputPort} from "digital/models";
+import type {DigitalComponent, DigitalEvent} from "digital/models";
+import {InputPort, OutputPort}               from "digital/models";
 
 import {IC} from "digital/models/ioobjects";
 
 import {useWindowKeyDownEvent} from "shared/utils/hooks/useKeyDownEvent";
 
-import {ItemNav, ItemNavItem, ItemNavSection} from "shared/containers/ItemNav";
+import type {ItemNavItem, ItemNavSection} from "shared/containers/ItemNav";
+import {ItemNav}                          from "shared/containers/ItemNav";
 
 import {SmartPlaceOptions} from "site/digital/utils/DigitalCreate";
 

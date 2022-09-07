@@ -1,9 +1,11 @@
 import {useDispatch, useSelector} from "react-redux";
-import {ThunkDispatch}            from "redux-thunk";
 
-import {AppState} from "site/analog/state";
 
-import {AllActions} from "site/analog/state/actions";
+import type {AppState} from "site/analog/state";
+
+import type {AllActions} from "site/analog/state/actions";
+
+import type {ThunkDispatch} from "redux-thunk";
 
 
 export const useAnalogDispatch = () => useDispatch<ThunkDispatch<AppState, undefined, AllActions>>();

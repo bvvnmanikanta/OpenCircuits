@@ -1,10 +1,13 @@
 import {serializable} from "serialeazy";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {Port} from "core/models/ports/Port";
 
-import {AnalogComponent, AnalogWire} from "../index";
+import {AnalogComponent} from "../index";
+
+import type {AnalogWire} from "../index";
 
 
 @serializable("AnalogPort")

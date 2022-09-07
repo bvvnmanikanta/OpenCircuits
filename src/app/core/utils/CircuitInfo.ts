@@ -1,15 +1,15 @@
-import {Camera} from "math/Camera";
+import type {Camera} from "math/Camera";
 
-import {HistoryManager} from "core/actions/HistoryManager";
+import type {HistoryManager} from "core/actions/HistoryManager";
 
-import {ToolManager} from "core/tools/ToolManager";
+import type {ToolManager} from "core/tools/ToolManager";
 
-import {CircuitDesigner} from "core/models";
+import type {CircuitDesigner} from "core/models";
 
-import {Input}             from "./Input";
-import {RenderQueue}       from "./RenderQueue";
-import {Selectable}        from "./Selectable";
-import {SelectionsWrapper} from "./SelectionsWrapper";
+import type {Input}             from "./Input";
+import type {RenderQueue}       from "./RenderQueue";
+import type {Selectable}        from "./Selectable";
+import type {SelectionsWrapper} from "./SelectionsWrapper";
 
 
 export type Cursor =

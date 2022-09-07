@@ -10,8 +10,8 @@ import {ConstantSpacePositioner} from "core/models/ports/positioners/ConstantSpa
 
 import {DigitalComponent} from "digital/models/DigitalComponent";
 
-import {InputPort}  from "digital/models/ports/InputPort";
-import {OutputPort} from "digital/models/ports/OutputPort";
+import type {InputPort}  from "digital/models/ports/InputPort";
+import type {OutputPort} from "digital/models/ports/OutputPort";
 
 
 @serializable("Decoder")

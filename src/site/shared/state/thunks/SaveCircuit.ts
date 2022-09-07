@@ -1,15 +1,16 @@
 // HOA = Higher-Order Action (creator)
 
-import {ThunkAction} from "redux-thunk";
 
 import {CreateUserCircuit, UpdateUserCircuit} from "shared/api/Circuits";
 
-import {SharedAppState} from "shared/state";
+import type {SharedAppState} from "shared/state";
 
-import {AllSharedActions}       from "shared/state/actions";
+import type {AllSharedActions}  from "shared/state/actions";
 import {SetCircuitId,
         _SetCircuitSavingFinish,
         _SetCircuitSavingStart} from "shared/state/CircuitInfo";
+
+import type {ThunkAction} from "redux-thunk";
 
 
 type ThunkResult<R> = ThunkAction<R, SharedAppState, undefined, AllSharedActions>;

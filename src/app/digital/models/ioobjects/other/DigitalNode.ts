@@ -2,14 +2,16 @@ import {serializable} from "serialeazy";
 
 import {IO_PORT_RADIUS} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {ClampedValue}   from "math/ClampedValue";
 import {CircleContains} from "math/MathUtils";
 
-import {Node} from "core/models/Node";
+import type {Node} from "core/models/Node";
 
-import {DigitalComponent, InputPort, OutputPort} from "digital/models/index";
+import type {InputPort, OutputPort} from "digital/models/index";
+import {DigitalComponent}           from "digital/models/index";
 
 
 @serializable("DigitalNode")

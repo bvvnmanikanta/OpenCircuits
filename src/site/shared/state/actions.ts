@@ -1,6 +1,7 @@
-import {ActionCreatorType} from "shared/utils/CreateState";
+import type {ActionCreatorType} from "shared/utils/CreateState";
 
 
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 type ActionCreators =
     typeof import("./Header")      &
     typeof import("./ContextMenu") &
@@ -9,6 +10,7 @@ type ActionCreators =
     typeof import("./CircuitInfo") &
     typeof import("./UserInfo")    &
     typeof import("./DebugInfo");
+/* eslint-enable @typescript-eslint/consistent-type-imports */
 
 export type AllSharedActions = {
     [Name in keyof ActionCreators]: ActionCreators[Name] extends ActionCreatorType

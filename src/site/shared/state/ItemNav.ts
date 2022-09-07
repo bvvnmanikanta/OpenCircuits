@@ -1,6 +1,6 @@
 import {CreateState} from "shared/utils/CreateState";
 
-import {ToggleCircuitLocked} from "./CircuitInfo";
+import type {ToggleCircuitLocked} from "./CircuitInfo";
 
 
 const [initialState, actions, reducer] = CreateState<typeof ToggleCircuitLocked>()(

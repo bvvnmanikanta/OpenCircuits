@@ -6,18 +6,19 @@ import {GRID_SIZE,
 import {V, Vector} from "Vector";
 
 import {BoundingBox}  from "math/BoundingBox";
-import {Camera}       from "math/Camera";
+import type {Camera}  from "math/Camera";
 import {Graph}        from "math/Graph";
 import {RectContains} from "math/MathUtils";
 import {Transform}    from "math/Transform";
 
 import {isPressable} from "core/utils/Pressable";
 
-import {Component}      from "core/models/Component";
-import {CullableObject} from "core/models/CullableObject";
-import {IOObject}       from "core/models/IOObject";
-import {Node, isNode}   from "core/models/Node";
-import {Wire}           from "core/models/Wire";
+import {Component}           from "core/models/Component";
+import type {CullableObject} from "core/models/CullableObject";
+import {IOObject}            from "core/models/IOObject";
+import type {Node}           from "core/models/Node";
+import {isNode}              from "core/models/Node";
+import {Wire}                from "core/models/Wire";
 
 import {Port} from "core/models/ports/Port";
 

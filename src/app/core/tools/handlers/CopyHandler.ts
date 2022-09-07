@@ -1,6 +1,6 @@
-import {CircuitInfo}           from "core/utils/CircuitInfo";
-import {SerializeForCopy}      from "core/utils/ComponentUtils";
-import {CopyPasteEvent, Event} from "core/utils/Events";
+import type {CircuitInfo}           from "core/utils/CircuitInfo";
+import {SerializeForCopy}           from "core/utils/ComponentUtils";
+import type {CopyPasteEvent, Event} from "core/utils/Events";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -10,7 +10,7 @@ import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
 
 import {IOObject} from "core/models";
 
-import {EventHandler} from "../EventHandler";
+import type {EventHandler} from "../EventHandler";
 
 
 export const CopyHandler: EventHandler = ({

@@ -1,4 +1,4 @@
-import {ICData} from "digital/models/ioobjects";
+import type {ICData} from "digital/models/ioobjects";
 
 import {CreateState} from "shared/utils/CreateState";
 

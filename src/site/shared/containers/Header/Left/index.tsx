@@ -1,6 +1,6 @@
 import {useCallback} from "react";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {useSharedDispatch, useSharedSelector} from "shared/utils/hooks/useShared";
 

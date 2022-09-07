@@ -1,9 +1,9 @@
 import {GetPath} from "core/utils/ComponentUtils";
 
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
 
-import {CircuitDesigner, Port} from "core/models";
+import type {CircuitDesigner, Port} from "core/models";
 
 import {CreateDeletePathAction} from "../deletion/DeletePathActionFactory";
 import {GroupAction}            from "../GroupAction";

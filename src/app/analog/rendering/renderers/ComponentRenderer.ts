@@ -5,22 +5,22 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import {Transform} from "math/Transform";
+import type {Transform} from "math/Transform";
 
 import {Images} from "core/utils/Images";
 
 
-import {Renderer} from "core/rendering/Renderer";
-import {Style}    from "core/rendering/Style";
+import type {Renderer} from "core/rendering/Renderer";
+import {Style}         from "core/rendering/Style";
 
 import {IOLabelRenderer} from "core/rendering/renderers/IOLabelRenderer";
 import {IOPortRenderer}  from "core/rendering/renderers/IOPortRenderer";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
 
-import {Component} from "core/models/Component";
+import type {Component} from "core/models/Component";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {Label, Oscilloscope} from "analog/models/eeobjects";
 

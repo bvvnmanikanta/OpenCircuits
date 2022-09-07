@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
 import {DragDropHandlers} from "./DragDropHandlers";
 

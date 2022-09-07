@@ -8,7 +8,7 @@ import {GroupAction} from "core/actions/GroupAction";
 
 import {ConnectionAction} from "core/actions/addition/ConnectionAction";
 
-import {Component, Port} from "core/models";
+import type {Component, Port} from "core/models";
 
 import {InputPort}  from "digital/models/ports/InputPort";
 import {OutputPort} from "digital/models/ports/OutputPort";

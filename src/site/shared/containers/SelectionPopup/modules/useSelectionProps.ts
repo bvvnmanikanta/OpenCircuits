@@ -1,9 +1,10 @@
-import React, {useCallback, useEffect, useState} from "react";
+import type React                         from "react";
+import {useCallback, useEffect, useState} from "react";
 
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Selectable}  from "core/utils/Selectable";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Selectable}  from "core/utils/Selectable";
 
 
 type BaseType = Record<string, string | number | Vector | boolean>;

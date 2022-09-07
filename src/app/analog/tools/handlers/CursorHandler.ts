@@ -1,13 +1,14 @@
 import {DEFAULT_BORDER_WIDTH} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {Rect} from "math/Rect";
 
-import {Cursor} from "core/utils/CircuitInfo";
-import {Event}  from "core/utils/Events";
+import type {Cursor} from "core/utils/CircuitInfo";
+import type {Event}  from "core/utils/Events";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {Oscilloscope} from "analog/models/eeobjects";
 

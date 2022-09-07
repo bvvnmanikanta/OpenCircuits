@@ -5,9 +5,9 @@ import {V} from "Vector";
 import {RectContains} from "math/MathUtils";
 import {Transform}    from "math/Transform";
 
-import {Event} from "core/utils/Events";
+import type {Event} from "core/utils/Events";
 
-import {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
+import type {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
 
 
 export type ICEdge = "horizontal" | "vertical" | "none";

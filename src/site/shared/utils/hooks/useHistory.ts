@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
 
 export const useHistory = (info: CircuitInfo) => {

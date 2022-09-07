@@ -3,7 +3,7 @@ import ReactDOM                       from "react-dom";
 import ReactGA                        from "react-ga";
 import {Provider}                     from "react-redux";
 import {applyMiddleware, createStore} from "redux";
-import thunk, {ThunkMiddleware}       from "redux-thunk";
+import thunk                          from "redux-thunk";
 
 import {DEV_CACHED_CIRCUIT_FILE} from "shared/utils/Constants";
 
@@ -46,14 +46,16 @@ import {SetCircuitSaved} from "shared/state/CircuitInfo";
 
 import {Login} from "shared/state/thunks/User";
 
-import {App}                from "./containers/App";
-import {AppState, AppStore} from "./state";
-import {AllActions}         from "./state/actions";
-import {reducers}           from "./state/reducers";
-import {Setup}              from "./utils/CircuitInfo/Setup";
-import {DigitalPaste}       from "./utils/DigitalPaste";
+import {App}          from "./containers/App";
+import {reducers}     from "./state/reducers";
+import {Setup}        from "./utils/CircuitInfo/Setup";
+import {DigitalPaste} from "./utils/DigitalPaste";
 
 import ImageFiles from "./data/images.json";
+
+import type {AppState, AppStore} from "./state";
+import type {AllActions}         from "./state/actions";
+import type {ThunkMiddleware}    from "redux-thunk";
 
 
 async function Init(): Promise<void> {

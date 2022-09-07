@@ -1,10 +1,10 @@
 import {ColorToHex, blend, parseColor} from "svg2canvas";
 
 
-import {CircuitDesigner} from "core/models";
+import type {CircuitDesigner} from "core/models";
 
-import {Node} from "core/models/Node";
-import {Wire} from "core/models/Wire";
+import type {Node} from "core/models/Node";
+import type {Wire} from "core/models/Wire";
 
 import {GroupAction}       from "../GroupAction";
 import {SetPropertyAction} from "../SetPropertyAction";

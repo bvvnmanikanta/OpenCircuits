@@ -1,4 +1,4 @@
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
 import {IC} from "digital/models/ioobjects";
 

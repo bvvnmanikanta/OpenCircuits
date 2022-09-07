@@ -7,7 +7,7 @@ import {DecimalToBCD} from "math/MathUtils";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
 
-import {Prop} from "core/models/PropInfo";
+import type {Prop} from "core/models/PropInfo";
 
 import {DigitalComponent} from "digital/models/DigitalComponent";
 

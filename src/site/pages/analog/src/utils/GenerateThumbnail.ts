@@ -8,9 +8,9 @@ import {GetCameraFit} from "core/utils/ComponentUtils";
 import {DefaultTool} from "core/tools/DefaultTool";
 import {ToolManager} from "core/tools/ToolManager";
 
-import {CullableObject} from "core/models";
+import type {CullableObject} from "core/models";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {GetRenderFunc} from "./Rendering";
 

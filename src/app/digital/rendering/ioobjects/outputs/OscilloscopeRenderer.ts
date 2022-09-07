@@ -4,16 +4,17 @@ import {DEFAULT_BORDER_COLOR,
         SELECTED_BORDER_COLOR,
         SELECTED_FILL_COLOR} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
-import {Camera} from "math/Camera";
+import type {Camera} from "math/Camera";
 
-import {Renderer} from "core/rendering/Renderer";
-import {Style}    from "core/rendering/Style";
+import type {Renderer} from "core/rendering/Renderer";
+import {Style}         from "core/rendering/Style";
 
 import {Rectangle} from "core/rendering/shapes/Rectangle";
 
-import {Oscilloscope} from "digital/models/ioobjects";
+import type {Oscilloscope} from "digital/models/ioobjects";
 
 
 const GRAPH_LINE_WIDTH = 4;

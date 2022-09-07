@@ -1,4 +1,4 @@
-import {OperatorFormat} from "./DataStructures";
+import type {OperatorFormat} from "./DataStructures";
 
 
 const programming1: Readonly<OperatorFormat> = {

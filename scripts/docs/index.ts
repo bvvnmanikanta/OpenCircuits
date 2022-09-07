@@ -1,13 +1,14 @@
 import fs   from "node:fs";
 import path from "node:path";
 
-import {ModuleKind, Project, ScriptTarget, ts} from "ts-morph";
+import {ModuleKind, Project, ScriptTarget} from "ts-morph";
 
 import {generateMD}               from "./display.js";
 import {parseClass, parseMethods} from "./parse.js";
 import {getAllFiles}              from "./utils.js";
 
 import type {TSDoc} from "./model";
+import type {ts}    from "ts-morph";
 
 
 function generateDocumentation(fileNames: string[], outPath: string, compilerOptions: ts.CompilerOptions) {

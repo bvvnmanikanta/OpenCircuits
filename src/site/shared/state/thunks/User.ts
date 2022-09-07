@@ -1,12 +1,13 @@
-import {ThunkAction} from "redux-thunk";
 
 import {QueryUserCircuits} from "shared/api/Circuits";
 
-import {AuthState} from "shared/api/auth/AuthState";
+import type {AuthState} from "shared/api/auth/AuthState";
 
-import {SharedAppState}                                  from "..";
-import {AllSharedActions}                                from "../actions";
 import {_LoadCircuitsFinish, _LoadCircuitsStart, _Login} from "../UserInfo";
+
+import type {SharedAppState}   from "..";
+import type {AllSharedActions} from "../actions";
+import type {ThunkAction}      from "redux-thunk";
 
 
 type ThunkResult<R> = ThunkAction<R, SharedAppState, undefined, AllSharedActions>;

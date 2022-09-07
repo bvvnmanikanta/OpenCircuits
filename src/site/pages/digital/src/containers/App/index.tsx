@@ -2,19 +2,20 @@ import {useCallback} from "react";
 
 import {CircuitMetadataBuilder} from "core/models/CircuitMetadata";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {useWindowSize} from "shared/utils/hooks/useWindowSize";
 
 import {ContextMenu}               from "shared/containers/ContextMenu";
 import {HistoryBox}                from "shared/containers/HistoryBox";
-import {ImageExporterPopup,
+import type {
         ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
-import {LoginPopup}     from "shared/containers/LoginPopup";
-import {SelectionPopup} from "shared/containers/SelectionPopup";
-import {SideNav}        from "shared/containers/SideNav";
+import {ImageExporterPopup} from "shared/containers/ImageExporterPopup";
+import {LoginPopup}         from "shared/containers/LoginPopup";
+import {SelectionPopup}     from "shared/containers/SelectionPopup";
+import {SideNav}            from "shared/containers/SideNav";
 
 import {PositionModule} from "shared/containers/SelectionPopup/modules/PositionModule";
 import {PropertyModule} from "shared/containers/SelectionPopup/modules/PropertyModule";

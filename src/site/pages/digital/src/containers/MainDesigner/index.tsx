@@ -10,7 +10,7 @@ import {CreateGroupPlaceAction} from "core/actions/addition/PlaceAction";
 
 import {CreateDeselectAllAction} from "core/actions/selection/SelectAction";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
 import {usePageVisibility} from "shared/utils/hooks/usePageVisibility";
 import {useWindowSize}     from "shared/utils/hooks/useWindowSize";

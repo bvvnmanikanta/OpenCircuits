@@ -1,19 +1,21 @@
 import {serialize} from "serialeazy";
 
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {ClampedValue} from "math/ClampedValue";
+import type {ClampedValue} from "math/ClampedValue";
 
 import {Component} from "core/models/Component";
-import {Prop}      from "core/models/PropInfo";
+import type {Prop} from "core/models/PropInfo";
 
 import {PortSet} from "core/models/ports/PortSets";
 
 import {Positioner} from "core/models/ports/positioners/Positioner";
 
-import {NetlistElement} from "./sim/Netlist";
+import {AnalogCircuitDesigner, AnalogPort} from "./index";
 
-import {AnalogCircuitDesigner, AnalogPort, AnalogWire} from "./index";
+import type {AnalogWire}     from "./index";
+import type {NetlistElement} from "./sim/Netlist";
+
 
 
 export abstract class AnalogComponent extends Component {

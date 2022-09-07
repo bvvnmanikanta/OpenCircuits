@@ -6,16 +6,16 @@ import {LED_LIGHT_INTENSITY,
 
 import {V} from "Vector";
 
-import {Camera} from "math/Camera";
+import type {Camera} from "math/Camera";
 
 import {Images} from "core/utils/Images";
 
-import {Renderer} from "core/rendering/Renderer";
-import {Style}    from "core/rendering/Style";
+import type {Renderer} from "core/rendering/Renderer";
+import {Style}         from "core/rendering/Style";
 
 import {Circle} from "core/rendering/shapes/Circle";
 
-import {LED} from "digital/models/ioobjects";
+import type {LED} from "digital/models/ioobjects";
 
 
 /**

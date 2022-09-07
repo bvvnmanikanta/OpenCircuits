@@ -1,8 +1,9 @@
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {Component, Port, Wire} from "core/models";
 
-import {Selectable} from "./Selectable";
+import type {Selectable} from "./Selectable";
 
 
 /**

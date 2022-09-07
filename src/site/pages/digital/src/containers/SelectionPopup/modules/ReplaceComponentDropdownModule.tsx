@@ -3,12 +3,13 @@ import {GetIDFor}                     from "serialeazy";
 
 import {GroupAction} from "core/actions/GroupAction";
 
-import {DigitalCircuitInfo}                       from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo}                  from "digital/utils/DigitalCircuitInfo";
 import {GenerateReplacementList, GetReplacements} from "digital/utils/ReplaceDigitalComponentHelpers";
 
 import {CreateReplaceDigitalComponentAction} from "digital/actions/ReplaceDigitalComponentActionFactory";
 
-import {DigitalComponent, DigitalEvent} from "digital/models";
+import type {DigitalEvent} from "digital/models";
+import {DigitalComponent}  from "digital/models";
 
 import {IC} from "digital/models/ioobjects";
 

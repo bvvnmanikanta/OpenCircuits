@@ -5,11 +5,11 @@ import {V} from "Vector";
 import {GetNearestPointOnRect} from "math/MathUtils";
 
 import {PortContains} from "core/utils/ComponentUtils";
-import {Event}        from "core/utils/Events";
+import type {Event}   from "core/utils/Events";
 
-import {Port} from "core/models";
+import type {Port} from "core/models";
 
-import {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
+import type {ICCircuitInfo} from "digital/utils/ICCircuitInfo";
 
 
 export const ICPortTool = (() => {

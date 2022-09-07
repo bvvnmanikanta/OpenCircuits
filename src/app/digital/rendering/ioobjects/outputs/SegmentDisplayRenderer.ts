@@ -8,17 +8,17 @@ import {DEFAULT_BORDER_COLOR,
 
 import {V} from "Vector";
 
-import {Camera} from "math/Camera";
+import type {Camera} from "math/Camera";
 
 import {Images} from "core/utils/Images";
 
-import {Renderer} from "core/rendering/Renderer";
-import {Style}    from "core/rendering/Style";
+import type {Renderer} from "core/rendering/Renderer";
+import {Style}         from "core/rendering/Style";
 
 import {Line}      from "core/rendering/shapes/Line";
 import {Rectangle} from "core/rendering/shapes/Rectangle";
 
-import {SegmentDisplay} from "digital/models/ioobjects/outputs/SegmentDisplay";
+import type {SegmentDisplay} from "digital/models/ioobjects/outputs/SegmentDisplay";
 
 
 /**

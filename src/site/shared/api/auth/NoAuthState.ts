@@ -1,7 +1,7 @@
 import {SetCookie} from "shared/utils/Cookies";
 
-import {AuthState} from "./AuthState";
-import {AuthType}  from "./AuthTypes";
+import type {AuthState} from "./AuthState";
+import type {AuthType}  from "./AuthTypes";
 
 
 const NO_AUTH_USERNAME_COOKIE = "no_auth_username";

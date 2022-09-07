@@ -11,7 +11,7 @@ import {userInfoReducer}    from "shared/state/UserInfo";
 import {icDesignerReducer} from "./ICDesigner";
 import {icViewerReducer}   from "./ICViewer";
 
-import {AppState} from ".";
+import type {AppState} from ".";
 
 
 export const reducers = combineReducers<AppState>({

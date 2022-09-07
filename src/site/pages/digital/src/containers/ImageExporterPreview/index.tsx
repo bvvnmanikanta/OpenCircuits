@@ -8,11 +8,11 @@ import {PanTool}         from "core/tools/PanTool";
 
 import {FitToScreenHandler} from "core/tools/handlers/FitToScreenHandler";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
-import {DigitalCircuitDesigner} from "digital/models";
+import type {DigitalCircuitDesigner} from "digital/models";
 
-import {ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
+import type {ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
 
 import {GetRenderFunc} from "site/digital/utils/Rendering";
 

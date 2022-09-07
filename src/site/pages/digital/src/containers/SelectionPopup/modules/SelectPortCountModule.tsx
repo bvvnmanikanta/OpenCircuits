@@ -1,4 +1,4 @@
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
 import {GroupAction} from "core/actions/GroupAction";
 

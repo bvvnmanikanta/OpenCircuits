@@ -4,11 +4,11 @@ import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 
-import {Positioner} from "core/models/ports/positioners/Positioner"
+import type {Positioner} from "core/models/ports/positioners/Positioner"
 
 import {DigitalComponent} from "digital/models/DigitalComponent";
 
-import {InputPort} from "digital/models/ports/InputPort";
+import type {InputPort} from "digital/models/ports/InputPort";
 
 //
 // Latch is an abstract superclass for general latches.

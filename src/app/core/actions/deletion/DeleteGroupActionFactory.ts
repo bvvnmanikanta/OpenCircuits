@@ -5,7 +5,8 @@ import {GroupAction} from "core/actions/GroupAction";
 import {DisconnectAction} from "core/actions/addition/ConnectionAction";
 import {DeleteAction}     from "core/actions/addition/PlaceAction";
 
-import {CircuitDesigner, IOObject, Node, isNode} from "core/models";
+import type {CircuitDesigner, IOObject, Node} from "core/models";
+import {isNode}                               from "core/models";
 
 
 /**

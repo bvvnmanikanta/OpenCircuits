@@ -3,7 +3,7 @@ import {act, render, screen}          from "@testing-library/react";
 import userEvent                      from "@testing-library/user-event";
 import {Provider}                     from "react-redux";
 import {applyMiddleware, createStore} from "redux";
-import thunk, {ThunkMiddleware}       from "redux-thunk";
+import thunk                          from "redux-thunk";
 
 import {Setup} from "test/helpers/Setup";
 
@@ -14,12 +14,14 @@ import {OpenHeaderPopup} from "shared/state/Header";
 import "shared/tests/helpers/Extensions";
 import {PressToggle} from "shared/tests/helpers/PressToggle";
 
-import {AppState} from "site/digital/state";
+import type {AppState} from "site/digital/state";
 
-import {AllActions} from "site/digital/state/actions";
-import {reducers}   from "site/digital/state/reducers";
+import type {AllActions} from "site/digital/state/actions";
+import {reducers}        from "site/digital/state/reducers";
 
 import {ExprToCircuitPopup} from "site/digital/containers/ExprToCircuitPopup";
+
+import type {ThunkMiddleware} from "redux-thunk";
 
 
 // beforeAll and beforeEach can be used to avoid duplicating store/render code, but is not recommended

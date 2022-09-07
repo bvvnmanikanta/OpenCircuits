@@ -4,7 +4,8 @@ import {V} from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 
-import {GenPropInfo, PropInfoLayout}        from "core/utils/PropInfoUtils";
+import type {PropInfoLayout}                from "core/utils/PropInfoUtils";
+import {GenPropInfo}                        from "core/utils/PropInfoUtils";
 import {AngleInfo, FrequencyInfo, TimeInfo} from "core/utils/Units";
 
 import {AnalogComponent} from "analog/models";

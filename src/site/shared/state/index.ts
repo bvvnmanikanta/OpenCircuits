@@ -1,10 +1,10 @@
-import {CircuitInfoState} from "./CircuitInfo";
-import {ContextMenuState} from "./ContextMenu";
-import {DebugInfoState}   from "./DebugInfo";
-import {HeaderState}      from "./Header";
-import {ItemNavState}     from "./ItemNav";
-import {SideNavState}     from "./SideNav";
-import {UserInfoState}    from "./UserInfo";
+import type {CircuitInfoState} from "./CircuitInfo";
+import type {ContextMenuState} from "./ContextMenu";
+import type {DebugInfoState}   from "./DebugInfo";
+import type {HeaderState}      from "./Header";
+import type {ItemNavState}     from "./ItemNav";
+import type {SideNavState}     from "./SideNav";
+import type {UserInfoState}    from "./UserInfo";
 
 
 export type SharedAppState = {

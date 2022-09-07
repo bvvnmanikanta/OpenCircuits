@@ -2,7 +2,8 @@ import {Create} from "serialeazy";
 
 import {AUTO_PLACE_LED_SPACE, AUTO_PLACE_SWITCH_SPACE} from "./Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {CircuitBoundingBox} from "core/utils/ComponentUtils";
 
@@ -11,7 +12,8 @@ import {GroupAction} from "core/actions/GroupAction";
 import {ConnectionAction}       from "core/actions/addition/ConnectionAction";
 import {CreateGroupPlaceAction} from "core/actions/addition/PlaceAction";
 
-import {DigitalCircuitDesigner, DigitalComponent, InputPort, OutputPort} from "digital/models";
+import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
+import {InputPort, OutputPort}                         from "digital/models";
 
 import {IC, LED, Switch} from "digital/models/ioobjects";
 

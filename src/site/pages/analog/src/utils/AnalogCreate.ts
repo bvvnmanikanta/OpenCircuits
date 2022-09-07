@@ -1,8 +1,8 @@
 import {Create} from "serialeazy";
 
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {AnalogCircuitDesigner, AnalogComponent} from "analog/models";
+import type {AnalogCircuitDesigner, AnalogComponent} from "analog/models";
 
 
 /**

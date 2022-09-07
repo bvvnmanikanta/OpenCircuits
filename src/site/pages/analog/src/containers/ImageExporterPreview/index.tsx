@@ -8,11 +8,11 @@ import {PanTool}         from "core/tools/PanTool";
 
 import {FitToScreenHandler} from "core/tools/handlers/FitToScreenHandler";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
-import {AnalogCircuitDesigner} from "analog/models";
+import type {AnalogCircuitDesigner} from "analog/models";
 
-import {ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
+import type {ImageExporterPreviewProps} from "shared/containers/ImageExporterPopup";
 
 import {GetRenderFunc} from "site/analog/utils/Rendering";
 

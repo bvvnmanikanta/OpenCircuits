@@ -1,5 +1,5 @@
-import {AuthState} from "./AuthState";
-import {AuthType}  from "./AuthTypes";
+import type {AuthState} from "./AuthState";
+import type {AuthType}  from "./AuthTypes";
 
 
 export class GoogleAuthState implements AuthState {

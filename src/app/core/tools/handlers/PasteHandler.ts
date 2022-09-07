@@ -1,6 +1,6 @@
-import {CopyPasteEvent, Event} from "core/utils/Events";
+import type {CopyPasteEvent, Event} from "core/utils/Events";
 
-import {EventHandler} from "../EventHandler";
+import type {EventHandler} from "../EventHandler";
 
 
 export const PasteHandler = (paste: (text: string) => boolean): EventHandler => ({

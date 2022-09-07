@@ -2,13 +2,14 @@ import {useEffect, useState} from "react";
 
 import {DEV_CACHED_CIRCUIT_FILE} from "shared/utils/Constants";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {useSharedDispatch, useSharedSelector} from "shared/utils/hooks/useShared";
 
 import {DevCreateFile, DevGetFile, DevListFiles} from "shared/api/Dev";
 
-import {CloseHeaderMenus, HeaderPopups, OpenHeaderMenu, OpenHeaderPopup} from "shared/state/Header";
+import type {HeaderPopups}                                 from "shared/state/Header";
+import {CloseHeaderMenus, OpenHeaderMenu, OpenHeaderPopup} from "shared/state/Header";
 
 import {Dropdown} from "./Dropdown";
 

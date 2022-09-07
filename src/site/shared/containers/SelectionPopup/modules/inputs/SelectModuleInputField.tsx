@@ -1,6 +1,8 @@
 import {useRef} from "react";
 
-import {DefaultConfig, SharedModuleInputFieldProps, useBaseModule} from "./ModuleInputField";
+import {DefaultConfig, useBaseModule} from "./ModuleInputField";
+
+import type {SharedModuleInputFieldProps} from "./ModuleInputField";
 
 
 type Props<T extends string|number> = SharedModuleInputFieldProps<T> & {

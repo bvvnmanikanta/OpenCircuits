@@ -1,4 +1,4 @@
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
 
 export type HistoryCallbackType = "add" | "undo" | "redo" | "reset";

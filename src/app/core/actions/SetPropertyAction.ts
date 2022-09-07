@@ -1,8 +1,8 @@
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
-import {IOObject} from "core/models";
+import type {IOObject} from "core/models";
 
-import {Prop} from "core/models/PropInfo";
+import type {Prop} from "core/models/PropInfo";
 
 
 export class SetPropertyAction implements Action {

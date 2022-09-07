@@ -1,13 +1,15 @@
 /* eslint-disable space-in-parens */
 import {IO_PORT_LENGTH} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {GetHelpers} from "test/helpers/Helpers";
 
 import {CreateBusAction, GetComponentBusPorts} from "digital/actions/addition/BusActionFactory";
 
-import {DigitalCircuitDesigner, InputPort, OutputPort} from "digital/models";
+import type {InputPort, OutputPort} from "digital/models";
+import {DigitalCircuitDesigner}     from "digital/models";
 
 import {ANDGate, BCDDisplay, BUFGate, ConstantNumber, IC,
         ICData, LED, Multiplexer, Switch} from "digital/models/ioobjects";

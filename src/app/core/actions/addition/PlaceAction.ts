@@ -1,7 +1,7 @@
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
-import {CircuitDesigner} from "core/models/CircuitDesigner";
-import {Component}       from "core/models/Component";
+import type {CircuitDesigner} from "core/models/CircuitDesigner";
+import type {Component}       from "core/models/Component";
 
 import {GroupAction}      from "../GroupAction";
 import {ReversableAction} from "../ReversableAction";

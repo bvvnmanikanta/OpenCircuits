@@ -1,11 +1,12 @@
-import React, {useCallback, useEffect, useRef, useState} from "react";
-import {GetIDFor}                                        from "serialeazy";
+import type React                                 from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
+import {GetIDFor}                                 from "serialeazy";
 
 import {DOUBLE_CLICK_DURATION, HEADER_HEIGHT} from "shared/utils/Constants";
 
 import {Clamp} from "math/MathUtils";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
 import {useEvent}          from "shared/utils/hooks/useEvent";
 import {useSharedSelector} from "shared/utils/hooks/useShared";

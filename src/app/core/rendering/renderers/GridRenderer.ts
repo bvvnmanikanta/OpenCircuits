@@ -3,11 +3,12 @@ import {GRID_SIZE} from "core/utils/Constants";
 
 import {V} from "Vector";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
-import {Renderer}        from "../Renderer";
 import {Style}           from "../Style";
 import {GRID_LINE_COLOR} from "../Styles";
+
+import type {Renderer} from "../Renderer";
 
 
 export const GridRenderer = ({

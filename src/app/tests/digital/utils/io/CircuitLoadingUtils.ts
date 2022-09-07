@@ -3,10 +3,10 @@ import {Deserialize} from "serialeazy";
 
 import "test/helpers/Extensions";
 
-import {Component} from "core/models";
+import type {Component} from "core/models";
 
-import {Circuit, ContentsData} from "core/models/Circuit";
-import {CircuitDesigner}       from "core/models/CircuitDesigner";
+import type {Circuit, ContentsData} from "core/models/Circuit";
+import {CircuitDesigner}            from "core/models/CircuitDesigner";
 
 import "digital/models/ioobjects";
 

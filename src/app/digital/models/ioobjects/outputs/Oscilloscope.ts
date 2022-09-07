@@ -1,16 +1,17 @@
 import {serializable, serialize} from "serialeazy";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
 
-import {Prop} from "core/models/PropInfo";
+import type {Prop} from "core/models/PropInfo";
 
 import {ConstantSpacePositioner} from "core/models/ports/positioners/ConstantSpacePositioner";
 
-import {InputPort} from "digital/models";
+import type {InputPort} from "digital/models";
 
 import {TimedComponent} from "../TimedComponent";
 

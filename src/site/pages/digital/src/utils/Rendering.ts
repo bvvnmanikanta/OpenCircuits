@@ -1,4 +1,4 @@
-import {RenderOptions} from "core/utils/RenderQueue";
+import type {RenderOptions} from "core/utils/RenderQueue";
 
 import {CreateRenderers} from "core/rendering/CreateRenderers";
 import {Renderer}        from "core/rendering/Renderer";
@@ -8,7 +8,7 @@ import {GridRenderer}  from "core/rendering/renderers/GridRenderer";
 import {ToolRenderer}  from "core/rendering/renderers/ToolRenderer";
 import {WireRenderer}  from "core/rendering/renderers/WireRenderer";
 
-import {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
 
 import {ComponentRenderer} from "digital/rendering/ioobjects/ComponentRenderer";
 

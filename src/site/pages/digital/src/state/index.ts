@@ -1,11 +1,11 @@
-import {Store}         from "redux";
-import {ThunkDispatch} from "redux-thunk";
 
-import {SharedAppState} from "shared/state";
+import type {SharedAppState} from "shared/state";
 
-import {AllActions}      from "./actions";
-import {ICDesignerState} from "./ICDesigner";
-import {ICViewerState}   from "./ICViewer";
+import type {AllActions}      from "./actions";
+import type {ICDesignerState} from "./ICDesigner";
+import type {ICViewerState}   from "./ICViewer";
+import type {Store}           from "redux";
+import type {ThunkDispatch}   from "redux-thunk";
 
 
 export type AppState = SharedAppState & {

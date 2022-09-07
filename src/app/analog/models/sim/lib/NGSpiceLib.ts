@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import {WASMModule} from "./WASM";
+import type {WASMModule} from "./WASM";
 
 
 export type NGSpiceLib = WASMModule & {

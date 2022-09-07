@@ -1,14 +1,15 @@
 import {LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
-import {CircuitInfo}               from "core/utils/CircuitInfo";
+import type {CircuitInfo}          from "core/utils/CircuitInfo";
 import {GetComponentPath, GetPath} from "core/utils/ComponentUtils";
-import {Event}                     from "core/utils/Events";
+import type {Event}                from "core/utils/Events";
 
 import {CreateGroupSelectAction} from "core/actions/selection/SelectAction";
 
-import {Component, Wire} from "core/models";
+import type {Component} from "core/models";
+import {Wire}           from "core/models";
 
-import {EventHandler} from "../EventHandler";
+import type {EventHandler} from "../EventHandler";
 
 
 export const SelectPathHandler: EventHandler = ({

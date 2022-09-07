@@ -2,9 +2,9 @@
 
 // export class CircuitRenderer {
 
-import {CircuitInfo} from "core/utils/CircuitInfo"
+import type {CircuitInfo} from "core/utils/CircuitInfo"
 
-import {Renderer} from "./Renderer"
+import type {Renderer} from "./Renderer"
 
 
 

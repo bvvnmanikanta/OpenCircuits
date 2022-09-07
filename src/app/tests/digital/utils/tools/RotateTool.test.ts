@@ -6,7 +6,7 @@ import "test/helpers/Extensions";
 import {GetHelpers} from "test/helpers/Helpers";
 import {Setup}      from "test/helpers/Setup";
 
-import {Component} from "core/models";
+import type {Component} from "core/models";
 
 import {ANDGate, ORGate} from "digital/models/ioobjects";
 

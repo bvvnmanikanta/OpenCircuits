@@ -1,7 +1,7 @@
 import {V} from "Vector";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Event}       from "core/utils/Events";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
 
 import {CopyGroupAction} from "core/actions/CopyGroupAction";
 import {GroupAction}     from "core/actions/GroupAction";
@@ -13,7 +13,7 @@ import {TranslateAction} from "core/actions/transform/TranslateAction";
 
 import {IOObject} from "core/models";
 
-import {EventHandler} from "../EventHandler";
+import type {EventHandler} from "../EventHandler";
 
 
 export const DuplicateHandler: EventHandler = ({

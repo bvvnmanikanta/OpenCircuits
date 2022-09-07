@@ -1,6 +1,6 @@
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
-import {Component} from "core/models/Component";
+import type {Component} from "core/models/Component";
 
 
 /**

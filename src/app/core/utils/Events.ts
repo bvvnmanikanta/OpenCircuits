@@ -1,6 +1,6 @@
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {Key} from "./Key";
+import type {Key} from "./Key";
 
 
 export type EventType =

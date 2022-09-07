@@ -1,6 +1,6 @@
 import {Create} from "serialeazy";
 
-import {OperatorFormat,
+import type {OperatorFormat,
         OperatorFormatLabel} from "digital/utils/ExpressionParser/Constants/DataStructures";
 import {FORMATS} from "digital/utils/ExpressionParser/Constants/Formats";
 
@@ -23,8 +23,8 @@ import {CreateDeselectAllAction,
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
 
-import {DigitalCircuitInfo}  from "digital/utils/DigitalCircuitInfo";
-import {ExpressionToCircuit} from "digital/utils/ExpressionParser";
+import type {DigitalCircuitInfo} from "digital/utils/DigitalCircuitInfo";
+import {ExpressionToCircuit}     from "digital/utils/ExpressionParser";
 
 import {GenerateTokens} from "digital/utils/ExpressionParser/GenerateTokens";
 
@@ -32,9 +32,11 @@ import {CreateICDataAction} from "digital/actions/CreateICDataAction";
 
 import {InputPortChangeAction} from "digital/actions/ports/InputPortChangeAction";
 
-import {DigitalCircuitDesigner, DigitalComponent, DigitalObjectSet} from "digital/models";
+import type {DigitalCircuitDesigner, DigitalComponent} from "digital/models";
+import {DigitalObjectSet}                              from "digital/models";
 
-import {Clock, IC, ICData, Label} from "digital/models/ioobjects";
+import type {Clock, Label} from "digital/models/ioobjects";
+import {IC, ICData}        from "digital/models/ioobjects";
 
 
 

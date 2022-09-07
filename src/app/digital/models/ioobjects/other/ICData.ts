@@ -4,7 +4,8 @@ import {DEFAULT_SIZE,
         GRID_SIZE,
         IO_PORT_LENGTH} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {GetNearestPointOnRect} from "math/MathUtils";
 import {Transform}             from "math/Transform";
@@ -12,10 +13,10 @@ import {Transform}             from "math/Transform";
 import {CopyGroup,
         CreateGroup} from "core/utils/ComponentUtils";
 
-import {Component} from "core/models/Component";
-import {IOObject}  from "core/models/IOObject";
+import type {Component} from "core/models/Component";
+import type {IOObject}  from "core/models/IOObject";
 
-import {Port} from "core/models/ports/Port";
+import type {Port} from "core/models/ports/Port";
 
 import {DigitalObjectSet} from "digital/models/DigitalObjectSet";
 

@@ -1,4 +1,4 @@
-import {NGElementID, NGNetlist, NGNetlistAnalysis, NGNetlistElement, NGSymbol} from "./lib/NGNetlist";
+import type {NGElementID, NGNetlist, NGNetlistAnalysis, NGNetlistElement, NGSymbol} from "./lib/NGNetlist";
 
 
 export type NetlistElement = {

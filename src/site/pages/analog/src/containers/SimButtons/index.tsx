@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
 import {ColorToHex}          from "svg2canvas";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {Oscilloscope} from "analog/models/eeobjects";
 
-import {NetlistAnalysis}  from "analog/models/sim/Netlist";
-import {CircuitToNetlist} from "analog/models/sim/NetlistGenerator";
+import type {NetlistAnalysis} from "analog/models/sim/Netlist";
+import {CircuitToNetlist}     from "analog/models/sim/NetlistGenerator";
 
 import {InputField} from "shared/components/InputField";
 

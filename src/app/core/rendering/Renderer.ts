@@ -1,13 +1,16 @@
-import {SVGDrawing, parseColor} from "svg2canvas";
+import {parseColor} from "svg2canvas";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
-import {Camera}    from "math/Camera";
-import {Transform} from "math/Transform";
+import type {Camera}    from "math/Camera";
+import type {Transform} from "math/Transform";
 
-import {Shape} from "./shapes/Shape";
-import {Style} from "./Style";
-import {FONT}  from "./Styles";
+import {FONT} from "./Styles";
+
+import type {Shape}      from "./shapes/Shape";
+import type {Style}      from "./Style";
+import type {SVGDrawing} from "svg2canvas";
 
 
 

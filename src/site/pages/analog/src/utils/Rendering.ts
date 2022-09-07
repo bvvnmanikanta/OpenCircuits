@@ -1,4 +1,4 @@
-import {RenderOptions} from "core/utils/RenderQueue";
+import type {RenderOptions} from "core/utils/RenderQueue";
 
 import {CreateRenderers} from "core/rendering/CreateRenderers";
 import {Renderer}        from "core/rendering/Renderer";
@@ -8,7 +8,7 @@ import {GridRenderer}  from "core/rendering/renderers/GridRenderer";
 import {ToolRenderer}  from "core/rendering/renderers/ToolRenderer";
 import {WireRenderer}  from "core/rendering/renderers/WireRenderer";
 
-import {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
+import type {AnalogCircuitInfo} from "analog/utils/AnalogCircuitInfo";
 
 import {ComponentRenderer} from "analog/rendering/renderers/ComponentRenderer";
 

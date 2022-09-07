@@ -4,10 +4,10 @@ import {ARROW_PAN_DISTANCE_NORMAL,
 
 import {Vector} from "Vector";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Event}       from "core/utils/Events";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
 
-import {Tool} from "core/tools/Tool";
+import type {Tool} from "core/tools/Tool";
 
 
 export const PanTool: Tool = (() => {

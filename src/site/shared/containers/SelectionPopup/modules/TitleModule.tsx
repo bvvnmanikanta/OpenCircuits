@@ -1,5 +1,5 @@
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Selectable}  from "core/utils/Selectable";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Selectable}  from "core/utils/Selectable";
 
 import {GroupAction}   from "core/actions/GroupAction";
 import {SetNameAction} from "core/actions/SetNameAction";

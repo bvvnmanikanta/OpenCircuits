@@ -8,7 +8,7 @@ import {Positioner} from "core/models/ports/positioners/Positioner";
 
 import {FlipFlop} from "digital/models/ioobjects/flipflops/FlipFlop";
 
-import {InputPort} from "../InputPort";
+import type {InputPort} from "../InputPort";
 
 
 @serializable("FlipFlopPositioner")

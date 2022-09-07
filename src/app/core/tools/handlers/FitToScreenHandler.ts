@@ -1,14 +1,14 @@
 import {FIT_PADDING_RATIO} from "core/utils/Constants";
 
-import {CircuitInfo}  from "core/utils/CircuitInfo";
-import {GetCameraFit} from "core/utils/ComponentUtils";
-import {Event}        from "core/utils/Events";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import {GetCameraFit}     from "core/utils/ComponentUtils";
+import type {Event}       from "core/utils/Events";
 
 import {MoveCameraAction} from "core/actions/camera/MoveCameraAction";
 
 import {CullableObject} from "core/models";
 
-import {EventHandler} from "../EventHandler";
+import type {EventHandler} from "../EventHandler";
 
 
 export const FitToScreenHandler: EventHandler = ({

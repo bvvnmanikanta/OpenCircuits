@@ -2,11 +2,11 @@ import {serialize} from "serialeazy";
 
 import {V, Vector} from "Vector";
 
-import {ClampedValue} from "math/ClampedValue";
-import {RectContains} from "math/MathUtils";
-import {Transform}    from "math/Transform";
+import type {ClampedValue} from "math/ClampedValue";
+import {RectContains}      from "math/MathUtils";
+import {Transform}         from "math/Transform";
 
-import {Pressable} from "core/utils/Pressable";
+import type {Pressable} from "core/utils/Pressable";
 
 import {DigitalComponent} from "../DigitalComponent";
 

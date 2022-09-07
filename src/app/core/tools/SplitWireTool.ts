@@ -1,9 +1,10 @@
 import {GRID_SIZE, LEFT_MOUSE_BUTTON} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
-import {Event}       from "core/utils/Events";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
+import type {Event}       from "core/utils/Events";
 
 import {GroupAction} from "core/actions/GroupAction";
 
@@ -14,9 +15,10 @@ import {CreateDeselectAllAction,
 
 import {TranslateAction} from "core/actions/transform/TranslateAction";
 
-import {Tool} from "core/tools/Tool";
+import type {Tool} from "core/tools/Tool";
 
-import {Node, Wire} from "core/models";
+import type {Node} from "core/models";
+import {Wire}      from "core/models";
 
 
 export const SplitWireTool: Tool = (() => {

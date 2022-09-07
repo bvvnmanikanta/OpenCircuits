@@ -3,10 +3,10 @@ import {GroupAction} from "core/actions/GroupAction";
 import {DisconnectAction} from "core/actions/addition/ConnectionAction";
 import {DeleteAction}     from "core/actions/addition/PlaceAction";
 
-import {CircuitDesigner} from "core/models";
+import type {CircuitDesigner} from "core/models";
 
 import {Component} from "core/models/Component";
-import {Node}      from "core/models/Node";
+import type {Node} from "core/models/Node";
 import {Wire}      from "core/models/Wire";
 
 

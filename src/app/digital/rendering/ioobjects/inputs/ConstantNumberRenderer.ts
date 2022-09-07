@@ -1,16 +1,17 @@
 import {DEFAULT_BORDER_COLOR, DEFAULT_BORDER_WIDTH, DEFAULT_FILL_COLOR, DEFAULT_ON_COLOR,
         SELECTED_BORDER_COLOR, SELECTED_FILL_COLOR} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
-import {Renderer}             from "core/rendering/Renderer";
+import type {Renderer}        from "core/rendering/Renderer";
 import {Style}                from "core/rendering/Style";
 import {FONT_CONSTANT_NUMBER} from "core/rendering/Styles";
 
 import {Line}      from "core/rendering/shapes/Line";
 import {Rectangle} from "core/rendering/shapes/Rectangle";
 
-import {ConstantNumber} from "digital/models/ioobjects";
+import type {ConstantNumber} from "digital/models/ioobjects";
 
 
 export const ConstantNumberRenderer = (() => {

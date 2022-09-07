@@ -7,7 +7,7 @@ import {V} from "Vector";
 
 import {Positioner} from "core/models/ports/positioners/Positioner";
 
-import {AnalogPort} from "analog/models";
+import type {AnalogPort} from "analog/models";
 
 
 @serializable("TopBottomPositioner")

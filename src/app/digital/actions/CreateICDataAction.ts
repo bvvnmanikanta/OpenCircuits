@@ -1,8 +1,8 @@
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
-import {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
+import type {DigitalCircuitDesigner} from "digital/models/DigitalCircuitDesigner";
 
-import {ICData} from "digital/models/ioobjects/other/ICData";
+import type {ICData} from "digital/models/ioobjects/other/ICData";
 
 
 export class CreateICDataAction implements Action {

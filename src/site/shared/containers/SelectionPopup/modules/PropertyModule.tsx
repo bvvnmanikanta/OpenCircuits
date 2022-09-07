@@ -1,20 +1,20 @@
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
-import {Action}            from "core/actions/Action";
+import type {Action}       from "core/actions/Action";
 import {GroupAction}       from "core/actions/GroupAction";
 import {SetPropertyAction} from "core/actions/SetPropertyAction";
 
 import {IOObject} from "core/models";
 
-import {Prop, PropInfo} from "core/models/PropInfo";
+import type {Prop, PropInfo} from "core/models/PropInfo";
 
 import {useSelectionProps} from "shared/containers/SelectionPopup/modules/useSelectionProps";
 
 import {ButtonModuleInputField} from "shared/containers/SelectionPopup/modules/inputs/ButtonModuleInputField";
 import {ColorModuleInputField}  from "shared/containers/SelectionPopup/modules/inputs/ColorModuleInputField";
-import {ModuleSubmitInfo}       from "shared/containers/SelectionPopup/modules/inputs/ModuleInputField";
+import type {ModuleSubmitInfo}  from "shared/containers/SelectionPopup/modules/inputs/ModuleInputField";
 import {NumberModuleInputField} from "shared/containers/SelectionPopup/modules/inputs/NumberModuleInputField";
 import {SelectModuleInputField} from "shared/containers/SelectionPopup/modules/inputs/SelectModuleInputField";
 import {TextModuleInputField}   from "shared/containers/SelectionPopup/modules/inputs/TextModuleInputField";

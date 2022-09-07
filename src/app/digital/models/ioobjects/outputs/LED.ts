@@ -4,7 +4,8 @@ import {DEFAULT_SIZE,
         LED_LIGHT_RADIUS,
         LED_WIDTH} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {ClampedValue} from "math/ClampedValue";
 

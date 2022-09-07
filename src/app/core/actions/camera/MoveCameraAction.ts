@@ -1,8 +1,8 @@
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {Camera} from "math/Camera";
+import type {Camera} from "math/Camera";
 
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
 
 export class MoveCameraAction implements Action {

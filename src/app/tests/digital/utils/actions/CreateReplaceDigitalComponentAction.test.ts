@@ -2,7 +2,7 @@ import {GetHelpers} from "test/helpers/Helpers";
 
 import {SelectionsWrapper} from "core/utils/SelectionsWrapper";
 
-import {GroupAction} from "core/actions/GroupAction";
+import type {GroupAction} from "core/actions/GroupAction";
 
 import {ConnectionAction} from "core/actions/addition/ConnectionAction";
 
@@ -13,7 +13,8 @@ import {InputPortChangeAction} from "digital/actions/ports/InputPortChangeAction
 
 import {DigitalCircuitDesigner} from "digital/models";
 
-import {ANDGate, Button, IC, ICData, LED,
+import type {Button}                                   from "digital/models/ioobjects";
+import {ANDGate, IC, ICData, LED,
         Multiplexer, ORGate, SRLatch, Switch, XORGate} from "digital/models/ioobjects";
 
 

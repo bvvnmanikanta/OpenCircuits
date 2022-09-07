@@ -1,5 +1,7 @@
-import {Matcher, screen} from "@testing-library/react";
-import {UserEvent}       from "@testing-library/user-event/dist/types/setup";
+import {screen} from "@testing-library/react";
+
+import type {Matcher}   from "@testing-library/react";
+import type {UserEvent} from "@testing-library/user-event/dist/types/setup";
 
 
 /**

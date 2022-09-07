@@ -1,6 +1,6 @@
-import {Selectable} from "core/utils/Selectable";
+import type {Selectable} from "core/utils/Selectable";
 
-import {Action} from "core/actions/Action";
+import type {Action} from "core/actions/Action";
 
 
 export class SetNameAction implements Action {

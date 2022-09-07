@@ -1,7 +1,7 @@
 import React from "react";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
-import {LoadFile}           from "shared/utils/Importer";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import {LoadFile}                from "shared/utils/Importer";
 
 import {InputField} from "shared/components/InputField";
 

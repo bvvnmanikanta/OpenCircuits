@@ -1,4 +1,4 @@
-import {SimDataMappings} from "analog/models/sim/NetlistGenerator";
+import type {SimDataMappings} from "analog/models/sim/NetlistGenerator";
 
 import {CreateState} from "shared/utils/CreateState";
 

@@ -4,17 +4,20 @@ import {DEFAULT_SIZE,
         WIRE_SNAP_THRESHOLD,
         WIRE_THICKNESS} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {BezierCurve}    from "math/BezierCurve";
 import {BezierContains} from "math/MathUtils";
 
 import {GenPropInfo} from "core/utils/PropInfoUtils";
 
-import {Component}      from "./Component";
 import {CullableObject} from "./CullableObject";
-import {Node}           from "./Node";
 import {Port}           from "./ports/Port";
+
+import type {Component} from "./Component";
+import type {Node}      from "./Node";
+
 
 
 const [Info, InitialInfo] = GenPropInfo({

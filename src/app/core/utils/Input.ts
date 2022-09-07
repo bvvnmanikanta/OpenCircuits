@@ -4,12 +4,13 @@ import {DRAG_TIME,
         LEFT_MOUSE_BUTTON,
         MIDDLE_MOUSE_BUTTON} from "core/utils/Constants";
 
-import {V, Vector} from "Vector";
+import type {Vector} from "Vector";
+import {V}           from "Vector";
 
 import {CalculateMidpoint} from "math/MathUtils";
 
-import {Event} from "./Events";
-import {Key}   from "./Key";
+import type {Event} from "./Events";
+import type {Key}   from "./Key";
 
 
 export type Listener = (event: Event) => void;

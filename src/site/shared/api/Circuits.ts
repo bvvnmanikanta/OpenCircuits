@@ -1,8 +1,9 @@
-import {CircuitMetadata, CircuitMetadataDef} from "core/models/CircuitMetadata";
+import type {CircuitMetadataDef} from "core/models/CircuitMetadata";
+import {CircuitMetadata}         from "core/models/CircuitMetadata";
 
 import {Request} from "shared/utils/Request";
 
-import {AuthState} from "./auth/AuthState";
+import type {AuthState} from "./auth/AuthState";
 
 
 export async function CreateUserCircuit(auth: AuthState, data: string): Promise<CircuitMetadata | undefined> {

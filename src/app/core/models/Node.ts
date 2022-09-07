@@ -1,5 +1,6 @@
 import {Component} from "./Component";
-import {Port}      from "./ports/Port";
+
+import type {Port} from "./ports/Port";
 
 
 export interface Node extends Component {

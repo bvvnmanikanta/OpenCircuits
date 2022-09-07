@@ -1,10 +1,11 @@
 import path from "node:path";
 
-import {ClassDeclaration, ConstructorDeclaration, FunctionDeclaration,
-        JSDocParameterTag, JSDocReturnTag, MethodDeclaration, ParameterDeclaration,
-        PropertyDeclaration, SyntaxKind, Type, ts} from "ts-morph";
+import {
+        JSDocParameterTag, JSDocReturnTag, SyntaxKind} from "ts-morph";
 
 import type {AccessModifier, Class, Constructor, Method, Parameter, Property, Types} from "./model";
+import type {ClassDeclaration, ConstructorDeclaration, FunctionDeclaration, MethodDeclaration, ParameterDeclaration,
+        PropertyDeclaration, Type, ts} from "ts-morph";
 
 
 export function getAccessModifier(d: ConstructorDeclaration | PropertyDeclaration

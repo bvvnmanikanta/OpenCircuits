@@ -6,10 +6,10 @@ import "test/helpers/Extensions";
 import {GetHelpers} from "test/helpers/Helpers";
 import {Setup}      from "test/helpers/Setup";
 
-import {DefaultTool} from "core/tools/DefaultTool";
-import {RotateTool}  from "core/tools/RotateTool";
-import {Tool}        from "core/tools/Tool";
-import {WiringTool}  from "core/tools/WiringTool";
+import type {DefaultTool} from "core/tools/DefaultTool";
+import {RotateTool}       from "core/tools/RotateTool";
+import type {Tool}        from "core/tools/Tool";
+import {WiringTool}       from "core/tools/WiringTool";
 
 import {ANDGate, LED, Switch} from "digital/models/ioobjects";
 

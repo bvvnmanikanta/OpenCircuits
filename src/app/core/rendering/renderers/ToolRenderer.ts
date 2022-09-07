@@ -2,20 +2,20 @@ import {ROTATION_CIRCLE_RADIUS,
         ROTATION_CIRCLE_THICKNESS} from "core/utils/Constants";
 
 
-import {Vector} from "Vector";
+import type {Vector} from "Vector";
 
-import {Camera} from "math/Camera";
+import type {Camera} from "math/Camera";
 
-import {CircuitInfo} from "core/utils/CircuitInfo";
+import type {CircuitInfo} from "core/utils/CircuitInfo";
 
 
 import {InteractionTool}  from "core/tools/InteractionTool";
 import {RotateTool}       from "core/tools/RotateTool";
 import {SelectionBoxTool} from "core/tools/SelectionBoxTool";
-import {ToolManager}      from "core/tools/ToolManager";
+import type {ToolManager} from "core/tools/ToolManager";
 import {WiringTool}       from "core/tools/WiringTool";
 
-import {Renderer}            from "core/rendering/Renderer";
+import type {Renderer}       from "core/rendering/Renderer";
 import {Style}               from "core/rendering/Style";
 import {ROTATION_ARC_STYLE,
         ROTATION_CIRCLE_COLOR,

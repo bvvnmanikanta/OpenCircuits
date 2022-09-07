@@ -1,20 +1,21 @@
-import {RefObject}   from "react";
-import {Deserialize} from "serialeazy";
+import type {RefObject} from "react";
+import {Deserialize}    from "serialeazy";
 
 
 import {OVERWRITE_CIRCUIT_MESSAGE} from "../Constants";
 
 import {V} from "Vector";
 
-import {Circuit, ContentsData}  from "core/models/Circuit";
+import type {ContentsData}      from "core/models/Circuit";
+import {Circuit}                from "core/models/Circuit";
 import {CircuitMetadataBuilder} from "core/models/CircuitMetadata";
 
-import {DigitalCircuitInfo}                                   from "digital/utils/DigitalCircuitInfo";
+import type {DigitalCircuitInfo}                              from "digital/utils/DigitalCircuitInfo";
 import {VersionConflictPostResolver, VersionConflictResolver} from "digital/utils/DigitalVersionConflictResolver";
 
-import {DigitalCircuitDesigner} from "digital/models";
+import type {DigitalCircuitDesigner} from "digital/models";
 
-import {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
+import type {CircuitInfoHelpers} from "shared/utils/CircuitInfoHelpers";
 
 import {CreateUserCircuit, DeleteUserCircuit, LoadUserCircuit} from "shared/api/Circuits";
 
@@ -24,8 +25,9 @@ import {SaveCircuit}      from "shared/state/thunks/SaveCircuit";
 import {LoadUserCircuits} from "shared/state/thunks/User";
 
 
-import {AppStore}          from "../../state";
 import {GenerateThumbnail} from "../GenerateThumbnail";
+
+import type {AppStore} from "../../state";
 
 
 export function GetDigitalCircuitInfoHelpers(store: AppStore, canvas: RefObject<HTMLCanvasElement>,

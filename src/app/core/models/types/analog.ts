@@ -10,8 +10,11 @@ export type AnalogNode = Component & { kind: "AnalogNode" };
 
 export type Resistor = Component & { kind: "Resistor" };
 
+export type VoltageSource = Component & { kind: "VoltageSource" };
+
 export type AnalogComponent =
     | AnalogNode
-    | Resistor;
+    | Resistor
+    | VoltageSource;
 
 export type AnalogObj = AnalogPort | AnalogWire | AnalogComponent;

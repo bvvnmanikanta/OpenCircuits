@@ -11,7 +11,7 @@ export type AnalogNode = Component & { kind: "AnalogNode" };
 export type Resistor = Component & { kind: "Resistor" };
 
 export type VoltageSource = Component & { kind: "VoltageSource" };
-
+//random line
 export type AnalogComponent =
     | AnalogNode
     | Resistor

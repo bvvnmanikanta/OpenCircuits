@@ -50,8 +50,8 @@ export const AnalogPortInfo: PortInfoRecord<AnalogComponent> = {
 
         Positions: {
             "2": {
-                "0:0": { origin: V(-0.6, 0), target: V(-1.3, 0), dir: V(-1, 0) },
-                "0:1": { origin: V(+0.6, 0), target: V(+1.3, 0), dir: V(+1, 0) },
+                "0:0": { origin: V(0, -0.5), target: V(0, -1), dir: V(0, -1) },
+                "0:1": { origin: V(0, +0.5), target: V(0, +1), dir: V(0, +1) },
             },
         },
     }

@@ -12,8 +12,9 @@ export type Ground = Component & { kind: "Ground" };
 
 export type Resistor = Component & { kind: "Resistor", resistance: number };
 
-export type VoltageSource = Component & { kind: "VoltageSource", voltage: number };
+export type VoltageSource = Component & { kind: "VoltageSource", voltage: number/*, frequency: number */};
 //random line
+//random line 2
 export type AnalogComponent =
     | AnalogNode
     | Resistor

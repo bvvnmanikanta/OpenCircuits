@@ -26,6 +26,17 @@ export const AnalogComponentInfo: ComponentInfoRecord<AnalogComponent> = {
             },
         },
     }),
+    "VoltageSource": ({
+        Default:  (id) => ({ kind: "VoltageSource", ...DefaultComponent(id), voltage: 10 }),
+        PropInfo: {
+            ...DefaultComponentPropInfo,
+            "voltage": {
+                type:  "float",
+                label: "Voltage",
+                step:  5, min:   -1000,
+            },
+        },
+    }),
 };
 
 export const AnalogInfo: ObjInfoRecord<AnalogObj> = {

@@ -42,7 +42,7 @@ export const AnalogPortInfo: PortInfoRecord<AnalogComponent> = {
         },
     },
     "VoltageSource": {
-        Default:        AnalogInfo["AnalogPort"].Default,
+        Default:       DefaultAnalogPort,
         InitialConfig: "2",
         AllowChanges:  false,
 

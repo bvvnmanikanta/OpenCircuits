@@ -30,13 +30,13 @@ export const AnalogComponentInfo: ComponentInfoRecord<AnalogComponent> = {
         Default: (id) => ({
             kind: "VoltageSource", ...DefaultComponent(id),
             voltage: 5,
-            v1: 0,
-            td: 0,
-            tr: 0.01,
-            tf: 0.01,
-            pw: 0.1,
-            p: 0.2,
-            ph: 0
+            low_voltage: 0,
+            delay_time: 0,
+            rise_time: 0.01,
+            fall_time: 0.01,
+            pulse_width: 0.1,
+            period: 0.2,
+            phase: 0
         }),
         PropInfo: {
             ...DefaultComponentPropInfo,
@@ -45,37 +45,37 @@ export const AnalogComponentInfo: ComponentInfoRecord<AnalogComponent> = {
                 label: "Voltage",
                 step: 1, min: -10,
             },
-            "v1": {
+            "low_voltage": {
                 type: "float",
                 label: "Low Voltage",
                 step: 1, min: -10,
             },
-            "td": {
+            "delay_time": {
                 type: "float",
                 label: "Delay Time",
                 step:1, min:-10,
             },
-            "tr": {
+            "rise_time": {
                 type: "float",
                 label: "Rise Time",
                 step:0.01, min:0,
             },
-            "tf": {
+            "fall_time": {
                 type: "float",
                 label: "Fall Time",
                 step:0.01, min:0,
             },
-            "pw": {
+            "pulse_width": {
                 type: "float",
                 label: "Pulse Width",
                 step:0.1, min:0,
             },
-            "p": {
+            "period": {
                 type: "float",
                 label: "Period",
                 step:0.1, min:0,
             },
-            "ph": {
+            "phase": {
                 type: "float",
                 label: "Phase",
                 step:1, min:0,

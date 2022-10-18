@@ -14,13 +14,13 @@ export type Resistor = Component & { kind: "Resistor", resistance: number };
 
 export type VoltageSource = Component & { kind: "VoltageSource", 
     voltage: number,
-    v1: number,
-    td: number,
-    tr: number,
-    tf: number,
-    pw: number,
-    p:  number,
-    ph: number,
+    low_voltage: number,
+    delay_time: number,
+    rise_time: number,
+    fall_time: number,
+    pulse_width: number,
+    period:  number,
+    phase: number,
  };
 //random line
 //random line 2
@@ -38,6 +38,8 @@ export const DefaultAnalogComponent: { [C in AnalogComponent as C["kind"]]: Comp
     "AnalogNode": (id) => ({ ...DefaultComponent(id), kind: "AnalogNode"                 }),
     "Ground":     (id) => ({ ...DefaultComponent(id), kind: "Ground"                     }),
     "Resistor":   (id) => ({ ...DefaultComponent(id), kind: "Resistor", resistance: 1000 }),
+    "VoltageSource": (id) => ({ ...DefaultComponent(id), kind: "VoltageSource", voltage: 5, low_voltage: 0, delay_time: 0,
+    rise_time: 0.01, fall_time: 0.01, pulse_width: 0.1, period: 0.2, phase: 0}),
 };
 
 export const DefaultAnalogPort: PortFactory<AnalogPort> =

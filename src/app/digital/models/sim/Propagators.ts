@@ -19,7 +19,7 @@ type PropagatorRecord = {
  *  any state or information from the component itself.
  *
  * @param propagator The simple propagator that takes in a list of signals and outputs a list of signals.
- * @returns            The propagator function to facilitate this propagation.
+ * @returns          The propagator function to facilitate this propagation.
  */
 const InputOutputPropagator = (propagator: (inputs: Signal[]) => Signal[]): Propagator<DigitalComponent, unknown> => (
     ({ signals }) => {
@@ -34,6 +34,9 @@ const InputOutputPropagator = (propagator: (inputs: Signal[]) => Signal[]): Prop
         };
     }
 );
+
+const Noprop: Propagator<DigitalComponent, unknown> =
+    ({ signals, state }) => ({ nextSignals: signals, nextState: state });
 
 // AND reducer
 const AND = SignalReducer((a, b) => (a && b));
@@ -54,7 +57,7 @@ export const AllPropagators: PropagatorRecord = {
     "Switch": ({ state = Signal.Off }) => ({ nextSignals: [[], [state as Signal], []], nextState: state }),
 
     // LEDs don't propagate a signal
-    "LED": ({ signals }) => ({ nextSignals: signals }),
+    "LED": Noprop,
 
     "ANDGate": InputOutputPropagator((inputs) => [inputs.reduce(AND)]),
 };

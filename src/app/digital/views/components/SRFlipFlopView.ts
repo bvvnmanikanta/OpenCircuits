@@ -28,7 +28,7 @@ export class SRFlipFlopView extends ComponentView<SRFlipFlop, DigitalViewInfo> {
 
         const fillcol = (selected ? SELECTED_FILL_COLOR : DEFAULT_FILL_COLOR);
 
-        const style = new Style(fillcol , borderCol, DEFAULT_CURVE_BORDER_WIDTH);
+        const style = new Style(fillcol , borderCol, DEFAULT_BORDER_WIDTH);
 
         // Get size of model
         const size = this.transform.get().getSize();

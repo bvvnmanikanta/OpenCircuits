@@ -23,14 +23,10 @@ export type Decoder = Component & { kind: "Decoder" };
 
 export type DigitalComponent =
     | DigitalNode
-<<<<<<< HEAD
-    | ANDGate
     | Encoder
-    | Decoder;
-=======
+    | Decoder
     | Switch
     | LED
     | ANDGate;
->>>>>>> 2426703fec11cdb7c20c89464557f9ead0afc885
 
 export type DigitalObj = DigitalPort | DigitalWire | DigitalComponent;

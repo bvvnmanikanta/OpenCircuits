@@ -15,12 +15,13 @@ import {ComponentView}            from "core/views/ComponentView";
 import {DigitalCircuitController} from "digital/controllers/DigitalCircuitController";
 import { DEFAULT_MAX_VERSION } from "tls";
 import { DEFAULT_EXTENSIONS } from "@babel/core";
+import { DigitalViewInfo } from "../DigitalViewInfo";
 
 
 
-export class DecoderView extends ComponentView<Decoder, DigitalCircuitController> {
-    public constructor(circuit: DigitalCircuitController, obj: Decoder) {
-        super(circuit, obj, V(1, 2));
+export class DecoderView extends ComponentView<Decoder, DigitalViewInfo> {
+    public constructor(info: DigitalViewInfo, obj: Decoder) {
+        super(info, obj, V(1, 2));
     }
 
     protected override renderComponent({ renderer, selections }: RenderInfo): void {
@@ -30,20 +31,18 @@ export class DecoderView extends ComponentView<Decoder, DigitalCircuitController
 
         const style = new Style("WHITE", borderCol, DEFAULT_BORDER_WIDTH);
 
-        // Get size of model
-        const size = this.transform.get().getSize();
-
-        // Get current number of inputs
-        const inputs = this.circuit.getPortsFor(this.obj)
-            .filter((p) => p.group === DigitalPortGroup.Input).length;
+        // Get current number of outputs
+         const input = this.circuit.getPortsFor(this.obj)
+             .filter((p) => p.group === DigitalPortGroup.Input).length;
+         const size = V((1 + (input - 1)/20), 1/2 * Math.pow(2,input));
 
         renderer.draw(new Rectangle(V(), size), style)
     }
 
-    protected override getBounds(): Rect {
+    public override getBounds(): Rect {
         // Get current number of inputs
         const inputs = this.circuit.getPortsFor(this.obj)
             .filter((p) => p.group === DigitalPortGroup.Input).length;
-        return super.getBounds().expand(V(1,2));
+        return super.getBounds().expand(V(0, 1));
     }
 }

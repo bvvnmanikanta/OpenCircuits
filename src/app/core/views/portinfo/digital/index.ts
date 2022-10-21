@@ -63,35 +63,36 @@ export const DigitalPortInfo: PortInfoRecord<DigitalComponent> = {
         Default:       DigitalInfo["DigitalPort"].Default,
         InitialConfig: "4,2",
         AllowChanges:  true,
-        ChangeGroup:   DigitalPortGroup.Input,
+        ChangeGroup:   DigitalPortGroup.Output,
 
-        Positions: {
-            "4,2": { 
-                "0:0" : { origin: V(-0.5, 0.75), target: V(-1.2, 0.75), dir: V(-1, 0) },
-                "0:1" : { origin: V(-0.5, 0.25), target: V(-1.2, 0.25), dir: V(-1, 0) },
-                "0:2" : { origin: V(-0.5,-0.25), target: V(-1.2,-0.25), dir: V(-1, 0) },
-                "0:3" : { origin: V(-0.5,-0.75), target: V(-1.2,-0.75), dir: V(-1, 0) },
-                "1:0" : { origin: V(+0.5,+0.25), target: V(+1.2, 0.25), dir: V(+1, 0) },
-                "1:1" : { origin: V(+0.5,-0.25), target: V(+1.2,-0.25), dir: V(+1, 0) }
-            }
-        }
+        Positions: GenPortConfig(
+            [1,2,3,4,5,6,7,8],
+            (numOutputs) => {
+                const width = (1+ (numOutputs - 1)/20); 
+                return {
+                    0: CalcPortPositions(2 ** numOutputs, 0.5, width, V(-1, 0)),
+                    1: CalcPortPositions(numOutputs     , 0.5, width, V(+1, 0)),
+                };
+            },
+        ),
     },
+
     "Decoder": {
         Default:       DigitalInfo["DigitalPort"].Default,
         InitialConfig: "2,4",
         AllowChanges:  true,
         ChangeGroup:   DigitalPortGroup.Input,
 
-        Positions: {
-            "2,4": { 
-                "0:0" : { origin: V(-0.5, 0.25), target: V(-1.2, 0.25), dir: V(-1, 0) },
-                "0:1" : { origin: V(-0.5,-0.25), target: V(-1.2,-0.25), dir: V(-1, 0) },
-                "1:0" : { origin: V(+0.5,+0.75), target: V(+1.2,+0.75), dir: V(+1, 0) },
-                "1:1" : { origin: V(+0.5,+0.25), target: V(+1.2,+0.25), dir: V(+1, 0) },
-                "1:2" : { origin: V(+0.5,-0.25), target: V(+1.2,-0.25), dir: V(+1, 0) },
-                "1:3" : { origin: V(+0.5,-0.75), target: V(+1.2,-0.75), dir: V(+1, 0) }
-            }
-        }
+        Positions: GenPortConfig(
+            [1,2,3,4,5,6,7,8],
+            (numInputs) => {
+                const width = (1+ (numInputs - 1)/20)
+                return {
+                    0: CalcPortPositions(numInputs     , 0.5, width, V(+1, 0)),
+                    1: CalcPortPositions(2 ** numInputs, 0.5, width, V(-1, 0)),
+                }
+            },
+        ),
     },
 
 

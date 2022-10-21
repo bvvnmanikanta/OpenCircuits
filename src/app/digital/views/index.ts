@@ -1,5 +1,4 @@
 import {ANDGate, Decoder, DigitalNode, DigitalObj, DigitalPort, DigitalWire, Encoder} from "core/models/types/digital";
-import {DigitalNode, DigitalObj} from "core/models/types/digital";
 
 import {NodeView}                 from "core/views/NodeView";
 import {ViewFactory, ViewRecord}  from "core/views/ViewManager";

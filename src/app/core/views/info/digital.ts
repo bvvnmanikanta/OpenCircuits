@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import {ANDGate, DigitalComponent, DigitalNode,
-        DigitalObj, DigitalPort, DigitalWire, Encoder, Decoder} from "core/models/types/digital";
-=======
 import {DigitalComponent, DigitalObj, DigitalPort, DigitalWire} from "core/models/types/digital";
->>>>>>> 2426703fec11cdb7c20c89464557f9ead0afc885
 
 import {DefaultComponent} from "core/models/types/base/Component";
 
@@ -15,12 +10,6 @@ const DigitalPort = GenPortInfo<DigitalPort>("DigitalPort");
 const DigitalWire = GenWireInfo<DigitalWire>("DigitalWire");
 
 export const DigitalComponentInfo: ComponentInfoRecord<DigitalComponent> = {
-<<<<<<< HEAD
-    "DigitalNode": GenDigitalComponentInfo<DigitalNode>("DigitalNode"),
-    "ANDGate":     GenDigitalComponentInfo<ANDGate>("ANDGate"),
-    "Encoder":     GenDigitalComponentInfo<Encoder>("Encoder"),
-    "Decoder":     GenDigitalComponentInfo<Decoder>("Decoder")
-=======
     "DigitalNode": {
         Default:  (id) => ({ kind: "DigitalNode", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
@@ -37,7 +26,14 @@ export const DigitalComponentInfo: ComponentInfoRecord<DigitalComponent> = {
         Default:  (id) => ({ kind: "ANDGate", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
     },
->>>>>>> 2426703fec11cdb7c20c89464557f9ead0afc885
+    "Encoder": {
+        Default:  (id) => ({ kind: "Encoder", ...DefaultComponent(id) }),
+        PropInfo: DefaultComponentPropInfo,
+    },
+    "Decoder": {
+        Default:  (id) => ({ kind: "Decoder", ...DefaultComponent(id) }),
+        PropInfo: DefaultComponentPropInfo,
+    },
 };
 
 export const DigitalInfo: ObjInfoRecord<DigitalObj> = {

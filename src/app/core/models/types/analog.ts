@@ -12,18 +12,33 @@ export type Ground = Component & { kind: "Ground" };
 
 export type Resistor = Component & { kind: "Resistor", resistance: number };
 
-export type VoltageSource = Component & { kind: "VoltageSource", 
-    voltage: number,
-    low_voltage: number,
-    delay_time: number,
-    rise_time: number,
-    fall_time: number,
-    pulse_width: number,
-    period:  number,
-    phase: number,
- };
-//random line
-//random line 2
+export type ConstantVoltageSourceProps = {
+    v: number; // voltage
+  }
+export type PulseVoltageSourceProps = {
+    v0: number; // Low voltage
+    v1: number; // High voltage
+    td: number; // Delay time
+    tr: number; // Rise time
+    tf: number; // Fall time
+    pw: number; // Pulse Width
+    p:  number; // Period
+    ph: number; // Phase
+  }
+export  type SineVoltageSourceProps = {
+    vo: number; // Offset voltage
+    v1: number; // Amplitude voltage
+    f:  number; // frequency
+    td: number; // Delay time
+    d:  number; // Damping factor
+    ph: number; // Phase
+  }
+
+export type VoltageSource = Component & {
+kind: "VoltageSource";
+waveform: "DC" | "DC Pulse" | "DC Sine";
+} & ConstantVoltageSourceProps & PulseVoltageSourceProps & SineVoltageSourceProps;
+
 export type AnalogComponent =
     | AnalogNode
     | Resistor
@@ -38,8 +53,10 @@ export const DefaultAnalogComponent: { [C in AnalogComponent as C["kind"]]: Comp
     "AnalogNode": (id) => ({ ...DefaultComponent(id), kind: "AnalogNode"                 }),
     "Ground":     (id) => ({ ...DefaultComponent(id), kind: "Ground"                     }),
     "Resistor":   (id) => ({ ...DefaultComponent(id), kind: "Resistor", resistance: 1000 }),
-    "VoltageSource": (id) => ({ ...DefaultComponent(id), kind: "VoltageSource", voltage: 5, low_voltage: 0, delay_time: 0,
-    rise_time: 0.01, fall_time: 0.01, pulse_width: 0.1, period: 0.2, phase: 0}),
+    "VoltageSource": (id) => ({ ...DefaultComponent(id), kind: "VoltageSource", 
+    waveform: "DC", v: 5, 
+    v0: 0, v1: 5, td: 0.1, tr: 0.01, tf: 0.01, pw: 0.1, p: 0.1, ph: 0,
+    f: 100, d: 1, vo: 0}),
 };
 
 export const DefaultAnalogPort: PortFactory<AnalogPort> =

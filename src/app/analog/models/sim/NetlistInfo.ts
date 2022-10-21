@@ -35,7 +35,8 @@ export const AllNetlistInfo: NetlistInfoRecord = {
 
     "Resistor": (r) => ["R", [`${r.resistance}`]],
 
-    "VoltageSource": (v) => ["V", [`${v.voltage}`]],
+    "VoltageSource": (v) => ["V", [`${v.v}`]],
+
 };
 
 export function GetNetlistInfo(comp: AnalogComponent) {

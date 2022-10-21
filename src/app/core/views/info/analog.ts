@@ -36,7 +36,7 @@ export const AnalogComponentInfo: ComponentInfoRecord<AnalogComponent> = {
             fall_time: 0.01,
             pulse_width: 0.1,
             period: 0.2,
-            phase: 0
+            phase: 0,
         }),
         PropInfo: {
             ...DefaultComponentPropInfo,
@@ -80,7 +80,7 @@ export const AnalogComponentInfo: ComponentInfoRecord<AnalogComponent> = {
                 label: "Phase",
                 step:1, min:0,
             },
-
+            
         },
     }),
 };

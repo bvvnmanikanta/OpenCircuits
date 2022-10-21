@@ -16,8 +16,8 @@ export type ConstantVoltageSourceProps = {
     v: number; // voltage
   }
 export type PulseVoltageSourceProps = {
-    v0: number; // Low voltage
-    v1: number; // High voltage
+    v1: number; // Low voltage
+    v: number; // High voltage
     td: number; // Delay time
     tr: number; // Rise time
     tf: number; // Fall time
@@ -55,7 +55,7 @@ export const DefaultAnalogComponent: { [C in AnalogComponent as C["kind"]]: Comp
     "Resistor":   (id) => ({ ...DefaultComponent(id), kind: "Resistor", resistance: 1000 }),
     "VoltageSource": (id) => ({ ...DefaultComponent(id), kind: "VoltageSource", 
     waveform: "DC", v: 5, 
-    v0: 0, v1: 5, td: 0.1, tr: 0.01, tf: 0.01, pw: 0.1, p: 0.1, ph: 0,
+    v1: 5, td: 0.1, tr: 0.01, tf: 0.01, pw: 0.1, p: 0.1, ph: 0,
     f: 100, d: 1, vo: 0}),
 };
 

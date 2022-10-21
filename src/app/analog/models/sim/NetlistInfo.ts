@@ -35,7 +35,7 @@ export const AllNetlistInfo: NetlistInfoRecord = {
 
     "Resistor": (r) => ["R", [`${r.resistance}`]],
 
-    "VoltageSource": (v) => ["V", [`${v.v}`]],
+    "VoltageSource": undefined,
 
 };
 

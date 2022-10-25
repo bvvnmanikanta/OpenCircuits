@@ -35,8 +35,8 @@ export  type SineVoltageSourceProps = {
   }
 
 export type VoltageSource = Component & {
-kind: "VoltageSource";
-waveform: "DC" | "DC Pulse" | "DC Sine";
+  kind: "VoltageSource";
+  waveform: "DC" | "DC Pulse" | "DC Sine";
 } & ConstantVoltageSourceProps & PulseVoltageSourceProps & SineVoltageSourceProps;
 
 export type AnalogComponent =

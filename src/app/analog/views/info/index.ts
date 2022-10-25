@@ -18,6 +18,7 @@ export const AnalogPropInfo: PropInfoRecord<AnalogObj> = {
     "VoltageSource":{
         ...DefaultComponentPropInfo,
         "v" : {type: "float", label: "Voltage", step: 0.1, min: 0},
-        "v1": {type: "float", label: "Voltage", step: 0.1, min: 0},
+        "v1": {type: "float", label: "Voltage High", step: 0.1, min: 0},
+        "waveform": {type: "string", label: "Waveform"},//cant use string[] beacuse of readonly
     }
 } as const;

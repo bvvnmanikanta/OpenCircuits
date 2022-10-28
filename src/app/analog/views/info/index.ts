@@ -14,7 +14,9 @@ export const AnalogPropInfo: PropInfoRecord<AnalogObj> = {
         ...DefaultComponentPropInfo,
         { id: "resistance", type: "float", key: "resistance", label: "Resistance", step: 100, min: 0 },
     ],
+
     "Ground": DefaultComponentPropInfo,
+
     "VoltageSource":[
         ...DefaultComponentPropInfo,
         { id: "v", type:"float", key: "v", label: "Voltage", step: 0.1, min: 0},

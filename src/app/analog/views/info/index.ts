@@ -20,6 +20,11 @@ export const AnalogPropInfo: PropInfoRecord<AnalogObj> = {
         { id: "v", type:"float", key: "v", label: "Voltage", step: 0.1, min: 0},
         { id: "v1", type: "float", key: "v1", label: "Voltage High", step: 0.1, min: 0},
         { id: "waveform", type: "string[]", key: "waveform", label: "Waveform", options: [["DC", "a"],["Pulse", "b"],["Sine", "c"]]},
+        { id: "td", type: "float", key: "td", label: "Time Delay", step: 0.1, min:0},
+        { id: "tr", type: "float", key: "tr", label: "Rise Time",  step: 0.1, min:0},
+        { id: "tf", type: "float", key: "tf", label: "Fall Time",  step: 0.1, min:0},
+
+
         //"v" : {type: "float", label: "Voltage", step: 0.1, min: 0},
         //"v1": {type: "float", label: "Voltage High", step: 0.1, min: 0},
         //"waveform": {type: "string[]", label: "Waveform", options: [["DC", "a"],["Pulse", "b"],["Sine", "c"]]},

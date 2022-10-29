@@ -1,4 +1,5 @@
-import {useCallback} from "react";
+import {DigitalPropInfo} from "digital/views/info";
+import {useCallback}     from "react";
 
 import {SAVE_VERSION} from "core/utils/Constants";
 
@@ -85,8 +86,10 @@ export const App = ({ info, helpers }: Props) => {
 
                     <SelectionPopup info={info}
                                     docsUrlConfig={docsConfig}>
-                        <PropertyModule info={info} />
-                        <PortCountModule info={info} labels={{ 0: "Input", 1: "Output", 2: "Select" }} />
+                        <PropertyModule info={info} propInfo={DigitalPropInfo} />
+                        <PortCountModule
+                            info={info}
+                            labels={{ "inputs": "Input", "outputs": "Output", "selects": "Select" }} />
                         <OscilloscopeModule info={info} />
                         <ClockSyncButtonModule info={info} />
                         <BusButtonModule info={info} />

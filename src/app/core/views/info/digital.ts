@@ -2,7 +2,7 @@ import {DigitalComponent, DigitalObj, DigitalPort, DigitalWire} from "core/model
 
 import {DefaultComponent} from "core/models/types/base/Component";
 
-import {ComponentInfoRecord, ObjInfoRecord}                 from "./base";
+import {ComponentInfoRecord, ObjInfoRecord}                  from "./base";
 import {DefaultComponentPropInfo, GenPortInfo, GenWireInfo} from "./utils";
 
 
@@ -11,27 +11,27 @@ const DigitalWire = GenWireInfo<DigitalWire>("DigitalWire");
 
 export const DigitalComponentInfo: ComponentInfoRecord<DigitalComponent> = {
     "DigitalNode": {
-        Default:  (id) => ({ kind: "DigitalNode", ...DefaultComponent(id) }),
+        Default:  (id:any) => ({ kind: "DigitalNode", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
     },
     "Switch": {
-        Default:  (id) => ({ kind: "Switch", ...DefaultComponent(id) }),
+        Default:  (id:any) => ({ kind: "Switch", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
     },
     "LED": {
-        Default:  (id) => ({ kind: "LED", ...DefaultComponent(id), color: "#ffffff" }),
+        Default:  (id:any) => ({ kind: "LED", ...DefaultComponent(id), color: "#ffffff" }),
         PropInfo: DefaultComponentPropInfo,
     },
     "ANDGate": {
-        Default:  (id) => ({ kind: "ANDGate", ...DefaultComponent(id) }),
+        Default:  (id:any) => ({ kind: "ANDGate", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
     },
     "Encoder": {
-        Default:  (id) => ({ kind: "Encoder", ...DefaultComponent(id) }),
+        Default:  (id:any) => ({ kind: "Encoder", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
     },
     "Decoder": {
-        Default:  (id) => ({ kind: "Decoder", ...DefaultComponent(id) }),
+        Default:  (id:any) => ({ kind: "Decoder", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
     },
 };

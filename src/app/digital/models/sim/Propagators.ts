@@ -1,6 +1,7 @@
 import {DigitalComponent} from "core/models/types/digital";
 
 import {Signal, SignalReducer} from "digital/models/sim/Signal";
+import { DecimalToBCD } from "math/MathUtils";
 
 
 type Propagator<C extends DigitalComponent> =
@@ -18,6 +19,8 @@ const Noprop: Propagator<DigitalComponent> = ({ signals, state }) => ([signals, 
 
 // AND reducer
 const AND = SignalReducer((a, b) => (a && b));
+
+const Encoder = Sign
 
 /**
  * This is a list of all the propagators for every digital component in the circuit.
@@ -39,9 +42,11 @@ export const AllPropagators: PropagatorRecord = {
 
     "ANDGate": ({ signals }) => [{ "outputs": [signals["inputs"].reduce(AND)] }],
 
-    "Encoder": Noprop,
+    "Encoder": ({ signals }) => [{
+            "outputs" : [signals["input"]].reduce()
+    }],
 
-    "Decoder": ({ signals }) => [{ "outputs": [signals["inputs"].reduce(decodeURI)] }],
+    "Decoder": Noprop,
 };
 
 export function Propagate(c: DigitalComponent, signals: Record<string, Signal[]>, state: Signal[]) {

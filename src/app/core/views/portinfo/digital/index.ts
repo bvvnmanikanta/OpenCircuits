@@ -46,39 +46,25 @@ export const DigitalPortInfo: PortInfoRecord<DigitalComponent> = {
         })),
     },
     "Encoder": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "4,2",
+        ...DefaultDigitalPortInfo,
         AllowChanges:  true,
-        ChangeGroup:   DigitalPortGroup.Output,
-
-        Positions: GenPortConfig(
-            [1,2,3,4,5,6,7,8],
-            (numOutputs) => {
-                const width = (1+ (numOutputs - 1)/20); 
-                return {
-                    0: CalcPortPositions(2 ** numOutputs, 0.5, width, V(-1, 0)),
-                    1: CalcPortPositions(numOutputs     , 0.5, width, V(+1, 0)),
-                };
-            },
-        ),
+        ChangeGroup:   "outputs",
+        
+        PositionConfigs: [2,3,4,5,6,7,8].map((numOutputs) => ({
+            "inputs":  CalcPortPositions(2 ** numOutputs, 0.5, 1 + (numOutputs - 1)/20 , V(-1, 0)),
+            "outputs": CalcPortPositions(numOutputs     , 0.5, 1 + (numOutputs - 1)/20 , V(+1, 0)),
+        })),
     },
 
     "Decoder": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "2,4",
+        ...DefaultDigitalPortInfo,
         AllowChanges:  true,
-        ChangeGroup:   DigitalPortGroup.Input,
+        ChangeGroup:  "inputs",
 
-        Positions: GenPortConfig(
-            [1,2,3,4,5,6,7,8],
-            (numInputs) => {
-                const width = (1+ (numInputs - 1)/20)
-                return {
-                    0: CalcPortPositions(numInputs     , 0.5, width, V(+1, 0)),
-                    1: CalcPortPositions(2 ** numInputs, 0.5, width, V(-1, 0)),
-                }
-            },
-        ),
+        PositionConfigs: [2,3,4,5,6,7,8].map((numInputs) => ({
+            "inputs":  CalcPortPositions(numInputs     , 0.5, 1 + (numInputs - 1)/20, V(-1, 0)),
+            "outputs": CalcPortPositions(2 ** numInputs, 0.5, 1 + (numInputs - 1)/20, V(-1, 0)),
+        })),
     },
 
 

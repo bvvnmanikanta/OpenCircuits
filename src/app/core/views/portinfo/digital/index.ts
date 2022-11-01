@@ -2,94 +2,75 @@ import {DEFAULT_BORDER_WIDTH} from "core/utils/Constants";
 
 import {V} from "Vector";
 
-import {DigitalComponent, DigitalPortGroup} from "core/models/types/digital";
-import {DigitalInfo}                        from "core/views/info/digital";
+import {DefaultDigitalPort, DigitalComponent} from "core/models/types/digital";
 
-import {CalcPortPos, CalcPortPositions, GenPortConfig} from "../positioning/utils";
-import {PortInfoRecord}                                from "../types";
+import {CalcPortPos, CalcPortPositions} from "../positioning/utils";
+import {PortInfoRecord}                 from "../types";
 
+
+const DefaultDigitalPortInfo = {
+    Default:       DefaultDigitalPort,
+    InitialConfig: 0,
+    AllowChanges:  false,
+} as const;
 
 export const DigitalPortInfo: PortInfoRecord<DigitalComponent> = {
     "DigitalNode": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "1,1",
-        AllowChanges:  false,
-
-        Positions: {
-            "1,1": {
-                "0:0": { origin: V(0, 0), target: V(0, 0), dir: V(-1, 0) },
-                "1:0": { origin: V(0, 0), target: V(0, 0), dir: V(+1, 0) },
-            },
-        },
+        ...DefaultDigitalPortInfo,
+        PositionConfigs: [{
+            "inputs":  [{ origin: V(0, 0), target: V(0, 0), dir: V(-1, 0) }],
+            "outputs": [{ origin: V(0, 0), target: V(0, 0), dir: V(+1, 0) }],
+        }],
     },
     "Switch": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "0,1",
-        AllowChanges:  false,
-
-        Positions: {
-            "0,1": {
-                "1:0": { origin: V(0.62, 0), target: V(1.32, 0), dir: V(+1, 0) },
-            },
-        },
+        ...DefaultDigitalPortInfo,
+        PositionConfigs: [{
+            "outputs": [{ origin: V(0.62, 0), target: V(1.32, 0), dir: V(+1, 0) }],
+        }],
     },
     "LED": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "1",
-        AllowChanges:  false,
-
-        Positions: {
-            "1": {
-                "0:0": { origin: V(0, -0.5), target: V(0, -2), dir: V(0, -1) },
-            },
-        },
+        ...DefaultDigitalPortInfo,
+        PositionConfigs: [{
+            "inputs": [{ origin: V(0, -0.5), target: V(0, -2), dir: V(0, -1) }],
+        }],
     },
     "ANDGate": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "2,1",
-        AllowChanges:  true,
-        ChangeGroup:   DigitalPortGroup.Input,
+        ...DefaultDigitalPortInfo,
+        AllowChanges: true,
+        ChangeGroup:  "inputs",
 
-        Positions: GenPortConfig(
-            [2,3,4,5,6,7,8],
-            (numInputs) => ({
-                0: CalcPortPositions(numInputs, 0.5 - DEFAULT_BORDER_WIDTH/2, 1, V(-1, 0)),
-                1: [CalcPortPos(V(0.5, 0), V(1, 0))], // 1 output
-            }),
-        ),
+        // Generate configs for 2->8 input ports
+        PositionConfigs: [2,3,4,5,6,7,8].map((numInputs) => ({
+            "inputs":  CalcPortPositions(numInputs, 0.5 - DEFAULT_BORDER_WIDTH/2, 1, V(-1, 0)),
+            "outputs": [CalcPortPos(V(0.5, 0), V(1, 0))], // 1 output
+        })),
     },
     "Encoder": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "4,2",
+        ...DefaultDigitalPortInfo,
+        InitialConfig: 1,
         AllowChanges:  true,
-        ChangeGroup:   DigitalPortGroup.Output,
+        ChangeGroup:   "outputs",
 
-        Positions: GenPortConfig(
-            [1,2,3,4,5,6,7,8],
-            (numOutputs) => {
-                const width = (1 + (numOutputs - 1)/20);
-                return {
-                    0: CalcPortPositions(2 ** numOutputs, 0.5, width, V(-1, 0)),
-                    1: CalcPortPositions(numOutputs,      0.5, width, V(+1, 0)),
-                }
-            },
-        ),
+        PositionConfigs: [1,2,3,4,5,6,7,8].map((numOutputs) => {
+            const width = (1 + (numOutputs - 1)/20);
+            return {
+                "inputs":  CalcPortPositions(2 ** numOutputs, 0.5, width, V(-1, 0)),
+                "outputs": CalcPortPositions(numOutputs,      0.5, width, V(+1, 0)),
+            }
+        }),
     },
     "Decoder": {
-        Default:       DigitalInfo["DigitalPort"].Default,
-        InitialConfig: "2,4",
+        ...DefaultDigitalPortInfo,
+        InitialConfig: 1,
         AllowChanges:  true,
-        ChangeGroup:   DigitalPortGroup.Input,
+        ChangeGroup:   "inputs",
 
-        Positions: GenPortConfig(
-            [1,2,3,4,5,6,7,8],
-            (numInputs) => {
-                const width = (1 + (numInputs - 1)/20);
-                return {
-                    0: CalcPortPositions(numInputs,      0.5, width, V(-1, 0)),
-                    1: CalcPortPositions(2 ** numInputs, 0.5, width, V(+1, 0)),
-                }
-            },
-        ),
+        PositionConfigs: [1,2,3,4,5,6,7,8].map((numInputs) => {
+            const width = (1 + (numInputs - 1)/20);
+            return {
+                "inputs": CalcPortPositions(numInputs,      0.5, width, V(-1, 0)),
+                "outputs": CalcPortPositions(2 ** numInputs, 0.5, width, V(+1, 0)),
+            }
+        }),
     },
 };

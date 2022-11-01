@@ -29,6 +29,10 @@ export const DigitalComponentInfo: ComponentInfoRecord<DigitalComponent> = {
         Default:  (id) => ({ kind: "Encoder", ...DefaultComponent(id) }),
         PropInfo: DefaultComponentPropInfo,
     },
+    "Decoder": {
+        Default:  (id) => ({ kind: "Decoder", ...DefaultComponent(id) }),
+        PropInfo: DefaultComponentPropInfo,
+    },
 };
 
 export const DigitalInfo: ObjInfoRecord<DigitalObj> = {

@@ -3,6 +3,7 @@ import {NodeView}                from "core/views/NodeView";
 import {ViewFactory, ViewRecord} from "core/views/ViewManager";
 
 import {ANDGateView}     from "./components/ANDGateView";
+import {DecoderView}     from "./components/DecoderView";
 import {EncoderView}     from "./components/EncoderView";
 import {LEDView}         from "./components/LEDView";
 import {SwitchView}      from "./components/SwitchView";
@@ -22,6 +23,7 @@ export const Views: ViewRecord<DigitalObj, DigitalViewInfo> = {
     "LED":     (c, o) => new LEDView(c, o),
     "ANDGate": (c, o) => new ANDGateView(c, o),
     "Encoder": (c, o) => new EncoderView(c, o),
+    "Decoder": (c, o) => new DecoderView(c, o),
 };
 
 export function CreateView(info: DigitalViewInfo, obj: DigitalObj) {

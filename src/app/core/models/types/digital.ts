@@ -18,12 +18,14 @@ export type Switch  = Component & { kind: "Switch"  };
 export type LED     = Component & { kind: "LED", color: string };
 
 export type Encoder = Component & { kind: "Encoder" };
+export type Decoder = Component & { kind: "Decoder" };
 
 export type DigitalComponent =
     | DigitalNode
     | Switch
     | LED
     | ANDGate
-    | Encoder;
+    | Encoder
+    | Decoder;
 
 export type DigitalObj = DigitalPort | DigitalWire | DigitalComponent;

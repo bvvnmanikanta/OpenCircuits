@@ -75,4 +75,21 @@ export const DigitalPortInfo: PortInfoRecord<DigitalComponent> = {
             },
         ),
     },
+    "Decoder": {
+        Default:       DigitalInfo["DigitalPort"].Default,
+        InitialConfig: "2,4",
+        AllowChanges:  true,
+        ChangeGroup:   DigitalPortGroup.Input,
+
+        Positions: GenPortConfig(
+            [1,2,3,4,5,6,7,8],
+            (numInputs) => {
+                const width = (1 + (numInputs - 1)/20);
+                return {
+                    0: CalcPortPositions(numInputs,      0.5, width, V(-1, 0)),
+                    1: CalcPortPositions(2 ** numInputs, 0.5, width, V(+1, 0)),
+                }
+            },
+        ),
+    },
 };

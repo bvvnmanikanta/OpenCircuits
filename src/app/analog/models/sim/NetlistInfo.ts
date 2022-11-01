@@ -35,8 +35,29 @@ export const AllNetlistInfo: NetlistInfoRecord = {
 
     "Resistor": (r) => ["R", [`${r.resistance}`]],
 
-    "VoltageSource": (v) => ["V", [`${v.v}`]],//to be implemented at a later date
+/*
+    Currently the simulation is not implimented, but the voltage source DC should work normally. This is based off of 
+    the resistor which is done above. PulseVoltageSourceProps and SineVoltageSourceProps needs to be done as well.
 
+    PulseVoltageSourceProps:
+    v1: number; // Low voltage
+    v: number; // High voltage
+    td: number; // Delay time
+    tr: number; // Rise time
+    tf: number; // Fall time
+    pw: number; // Pulse Width
+    p:  number; // Period
+    ph: number; // Phase
+
+    SineVoltageSourceProps:
+    vo: number; // Offset voltage
+    v1: number; // Amplitude voltage
+    f:  number; // frequency
+    td: number; // Delay time
+    d:  number; // Damping factor
+    ph: number; // Phase
+*/
+    "VoltageSource": (v) => ["V", [`${v.v}`]],//ConstantVoltageSourceProps
 };
 
 export function GetNetlistInfo(comp: AnalogComponent) {

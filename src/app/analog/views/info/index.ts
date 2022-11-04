@@ -20,7 +20,6 @@ export const AnalogPropInfo: PropInfoRecord<AnalogObj> = {
     "VoltageSource":[
         ...DefaultComponentPropInfo,
         { id: "waveform", type: "string[]", key: "waveform", label: "waveform", options: [["DC", "a"],["Pulse", "b"],["Sine", "c"]]},
-        
     ],
 };
 /*

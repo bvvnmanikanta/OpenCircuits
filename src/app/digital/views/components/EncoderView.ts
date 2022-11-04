@@ -4,12 +4,11 @@ import {V} from "Vector";
 
 import {Rect} from "math/Rect";
 
-import {DigitalPortGroup, Encoder} from "core/models/types/digital";
-import {Line}                      from "core/utils/rendering/shapes/Line";
-import {Rectangle}                 from "core/utils/rendering/shapes/Rectangle";
-import {Style}                     from "core/utils/rendering/Style";
-import {RenderInfo}                from "core/views/BaseView";
-import {ComponentView}             from "core/views/ComponentView";
+import {Encoder}       from "core/models/types/digital";
+import {Rectangle}     from "core/utils/rendering/shapes/Rectangle";
+import {Style}         from "core/utils/rendering/Style";
+import {RenderInfo}    from "core/views/BaseView";
+import {ComponentView} from "core/views/ComponentView";
 
 import {DigitalViewInfo} from "../DigitalViewInfo";
 
@@ -28,7 +27,7 @@ export class EncoderView extends ComponentView<Encoder, DigitalViewInfo> {
 
         // Get current number of outputss
         const numOutputs = this.circuit.getPortsFor(this.obj)
-            .filter((p) => p.group === DigitalPortGroup.Output).length;
+            .filter((p) => p.group === "outputs").length;
 
         // Get size of model
         const size = V((1 + (numOutputs - 1)/20), 1/2 * Math.pow(2, numOutputs));
@@ -38,8 +37,6 @@ export class EncoderView extends ComponentView<Encoder, DigitalViewInfo> {
 
     public override getBounds(): Rect {
         // Get current number of inputs
-        const inputs = this.circuit.getPortsFor(this.obj)
-            .filter((p) => p.group === DigitalPortGroup.Input).length;
         return super.getBounds().expand(V(0, 1));
     }
 }

@@ -30,6 +30,8 @@ export const DefaultDigitalComponent: { [C in DigitalComponent as C["kind"]]: Co
     "Switch":      (id) => ({ ...DefaultComponent(id), kind: "Switch"                }),
     "LED":         (id) => ({ ...DefaultComponent(id), kind: "LED", color: "#ffffff" }),
     "ANDGate":     (id) => ({ ...DefaultComponent(id), kind: "ANDGate"               }),
+    "Encoder":     (id) => ({ ...DefaultComponent(id), kind: "Encoder"               }),
+    "Decoder":     (id) => ({ ...DefaultComponent(id), kind: "Decoder"               }),
 };
 
 export const DefaultDigitalPort: PortFactory<DigitalPort> =

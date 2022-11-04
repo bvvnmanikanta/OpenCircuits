@@ -4,12 +4,9 @@ import {V} from "Vector";
 
 import {Rect} from "math/Rect";
 
-import {Style} from "core/utils/rendering/Style";
-
-import {Line} from "core/utils/rendering/shapes/Line";
-
-import {ANDGate} from "core/models/types/digital";
-
+import {ANDGate}       from "core/models/types/digital";
+import {Line}          from "core/utils/rendering/shapes/Line";
+import {Style}         from "core/utils/rendering/Style";
 import {RenderInfo}    from "core/views/BaseView";
 import {ComponentView} from "core/views/ComponentView";
 

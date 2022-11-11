@@ -1,4 +1,4 @@
-import {PropInfoRecord} from "core/models/PropInfo";
+import {PropInfoRecord,PropInfo} from "core/models/PropInfo";
 
 import {AnalogObj, VoltageSource} from "core/models/types/analog";
 
@@ -10,19 +10,18 @@ into voltagesource so that voltagesource would be a group object consists
 of ConstVPropInfo, PulseVPropInfo, and SineVPropInfo. The pop down selection 
 menu would be how the user changes the mode to the 3 different waveforms.
 */
-
-const ConstantVoltageSourceProps = [
-    {id: "waveform-const-group",
+ 
+ const ConstantVoltageSourceProps: PropInfo<VoltageSource> = [
+    {id: "ConstantVoltageSourceProps",
     type: "group",
-    isActive:  (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] == "DC")),
+    //isActive:  (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] == "DC")),
     info: [{ id: "v", type:"float", key: "v", label: "Voltage", step: 0.1, min: 0}]}
 ]
 
-
-const PulseVoltageSourceProps = [
-    {id: "waveform-pulse-group",
+const PulseVoltageSourceProps: PropInfo<VoltageSource> = [
+    {id: "PulseVoltageSourceProps",
     type: "group",
-    isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Pulse")),
+    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Pulse")),
     info: [
     { id: "v", type:"float", key: "v", label: "Voltage", step: 0.1, min: 0},
     { id: "v1", type: "float", key: "v1", label: "Voltage High", step: 0.1, min: 0},
@@ -32,10 +31,10 @@ const PulseVoltageSourceProps = [
     { id: "ph", type: "float", key: "ph", label: "Phase", step: 0.1, min:0},]}
 ]
 
-const SineVoltageSourceProps =[
-    {id: "waveform-sine-group",
+const SineVoltageSourceProps: PropInfo<VoltageSource> = [
+    {id: "SineVoltageSourceProps",
     type: "group",
-    isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Sine")),
+    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Sine")),
     info: [
     { id: "v1", type: "float", key:"v1", label: "Offset Voltage", step: 0.1, min: 0},
     { id: "v", type: "float", key:"v", label: "Amplitude Voltage", step: 0.1, min: 0},
@@ -62,7 +61,7 @@ export const AnalogPropInfo: PropInfoRecord<AnalogObj> = {
         ...DefaultComponentPropInfo,
         { id: "waveform", type: "string[]", key: "waveform", label: "waveform", options: [["DC", "a"],["Pulse", "b"],["Sine", "c"]]},
         ...ConstantVoltageSourceProps,
-        ...PulseVoltageSourceProps,
+        ... PulseVoltageSourceProps,
         ...SineVoltageSourceProps,
     ],
 };

@@ -14,8 +14,9 @@ menu would be how the user changes the mode to the 3 different waveforms.
  const ConstantVoltageSourceProps: PropInfo<VoltageSource> = [
     {id: "ConstantVoltageSourceProps",
     type: "group",
-    //isActive:  (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] == "DC")),
-    info: [{ id: "v", type:"float", key: "v", label: "Voltage", step: 0.1, min: 0}]}
+    info: [{ id: "v", type:"float", key: "v", label: "Voltage", step: 0.1, min: 0}],
+    isActive: props => ("waveform" in props) && (props["waveform"]!.every(waveform => waveform == "DC"))}
+    
 ]
 
 const PulseVoltageSourceProps: PropInfo<VoltageSource> = [

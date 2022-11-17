@@ -22,7 +22,8 @@ menu would be how the user changes the mode to the 3 different waveforms.
 const PulseVoltageSourceProps: PropInfo<VoltageSource> = [
     {id: "PulseVoltageSourceProps",
     type: "group",
-    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Pulse")),
+    isActive: props => ("waveform" in props) && (props["waveform"]!.every(waveform => waveform == "DC Pulse")),
+    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Pulse")), //old
     info: [
     { id: "v", type:"float", key: "v", label: "Voltage", step: 0.1, min: 0},
     { id: "v1", type: "float", key: "v1", label: "Voltage High", step: 0.1, min: 0},
@@ -35,7 +36,8 @@ const PulseVoltageSourceProps: PropInfo<VoltageSource> = [
 const SineVoltageSourceProps: PropInfo<VoltageSource> = [
     {id: "SineVoltageSourceProps",
     type: "group",
-    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Sine")),
+    isActive: props => ("waveform" in props) && (props["waveform"]!.every(waveform => waveform == "DC Sine")),
+    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Sine")), //old
     info: [
     { id: "v1", type: "float", key:"v1", label: "Offset Voltage", step: 0.1, min: 0},
     { id: "v", type: "float", key:"v", label: "Amplitude Voltage", step: 0.1, min: 0},

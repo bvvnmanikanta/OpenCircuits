@@ -36,8 +36,8 @@ export const AllNetlistInfo: NetlistInfoRecord = {
     "Resistor": (r) => ["R", [`${r.resistance}`]],
 
 /*
-    Currently the simulation is not implimented, but the voltage source DC should work normally. This is based off of 
-    the resistor which is done above. PulseVoltageSourceProps and SineVoltageSourceProps needs to be done as well.
+    Currently the simulation is not implimented. The current code is based off of 
+    the resistor which is done above. ConstantVoltage is done below, PulseVoltageSourceProps and SineVoltageSourceProps need to be done as well.
 
     PulseVoltageSourceProps:
     v1: number; // Low voltage

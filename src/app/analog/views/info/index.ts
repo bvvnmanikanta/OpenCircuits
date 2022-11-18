@@ -37,7 +37,7 @@ const SineVoltageSourceProps: PropInfo<VoltageSource> = [
     {id: "SineVoltageSourceProps",
     type: "group",
     isActive: props => ("waveform" in props) && (props["waveform"]!.every(waveform => waveform == "DC Sine")),
-    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Sine")), //old
+    //isActive: (states: Array<VoltageSource>) => (states.every((state) => state["waveform"] === "DC Sine")),
     info: [
     { id: "v1", type: "float", key:"v1", label: "Offset Voltage", step: 0.1, min: 0},
     { id: "v", type: "float", key:"v", label: "Amplitude Voltage", step: 0.1, min: 0},
@@ -62,7 +62,7 @@ export const AnalogPropInfo: PropInfoRecord<AnalogObj> = {
 
     "VoltageSource":[
         ...DefaultComponentPropInfo,
-        { id: "waveform", type: "string[]", key: "waveform", label: "waveform", options: [["DC", "a"],["Pulse", "b"],["Sine", "c"]]},
+        { id: "waveform", type: "string[]", key: "waveform", label: "waveform", options: [["DC", "DC"],["Pulse", "DC Pulse"],["Sine", "DC Sine"]]},
         ...ConstantVoltageSourceProps,
         ... PulseVoltageSourceProps,
         ...SineVoltageSourceProps,

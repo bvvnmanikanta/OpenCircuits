@@ -2,7 +2,7 @@
 title: Adding new Components
 ---
 
-Each component has at least two SVG files to display. One of these is the one shown in the item navigation bar where you drag components from, and the other(s) are shown on the canvas when dragged and dropped.
+Most components have at least two SVG files to display. One of these is the one shown in the item navigation bar where you drag components from, and the other(s) are shown on the canvas when dragged and dropped.
 
 
 ## Itemnav SVG file
@@ -17,10 +17,10 @@ stroke="black" stroke-width="1" stroke-linecap="round" fill="none"></path>
 
 I like to use [this editor/viewer from rapidtables](https://www.rapidtables.com/web/tools/svg-viewer-editor.html) because it is straightforward unlike a lot of other SVG editors out there. Copy the code above into there and modify `INPUT PATH HERE` to be the actual path ([read up on paths here](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)). Some icons require more than just a path (i.e. circles and other neat shapes). You can edit these however you like, this is just some starter code.
 
-Put your itemnav SVG file into the  site/public/img/icons folder, where you will see additional subfolders for each category of component.
+Put your itemnav SVG file in the appropriate subdirectory in either the site/pages/digital/public/img/itemnav/ folder if your component is digital or the site/pages/analog/public/img/itemnav/ folder if it is an analog component
 
-Additionally, you'll need to add your component as an object in digitalnavconfig.json file. The `"id"` field should be the same `"id"` used in the `@serializable` tag in `YourComponentName.ts`. The `"label"` field is what is shown underneath the component in the itemnav, and in the `"icon"` field you should put the path to your itemnav SVG file name.  
-
+Additionally, you'll need to add your component in site/pages/digital/src/data/itemNavConfig.json if it is digitials or 
+site/pages/analog/src/data/itemNavConfig.json if it is analog
 
 ## Canvas SVG file(s)
 If your component is `Pressable`, which means you should be able to click on it to change its behavior (e.g. a switch or button), then you will need to create multiple SVG files. If not, then only one is required. These are similar to the itemnav SVG files:
@@ -32,180 +32,192 @@ stroke="black" stroke-width="1" stroke-linecap="round" fill="none"></path>
 </svg>
 ```
 
-Your path and dimensions may vary from the itemnav tool. When in doubt, take a look at existing component SVGs as examples. The main difference here is the `viewBox` which defines the area of the icon which is to be visible. The height and width should be at least the same ratio as those defined in your component's TypeScript file, which we will get to later.  
-
-Make it in site/public/img/items. Next, add your canvas SVG file name(s) to a variable called `IMAGE_FILE_NAMES` in app/digital/ts/utils/Images.ts .  
-
+Your path and dimensions may vary from the itemnav tool. When in doubt, take a look at existing component SVGs as examples. The main difference here is the `viewBox` which defines the area of the icon which is to be visible. 
+ Make it in site/pages/digital/public/img/items/ if it is a digitial competent or site/pages/analog/public/img/items/ if it is analog. 
 
 ## TypeScript files
-First create a new `YourComponentName.ts` file in the app/digital/ts/models/ioobjects . Implement the class in the TypeScript file. It's easiest to follow the example of an existing component, but here's what it should look like.
-
+First add your competent to src/app/core/models/types/digital.ts 
 ```typescript
-@serializable("YourComponentID") // <- this must be the same "id" as in digital navconfig.json
-export class YourComponent extends DigitalComponent {
-    public constructor( /* arguments */ ) {
-        super(new ClampedValue(NUMBER OF PORTS), V(WIDTH, HEIGHT));
-         // more code ...
-    }
+export type ANDGate = Component & { kind: "ANDGate" };
+export type Switch  = Component & { kind: "Switch"  };
+export type LED     = Component & { kind: "LED", color: string };
 
-    public getDisplayName(): string {
-        return "YourComponentName";
-    }
+export type DigitalComponent =
+    | DigitalNode
+    | Switch
+    | LED
+    | ANDGate;
 
-    // name of the canvas icon, not the itemnav svg
-    public getImageName(): string {
-        return "yourcomponent.svg";
-    }
+export type DigitalObj = DigitalPort | DigitalWire | DigitalComponent;
 
-    // other necessary methods ...
+
+export const DefaultDigitalComponent: { [C in DigitalComponent as C["kind"]]: ComponentFactory<C> } = {
+    "DigitalNode": (id) => ({ ...DefaultComponent(id), kind: "DigitalNode"           }),
+    "Switch":      (id) => ({ ...DefaultComponent(id), kind: "Switch"                }),
+    "LED":         (id) => ({ ...DefaultComponent(id), kind: "LED", color: "#ffffff" }),
+    "ANDGate":     (id) => ({ ...DefaultComponent(id), kind: "ANDGate"               }),
+};
 ```
-Add this component to a list of `export`s in the app/digital/ts/models/ioobjects/index.ts .
-
+or src/app/core/models/types/analog.ts if it is an analog competent
 ```typescript
-export {YourComponent} from "./YourComponent";
-```
+export type AnalogNode = Component & { kind: "AnalogNode" };
 
-Second create any actions yor component might need in app/digital/actions/. Here is an example from 
-`ClockFrequencyChangeAction.ts`
+export type Ground = Component & { kind: "Ground" };
 
-```typescript
-export class ClockFrequencyChangeAction implements Action {
-    private clock: Clock;
+export type Resistor = Component & { kind: "Resistor", resistance: number };
 
-    private initialFreq: number;
-    private targetFreq: number;
+export type AnalogComponent =
+    | AnalogNode
+    | Ground
+    | Resistor;
 
-    public constructor(clock: Clock, targetFreq: number) {
-        this.clock = clock;
+export type AnalogObj = AnalogPort | AnalogWire | AnalogComponent;
 
-        this.initialFreq = clock.getFrequency();
-        this.targetFreq = targetFreq;
-    }
 
-    public execute(): Action {
-        this.clock.setFrequency(this.targetFreq);
-
-        return this;
-    }
-
-    public undo(): Action {
-        this.clock.setFrequency(this.initialFreq);
-
-        return this;
-    }
-
-}
+export const DefaultAnalogComponent: { [C in AnalogComponent as C["kind"]]: ComponentFactory<C> } = {
+    "AnalogNode": (id) => ({ ...DefaultComponent(id), kind: "AnalogNode"                 }),
+    "Ground":     (id) => ({ ...DefaultComponent(id), kind: "Ground"                     }),
+    "Resistor":   (id) => ({ ...DefaultComponent(id), kind: "Resistor", resistance: 1000 }),
+};
 ```
 
-Third create any SelectionPopupModules your component needs in site/pages/digital/src/containers/SelectionPopup/modules/. Here is 
-an example from `OutputCountModule.tsx`
+Second add your competent to `const AllPropagators: PropagatorRecord`
+in src/app/digital/models/sim/Propagators.ts with the appropriate logic.
 ```typescript
-const Config: ModuleConfig<[Encoder], number> = {
-    types: [Encoder],
-    valType: "int",
-    getProps: (o) => o.getOutputPortCount().getValue(),
-    getAction: (s, newCount) => new GroupAction(s.map(o =>
-        new CoderPortChangeAction(o, o.getOutputPortCount().getValue(), newCount)))
-}
+export const AllPropagators: PropagatorRecord = {
+    "DigitalNode": ({ signals }) => [{ "outputs": signals["inputs"] }],
 
-export const OutputCountModule = PopupModule({
-    label: "Output Count",
-    modules: [CreateModule({
-        inputType: "number",
-        config: Config,
-        step: 1, min: 2, max: 8,
-        alt: "Number of outputs object(s) have"
-    })]
-});
+    // Switch has state which represents the user-defined isOn/isOff
+    "Switch": ({ state = [Signal.Off] }) => [{ "outputs": state }, state],
+
+    // LEDs don't propagate a signal
+    "LED": Noprop,
+
+    "ANDGate":  ({ signals }) => [{ "outputs": [signals["inputs"].reduce(AND)] }],
+};
 ```
-Add your new PopupModules to src/site/pages/digital/src/containers/App/index.tsx 
-(around line 114)
+or add it to `const AllNetlistInfo: NetlistInfoRecord` in app/analog/models/sim/NetlistInfo.ts if it is an analog competent
 ```typescript
-modules={[PositionModule, InputCountModule,
-        SelectPortCountModule,
-        DecoderInputCountModule,
-        OutputCountModule, SegmentCountModule,
-        ClockFrequencyModule,
-        ColorModule, TextColorModule,
-        BusButtonModule, CreateICButtonModule,
-        ViewICButtonModule, ClockSyncButtonModule, 
-        YourModuleHere]} />
+export const AllNetlistInfo: NetlistInfoRecord = {
+    // AnalogNode is purely a user-facing component and has no effect on the actual circuit sim
+    "AnalogNode": undefined,
 
+    // Ground is a very special case so has no specified information
+    "Ground": undefined,
+
+    "Resistor": (r) => ["R", [`${r.resistance}`]],
+};
 ```
 
-Lastly create any custom renderers your component needs in app/digital/rendering/ioobjects/FOLDER/YOUR_RENDERER.ts . 
-Here is 
-an example from `ConstantNumberRenderer.ts`
+Third add your competent to `const DigitalPortInfo` in app/core/views/portinfo/digital/index.ts
 ```typescript
-export const ConstantNumberRenderer = (() => {
+export const DigitalPortInfo: PortInfoRecord<DigitalComponent> = {
+    "DigitalNode": {
+        ...DefaultDigitalPortInfo,
+        PositionConfigs: [{
+            "inputs":  [{ origin: V(0, 0), target: V(0, 0), dir: V(-1, 0) }],
+            "outputs": [{ origin: V(0, 0), target: V(0, 0), dir: V(+1, 0) }],
+        }],
+    },
+    "Switch": {
+        ...DefaultDigitalPortInfo,
+        PositionConfigs: [{
+            "outputs": [{ origin: V(0.62, 0), target: V(1.32, 0), dir: V(+1, 0) }],
+        }],
+    },
+    "LED": {
+        ...DefaultDigitalPortInfo,
+        PositionConfigs: [{
+            "inputs": [{ origin: V(0, -0.5), target: V(0, -2), dir: V(0, -1) }],
+        }],
+    },
+    "ANDGate": {
+        ...DefaultDigitalPortInfo,
+        AllowChanges: true,
+        ChangeGroup:  "inputs",
 
-    // Function to draw the line connecting the 4 outputs
-    const drawOutputConnector = function(renderer: Renderer, size: Vector, borderColor: string): void {
-        const style = new Style(undefined, borderColor, DEFAULT_BORDER_WIDTH);
-        // Y coordinates of the top and bottom
-        const l1 = -(size.y/2)*(1.5);
-        const l2 =  (size.y/2)*(1.5);
-        // X coordinate to draw the vertical line
+        // Generate configs for 2->8 input ports
+        PositionConfigs: [2,3,4,5,6,7,8].map((numInputs) => ({
+            "inputs":  CalcPortPositions(numInputs, 0.5 - DEFAULT_BORDER_WIDTH/2, 1, V(-1, 0)),
+            "outputs": [CalcPortPos(V(0.5, 0), V(1, 0))], // 1 output
+        })),
+    },
+};
+```
+or `const AnalogPortInfo` in app/core/views/portinfo/analog/index.ts if it is an analog competent
+```typescript
+export const AnalogPortInfo: PortInfoRecord<AnalogComponent> = {
+    "AnalogNode": {
+        ...DefaultAnalogPortInfo,
+        PositionConfigs: [{
+            "ports": [
+                { origin: V(0, 0), target: V(0, 0), dir: V(-1, 0) },
+                { origin: V(0, 0), target: V(0, 0), dir: V(+1, 0) },
+            ],
+        }],
+    },
+    "Ground": {
+        ...DefaultAnalogPortInfo,
+        PositionConfigs: [{
+            "ports": [{ origin: V(0, +0.3), target: V(0, +1), dir: V(0, +1) }],
+        }],
+    },
+    "Resistor": {
+        ...DefaultAnalogPortInfo,
+        PositionConfigs: [{
+            "ports": [
+                { origin: V(-0.6, 0), target: V(-1.3, 0), dir: V(-1, 0) },
+                { origin: V(+0.6, 0), target: V(+1.3, 0), dir: V(+1, 0) },
+            ],
+        }],
+    },
+};
+```
+Lastly make a veiw for your competent in app/digital/views/ or app/analog/views/ here is an example from ANDGateView.ts
+```typescript
+export class ANDGateView extends ComponentView<ANDGate, DigitalViewInfo> {
+    public constructor(info: DigitalViewInfo, obj: ANDGate) {
+        super(info, obj, V(1, 1), "and.svg");
+    }
+
+    protected override renderComponent({ renderer, selections }: RenderInfo): void {
+        const selected = selections.has(this.obj.id);
+
+        const borderCol = (selected ? SELECTED_BORDER_COLOR : DEFAULT_BORDER_COLOR);
+
+        const style = new Style(undefined, borderCol, DEFAULT_CURVE_BORDER_WIDTH);
+
+        // Get size of model
+        const size = this.transform.get().getSize();
+
+        // Get current number of inputs
+        const inputs = this.circuit.getPortsFor(this.obj)
+            .filter((p) => p.group === "inputs").length;
+
+        // Draw line to visually match input ports
+        const l1 = -(inputs-1)/2*(0.5 - DEFAULT_BORDER_WIDTH/2) - DEFAULT_BORDER_WIDTH/2;
+        const l2 =  (inputs-1)/2*(0.5 - DEFAULT_BORDER_WIDTH/2) + DEFAULT_BORDER_WIDTH/2;
+
         const s = (size.x-DEFAULT_BORDER_WIDTH)/2;
-        renderer.draw(new Line(V(s, l1), V(s, l2)), style);
+        const p1 = V(-s, l1);
+        const p2 = V(-s, l2);
+
+        renderer.draw(new Line(p1, p2), style);
     }
 
-    // Function to draw the input value on the component
-    const drawInputText = function(renderer: Renderer, value: number): void {
-        const text = value < 10 ? value.toString() : "ABCDEF".charAt(value - 10);
-        renderer.text(text, V(0, 2.5), "center", DEFAULT_ON_COLOR, FONT_CONSTANT_NUMBER);
+    public override getBounds(): Rect {
+        // Get current number of inputs
+        const inputs = this.circuit.getPortsFor(this.obj)
+            .filter((p) => p.group === "inputs").length;
+        return super.getBounds().expand(V(0, ((inputs-1)/2*(0.5 - DEFAULT_BORDER_WIDTH/2) + DEFAULT_BORDER_WIDTH/2)));
     }
-
-    return {
-        render(renderer: Renderer, object: ConstantNumber, selected: boolean): void {
-            const transform = object.getTransform();
-            const fillColor = selected ? SELECTED_FILL_COLOR : DEFAULT_FILL_COLOR;
-
-            const borderColor = selected ? SELECTED_BORDER_COLOR : DEFAULT_BORDER_COLOR;
-            const style = new Style(fillColor, borderColor, DEFAULT_BORDER_WIDTH);
-
-            // Draw the rectangle first, subtracting border width for alignment
-            const rectSize = transform.getSize().sub(DEFAULT_BORDER_WIDTH);
-            renderer.draw(new Rectangle(V(), rectSize), style);
-
-            // Connect the output lines together and draw the text
-            drawOutputConnector(renderer, transform.getSize(), borderColor);
-            drawInputText(renderer, object.getInputNum());
-        }
-    };
-})();
+}
 ```
-
-To add your custom render go to src/app/digital/rendering/ioobjects/ComponentRenderer.ts
-change the following code to add your custom render
-
-```typescript
-    if (object instanceof Gate)
-        GateRenderer.render(renderer, camera, object, selected);
-    else if (object instanceof Multiplexer || object instanceof Demultiplexer)
-        MultiplexerRenderer.render(renderer, camera, object, selected);
-    else if (object instanceof SegmentDisplay)
-        SegmentDisplayRenderer.render(renderer, camera, object, selected);
-    else if (object instanceof IC)
-        ICRenderer.render(renderer, camera, object, selected);
-    else if (object instanceof FlipFlop || object instanceof Latch)
-        drawBox(renderer, transform, selected);
-    else if (object instanceof Encoder || object instanceof Decoder)
-        drawBox(renderer, transform, selected);
-    else if (object instanceof Your_Component)
-        Your_ComponentRenderer.render(renderer, camera, object, selected);
-```
-
-
 ## Checklist
-- [ ] Itemnav SVG in icons folder
+- [ ] Itemnav SVG in itemnav folder
 - [ ] Canvas SVG(s) in items folder
-- [ ] Add object to digitalnavconfig.json
-- [ ] Update `IMAGE_FILE_NAMES` in Images.ts
-- [ ] Create TypeScript file
-- [ ] Add export in index.ts
-- [ ] Create new actions
-- [ ] Create SelectionPopupModules
-- [ ] Add your SelectionPopupModules in index.tsx
-- [ ] Create custom renderers
-- [ ] Add your custom renderers in ComponentRenderer.ts
+- [ ] Add the competent to itemNavConfig.json
+- [ ] Add competent to digital.ts or analog.ts
+- [ ] Add competent to Propagators.ts
+- [ ] Add competent to Propinfo
+- [ ] Make a veiw for your competent

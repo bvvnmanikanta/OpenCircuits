@@ -7,24 +7,33 @@ export type DigitalPort = Port      & { kind: "DigitalPort" };
 export type DigitalWire = Wire      & { kind: "DigitalWire" };
 export type DigitalNode = Component & { kind: "DigitalNode" };
 
-export type ANDGate = Component & { kind: "ANDGate" };
-export type Switch  = Component & { kind: "Switch"  };
-export type LED     = Component & { kind: "LED", color: string };
+export type ANDGate        = Component & { kind: "ANDGate" };
+export type Switch         = Component & { kind: "Switch"  };
+export type LED            = Component & { kind: "LED", color: string };
+export type SegmentDisplay = Component & { kind: "SegmentDisplay"  };
+export type BCDDisplay     = Component & { kind: "BCDDisplay", segmentCount: number  };
+export type ASCIIDisplay   = Component & { kind: "ASCIIDisplay", segmentCount: number  };
 
 export type DigitalComponent =
     | DigitalNode
     | Switch
     | LED
-    | ANDGate;
+    | ANDGate
+    | SegmentDisplay
+    | BCDDisplay
+    | ASCIIDisplay;
 
 export type DigitalObj = DigitalPort | DigitalWire | DigitalComponent;
 
 
 export const DefaultDigitalComponent: { [C in DigitalComponent as C["kind"]]: ComponentFactory<C> } = {
-    "DigitalNode": (id) => ({ ...DefaultComponent(id), kind: "DigitalNode"           }),
-    "Switch":      (id) => ({ ...DefaultComponent(id), kind: "Switch"                }),
-    "LED":         (id) => ({ ...DefaultComponent(id), kind: "LED", color: "#ffffff" }),
-    "ANDGate":     (id) => ({ ...DefaultComponent(id), kind: "ANDGate"               }),
+    "DigitalNode":     (id) => ({ ...DefaultComponent(id), kind: "DigitalNode"                 }),
+    "Switch":          (id) => ({ ...DefaultComponent(id), kind: "Switch"                      }),
+    "LED":             (id) => ({ ...DefaultComponent(id), kind: "LED", color: "#ffffff"       }),
+    "ANDGate":         (id) => ({ ...DefaultComponent(id), kind: "ANDGate"                     }),
+    "SegmentDisplay":  (id) => ({ ...DefaultComponent(id), kind: "SegmentDisplay"              }),
+    "BCDDisplay":  (id) => ({ ...DefaultComponent(id), kind: "BCDDisplay", segmentCount: 7     }),
+    "ASCIIDisplay":  (id) => ({ ...DefaultComponent(id), kind: "ASCIIDisplay", segmentCount: 16 }),
 };
 
 export const DefaultDigitalPort: PortFactory<DigitalPort> =

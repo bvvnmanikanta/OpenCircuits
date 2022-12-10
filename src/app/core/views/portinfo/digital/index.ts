@@ -45,4 +45,28 @@ export const DigitalPortInfo: PortInfoRecord<DigitalComponent> = {
             "outputs": [CalcPortPos(V(0.5, 0), V(1, 0))], // 1 output
         })),
     },
+    "SegmentDisplay": {
+        ...DefaultDigitalPortInfo,
+        AllowChanges: true,
+        ChangeGroup:  "inputs",
+
+        PositionConfigs: [7, 9, 14, 16].map((numInputs) => ({
+            "inputs":  CalcPortPositions(numInputs, 0.5 - DEFAULT_BORDER_WIDTH/2, 1, V(-1, 0)),
+        })),
+    },
+    "BCDDisplay": {
+        ...DefaultDigitalPortInfo,
+
+        PositionConfigs: [4].map((numInputs) => ({
+            "inputs":  CalcPortPositions(numInputs, 0.5 - DEFAULT_BORDER_WIDTH/2, 1, V(-1, 0)),
+        })),
+    },
+    "ASCIIDisplay": {
+        ...DefaultDigitalPortInfo,
+
+        PositionConfigs: [7].map((numInputs) => ({
+            "inputs":  CalcPortPositions(numInputs, 0.5 - DEFAULT_BORDER_WIDTH/2, 1, V(-1, 0)),
+        })),
+    },
+    
 };

@@ -191,14 +191,12 @@ export abstract class CircuitImpl implements Circuit {
                 delete objs[i];
             }
             else if(objs[i].baseKind == "Wire") {
-
+                delete objs[i];
             }
-            else {
+            else if(objs[i].baseKind == "Port") {
                 //port = no-op
             }
         }
-        //  Then it's safe to delete the Component directly
-        //  And also note that deleting Ports is a no-op, just ignore that case
         this.circuit.commitTransaction();
     }
     public clearSelections(): void {

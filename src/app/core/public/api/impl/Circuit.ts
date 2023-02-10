@@ -36,7 +36,7 @@ export abstract class CircuitImpl implements Circuit {
         };
     }
 
-    private get circuit(): CircuitInternal {
+    protected get circuit(): CircuitInternal {
         return this.state.circuit;
     }
     private get selections(): SelectionsManager {
@@ -179,13 +179,20 @@ export abstract class CircuitImpl implements Circuit {
     public abstract connectWire(p1: Port, p2: Port): Wire | undefined;
 
     public deleteObjs(objs: Obj[]): void {
+        this.circuit.beginTransaction();
         // TODO(friedj)
         //  See `placeComponentAt` for some general guidance
         //  Note that to delete a Component, you have to set its "Port Config" to `{}` first
         //   which will remove all of its ports
+        for(let i = 0; i < objs.length; i++) 
+        {
+            //if(component)
+            this.circuit.setPortConfig(objs[i].id, {});
+            delete objs[i];
+        }
         //  Then it's safe to delete the Component directly
         //  And also note that deleting Ports is a no-op, just ignore that case
-        throw new Error("Unimplemented");
+        this.circuit.commitTransaction();
     }
     public clearSelections(): void {
         // TODO(callac5)

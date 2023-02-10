@@ -186,9 +186,16 @@ export abstract class CircuitImpl implements Circuit {
         //   which will remove all of its ports
         for(let i = 0; i < objs.length; i++) 
         {
-            //if(component)
-            this.circuit.setPortConfig(objs[i].id, {});
-            delete objs[i];
+            if(objs[i].baseKind == "Component") {
+                this.circuit.setPortConfig(objs[i].id, {});
+                delete objs[i];
+            }
+            else if(objs[i].baseKind == "Wire") {
+
+            }
+            else {
+                //port = no-op
+            }
         }
         //  Then it's safe to delete the Component directly
         //  And also note that deleting Ports is a no-op, just ignore that case

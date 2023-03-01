@@ -1,4 +1,4 @@
-import {Vector, V} from "Vector";
+import {V, Vector} from "Vector";
 
 import {Rect} from "math/Rect";
 
@@ -16,7 +16,8 @@ import {Obj}       from "../Obj";
 import {Port}      from "../Port";
 import {Wire}      from "../Wire";
 
-import {CircuitState} from "./CircuitState";
+import {CircuitState}    from "./CircuitState";
+import {CircuitDocument} from "core/internal/impl/CircuitDocument";
 
 
 export abstract class CircuitImpl<
@@ -32,7 +33,7 @@ export abstract class CircuitImpl<
     public isLocked: boolean;
 
     public constructor(provider: ObjInfoProvider) {
-        this.circuit = new CircuitInternal(provider, new CircuitLog());
+        this.circuit = new CircuitInternal(new CircuitLog(), new CircuitDocument(provider));
         this.view = undefined;
 
         this.selections = new SelectionsManager();
@@ -115,7 +116,7 @@ export abstract class CircuitImpl<
     public pickObjectRange(bounds: Rect): Array<ComponentT | WireT | PortT> {
         throw new Error("Unimplemented");
     }
-    
+
     public selectedObjs(): Obj[] {
         return this.selections.get()
                .map((id) => this.getObj(id))
@@ -164,7 +165,7 @@ export abstract class CircuitImpl<
                               .filter((comp) => (comp !== undefined)) as Component[];
 
         // Case: no components are selected
-        if (allComponents.length === 0) 
+        if (allComponents.length === 0)
             return V(0,0)
 
         // Case: One or more components are selected
